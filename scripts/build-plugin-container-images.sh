@@ -73,7 +73,6 @@ build_container_images() {
   esac
 }
 
-# Note: Exclude the nfs workspace for now. Will integrate that later into the 1.48 workspace.
 for workspace in plugins/backstage-1.42 plugins/backstage-1.45 plugins/backstage-1.48; do
   if [ ! -d "$workspace" ]; then
     continue
