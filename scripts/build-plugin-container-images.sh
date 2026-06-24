@@ -37,32 +37,32 @@ build_container_images() {
       ;;
     *1.45*)
       echo
-      echo "Build plugins with suffix $suffix for Backstage 1.45 plugins with @red-hat-developer-hub/cli@1.8.0"
+      echo "Build plugins with suffix $suffix for Backstage 1.45 plugins with @red-hat-developer-hub/cli@1.9.1"
       echo
       cd "$workspace"
       cd plugins/page-n
       rm -rf dist dist-dynamic dist-scalprum
-      npx --yes @red-hat-developer-hub/cli@1.8.0 plugin package --tag "rhdh-loadtest-plugins:bs_1.45_page-$suffix"
+      npx --yes @red-hat-developer-hub/cli@1.9.1 plugin package --tag "rhdh-loadtest-plugins:bs_1.45_page-$suffix"
       cd ../..
       cd plugins/catalog-tab-n
       rm -rf dist dist-dynamic dist-scalprum
-      npx --yes @red-hat-developer-hub/cli@1.8.0 plugin package --tag "rhdh-loadtest-plugins:bs_1.45_catalog-tab-$suffix"
+      npx --yes @red-hat-developer-hub/cli@1.9.1 plugin package --tag "rhdh-loadtest-plugins:bs_1.45_catalog-tab-$suffix"
       cd ../..
       cd ../..
 
       ;;
     *1.48*)
       echo
-      echo "Build plugins with suffix $suffix for Backstage 1.48 plugins with @red-hat-developer-hub/cli@1.9.1"
+      echo "Build plugins with suffix $suffix for Backstage 1.48 plugins with @red-hat-developer-hub/cli@1.10.7"
       echo
       cd "$workspace"
       cd plugins/page-n
       rm -rf dist dist-dynamic dist-scalprum
-      npx --yes @red-hat-developer-hub/cli@1.9.1 plugin package --tag "rhdh-loadtest-plugins:bs_1.48_page-$suffix"
+      npx --yes @red-hat-developer-hub/cli@1.10.7 plugin package --tag "rhdh-loadtest-plugins:bs_1.48_page-$suffix"
       cd ../..
       cd plugins/catalog-tab-n
       rm -rf dist dist-dynamic dist-scalprum
-      npx --yes @red-hat-developer-hub/cli@1.9.1 plugin package --tag "rhdh-loadtest-plugins:bs_1.48_catalog-tab-$suffix"
+      npx --yes @red-hat-developer-hub/cli@1.10.7 plugin package --tag "rhdh-loadtest-plugins:bs_1.48_catalog-tab-$suffix"
       cd ../..
       cd ../..
 

@@ -4,8 +4,7 @@ set -e
 
 function list_container_images() {
   podman images --filter=reference='localhost/rhdh-loadtest-plugins:*' \
-    --format '{{.Repository}}:{{.Tag}}' \
-    | grep -e '-n$'
+    --format '{{.Repository}}:{{.Tag}}'
 }
 
 # list local podman containers
@@ -18,5 +17,10 @@ echo
 echo Wait 10 seconds...
 echo 
 sleep 10
+echo Cleanup...
+echo
 
-list_container_images | xargs -r podman rmi
+list_container_images | xargs -n 1 -r podman rmi
+
+echo Done.
+echo

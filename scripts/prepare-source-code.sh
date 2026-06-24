@@ -31,7 +31,6 @@ sed -i -E "s/catalog-tab-(n|[0-9]+)/catalog-tab-$suffix/g" \
     "$workspace/plugins/catalog-tab-n/package.json" \
     "$workspace/plugins/catalog-tab-n/src/plugin.ts" \
     "$workspace/plugins/catalog-tab-n/src/alpha/plugin.tsx" \
-    "$workspace/plugins/catalog-tab-n/src/alpha/routes.ts" \
     "$workspace/plugins/catalog-tab-n/src/components/ExampleComponent/ExampleComponent.tsx" \
     "$workspace/plugins/catalog-tab-n/dev/index.tsx" \
     "$workspace/plugins/catalog-tab-n/dev/legacy.tsx" \

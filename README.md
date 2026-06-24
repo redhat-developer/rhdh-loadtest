@@ -2,7 +2,7 @@
 
 ## Create instances with Helm
 
-To create all test instances at once (`rhdh-17`, `rhdh-18`, `rhdh-19` and `rhdh-next`) run
+To create all test instances at once (`rhdh-17`, `rhdh-18`, `rhdh-19`, `rhdh-110`, and `rhdh-next`) run
 
 ```
 make install-all
@@ -11,7 +11,7 @@ make install-all
 or for just one version use:
 
 ```
-cd helm/rhdh-17 && make install 
+cd helm/rhdh-110 && make install 
 ```
 
 ## Create instances with Argo CD
@@ -32,7 +32,7 @@ oc apply -f https://raw.githubusercontent.com/christoph-jerolimov/rhdh-loadtests
 oc apply -f https://raw.githubusercontent.com/christoph-jerolimov/rhdh-loadtests/refs/heads/main/argocd/app-of-apps.yaml
 ```
 
-Or apply just a single application (current available: `rhdh-17`, `rhdh-18`, `rhdh-19`, and `rhdh-next`):
+Or apply just a single application (current available: `rhdh-17`, `rhdh-18`, `rhdh-19`, `rhdh-110`, and `rhdh-next`):
 
 ```bash
 oc apply -f argocd/app-project.yaml
@@ -156,4 +156,4 @@ You can pick up a complete example in [helm/rhdh-18/values.yaml](helm/rhdh-18/va
 
 ## RBAC
 
-TODO / Coming soon...
+TODO
