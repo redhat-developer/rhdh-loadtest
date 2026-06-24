@@ -1,0 +1,102 @@
+kind: Route
+apiVersion: route.openshift.io/v1
+metadata:
+  name: {{ printf "%s-developer-hub" .Release.Name }}
+  labels:
+    app.kubernetes.io/component: backstage
+    app.kubernetes.io/instance: {{ printf "%s" .Release.Name }}
+    app.kubernetes.io/name: developer-hub
+spec:
+  to:
+    kind: Service
+    name: {{ printf "%s-developer-hub" .Release.Name }}
+  port:
+    targetPort: http-backend
+  tls:
+    termination: edge
+    insecureEdgeTerminationPolicy: Redirect
+---
+# ServiceAccount for the job
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: rhdh-baseurl-configmap-creator
+---
+# Role to read routes and create configmaps
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  name: rhdh-baseurl-configmap-creator
+rules:
+  - apiGroups:
+      - route.openshift.io
+    resources:
+      - routes
+    verbs:
+      - get
+      - list
+  - apiGroups:
+      - ""
+    resources:
+      - configmaps
+    verbs:
+      - get
+      - create
+      - update
+      - patch
+---
+# RoleBinding to bind the role to the service account
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: rhdh-baseurl-configmap-creator
+subjects:
+  - kind: ServiceAccount
+    name: rhdh-baseurl-configmap-creator
+roleRef:
+  kind: Role
+  name: rhdh-baseurl-configmap-creator
+  apiGroup: rbac.authorization.k8s.io
+---
+# Job to create the configmap with the route host
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: rhdh-baseurl-configmap-creator
+  # or generateName: rhdh-baseurl-configmap-creator- ???
+spec:
+  template:
+    spec:
+      serviceAccountName: rhdh-baseurl-configmap-creator
+      containers:
+        - name: configmap-creator
+          image: bitnami/kubectl:latest
+          command:
+            - /bin/sh
+            - -c
+            - |
+              # Get the route host
+              HOST=$(kubectl get route {{ printf "%s-developer-hub" .Release.Name }} -o jsonpath='{.spec.host}')
+              
+              if [ -z "$HOST" ]; then
+                echo "Error: Could not retrieve route host"
+                exit 1
+              fi
+              
+              echo "Route host: $HOST"
+              
+              # Generate and apply ConfigMap
+              cat <<EOF | kubectl apply -f -
+              apiVersion: v1
+              kind: ConfigMap
+              metadata:
+                name: rhdh-baseurl-configmap
+              data:
+                APP_CONFIG_app_baseUrl: https://$HOST
+                APP_CONFIG_backend_baseUrl: https://$HOST
+                BASEURL: https://$HOST
+              EOF
+              
+              echo "ConfigMap created/updated successfully"
+      restartPolicy: Never
+  backoffLimit: 3

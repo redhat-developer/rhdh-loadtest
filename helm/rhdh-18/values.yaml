@@ -686,8 +686,6 @@ redhat-developer-hub:
             # policies-csv-file: ./rbac/rbac-policies.csv
             # conditionalPoliciesFile: ./rbac-conditions/rbac-conditional-policies.yaml
             admin:
-              superUsers:
-                - name: user:default/christoph-jerolimov
               users:
                 - name: user:default/rhdh-qe
 

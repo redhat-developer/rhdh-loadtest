@@ -1,0 +1,200 @@
+global:
+  catalogIndex:
+    image:
+      registry: quay.io
+      repository: rhdh/plugin-catalog-index
+      tag: "1.10"
+  dynamic:
+    plugins:
+      - package: ./dynamic-plugins/dist/backstage-community-plugin-rbac
+        disabled: false
+      - package: ./dynamic-plugins/dist/red-hat-developer-hub-backstage-plugin-bulk-import
+        disabled: false
+      - package: ./dynamic-plugins/dist/red-hat-developer-hub-backstage-plugin-bulk-import-backend-dynamic
+        disabled: false
+      - package: oci://quay.io/jerolimov/rhdh-loadtest-plugins:bs_1.48_page-1!internal-backstage-plugin-page-1
+        disabled: false
+      - package: oci://quay.io/jerolimov/rhdh-loadtest-plugins:bs_1.48_page-2!internal-backstage-plugin-page-2
+        disabled: false
+      - package: oci://quay.io/jerolimov/rhdh-loadtest-plugins:bs_1.48_page-3!internal-backstage-plugin-page-3
+        disabled: false
+      - package: oci://quay.io/jerolimov/rhdh-loadtest-plugins:bs_1.48_page-4!internal-backstage-plugin-page-4
+        disabled: false
+      - package: oci://quay.io/jerolimov/rhdh-loadtest-plugins:bs_1.48_page-5!internal-backstage-plugin-page-5
+        disabled: false
+      - package: oci://quay.io/jerolimov/rhdh-loadtest-plugins:bs_1.48_page-6!internal-backstage-plugin-page-6
+        disabled: false
+      - package: oci://quay.io/jerolimov/rhdh-loadtest-plugins:bs_1.48_page-7!internal-backstage-plugin-page-7
+        disabled: false
+      - package: oci://quay.io/jerolimov/rhdh-loadtest-plugins:bs_1.48_page-8!internal-backstage-plugin-page-8
+        disabled: false
+        pluginConfig:
+      - package: oci://quay.io/jerolimov/rhdh-loadtest-plugins:bs_1.48_page-9!internal-backstage-plugin-page-9
+        disabled: false
+      - package: oci://quay.io/jerolimov/rhdh-loadtest-plugins:bs_1.48_page-10!internal-backstage-plugin-page-10
+        disabled: false
+      - package: oci://quay.io/jerolimov/rhdh-loadtest-plugins:bs_1.48_page-11!internal-backstage-plugin-page-11
+        disabled: false
+      - package: oci://quay.io/jerolimov/rhdh-loadtest-plugins:bs_1.48_page-12!internal-backstage-plugin-page-12
+        disabled: false
+      - package: oci://quay.io/jerolimov/rhdh-loadtest-plugins:bs_1.48_page-13!internal-backstage-plugin-page-13
+        disabled: false
+      - package: oci://quay.io/jerolimov/rhdh-loadtest-plugins:bs_1.48_page-14!internal-backstage-plugin-page-14
+        disabled: false
+      - package: oci://quay.io/jerolimov/rhdh-loadtest-plugins:bs_1.48_page-15!internal-backstage-plugin-page-15
+        disabled: false
+      - package: oci://quay.io/jerolimov/rhdh-loadtest-plugins:bs_1.48_page-16!internal-backstage-plugin-page-16
+        disabled: false
+      - package: oci://quay.io/jerolimov/rhdh-loadtest-plugins:bs_1.48_page-17!internal-backstage-plugin-page-17
+        disabled: false
+      - package: oci://quay.io/jerolimov/rhdh-loadtest-plugins:bs_1.48_page-18!internal-backstage-plugin-page-18
+        disabled: false
+      - package: oci://quay.io/jerolimov/rhdh-loadtest-plugins:bs_1.48_page-19!internal-backstage-plugin-page-19
+        disabled: false
+      - package: oci://quay.io/jerolimov/rhdh-loadtest-plugins:bs_1.48_page-20!internal-backstage-plugin-page-20
+        disabled: false
+      - package: oci://quay.io/jerolimov/rhdh-loadtest-plugins:bs_1.48_page-21!internal-backstage-plugin-page-21
+        disabled: false
+      - package: oci://quay.io/jerolimov/rhdh-loadtest-plugins:bs_1.48_page-22!internal-backstage-plugin-page-22
+        disabled: false
+      - package: oci://quay.io/jerolimov/rhdh-loadtest-plugins:bs_1.48_page-23!internal-backstage-plugin-page-23
+        disabled: false
+      - package: oci://quay.io/jerolimov/rhdh-loadtest-plugins:bs_1.48_page-24!internal-backstage-plugin-page-24
+        disabled: false
+      - package: oci://quay.io/jerolimov/rhdh-loadtest-plugins:bs_1.48_page-25!internal-backstage-plugin-page-25
+        disabled: false
+      - package: oci://quay.io/jerolimov/rhdh-loadtest-plugins:bs_1.48_catalog-tab-1!internal-backstage-plugin-catalog-tab-1
+        disabled: false
+      - package: oci://quay.io/jerolimov/rhdh-loadtest-plugins:bs_1.48_catalog-tab-2!internal-backstage-plugin-catalog-tab-2
+        disabled: false
+      - package: oci://quay.io/jerolimov/rhdh-loadtest-plugins:bs_1.48_catalog-tab-3!internal-backstage-plugin-catalog-tab-3
+        disabled: false
+      - package: oci://quay.io/jerolimov/rhdh-loadtest-plugins:bs_1.48_catalog-tab-4!internal-backstage-plugin-catalog-tab-4
+        disabled: false
+      - package: oci://quay.io/jerolimov/rhdh-loadtest-plugins:bs_1.48_catalog-tab-5!internal-backstage-plugin-catalog-tab-5
+        disabled: false
+      - package: oci://quay.io/jerolimov/rhdh-loadtest-plugins:bs_1.48_catalog-tab-6!internal-backstage-plugin-catalog-tab-6
+        disabled: false
+      - package: oci://quay.io/jerolimov/rhdh-loadtest-plugins:bs_1.48_catalog-tab-7!internal-backstage-plugin-catalog-tab-7
+        disabled: false
+      - package: oci://quay.io/jerolimov/rhdh-loadtest-plugins:bs_1.48_catalog-tab-8!internal-backstage-plugin-catalog-tab-8
+        disabled: false
+      - package: oci://quay.io/jerolimov/rhdh-loadtest-plugins:bs_1.48_catalog-tab-9!internal-backstage-plugin-catalog-tab-9
+        disabled: false
+      - package: oci://quay.io/jerolimov/rhdh-loadtest-plugins:bs_1.48_catalog-tab-10!internal-backstage-plugin-catalog-tab-10
+        disabled: false
+      - package: oci://quay.io/jerolimov/rhdh-loadtest-plugins:bs_1.48_catalog-tab-11!internal-backstage-plugin-catalog-tab-11
+        disabled: false
+      - package: oci://quay.io/jerolimov/rhdh-loadtest-plugins:bs_1.48_catalog-tab-12!internal-backstage-plugin-catalog-tab-12
+        disabled: false
+      - package: oci://quay.io/jerolimov/rhdh-loadtest-plugins:bs_1.48_catalog-tab-13!internal-backstage-plugin-catalog-tab-13
+        disabled: false
+      - package: oci://quay.io/jerolimov/rhdh-loadtest-plugins:bs_1.48_catalog-tab-14!internal-backstage-plugin-catalog-tab-14
+        disabled: false
+      - package: oci://quay.io/jerolimov/rhdh-loadtest-plugins:bs_1.48_catalog-tab-15!internal-backstage-plugin-catalog-tab-15
+        disabled: false
+      - package: oci://quay.io/jerolimov/rhdh-loadtest-plugins:bs_1.48_catalog-tab-16!internal-backstage-plugin-catalog-tab-16
+        disabled: false
+      - package: oci://quay.io/jerolimov/rhdh-loadtest-plugins:bs_1.48_catalog-tab-17!internal-backstage-plugin-catalog-tab-17
+        disabled: false
+      - package: oci://quay.io/jerolimov/rhdh-loadtest-plugins:bs_1.48_catalog-tab-18!internal-backstage-plugin-catalog-tab-18
+        disabled: false
+      - package: oci://quay.io/jerolimov/rhdh-loadtest-plugins:bs_1.48_catalog-tab-19!internal-backstage-plugin-catalog-tab-19
+        disabled: false
+      - package: oci://quay.io/jerolimov/rhdh-loadtest-plugins:bs_1.48_catalog-tab-20!internal-backstage-plugin-catalog-tab-20
+        disabled: false
+      - package: oci://quay.io/jerolimov/rhdh-loadtest-plugins:bs_1.48_catalog-tab-21!internal-backstage-plugin-catalog-tab-21
+        disabled: false
+      - package: oci://quay.io/jerolimov/rhdh-loadtest-plugins:bs_1.48_catalog-tab-22!internal-backstage-plugin-catalog-tab-22
+        disabled: false
+      - package: oci://quay.io/jerolimov/rhdh-loadtest-plugins:bs_1.48_catalog-tab-23!internal-backstage-plugin-catalog-tab-23
+        disabled: false
+      - package: oci://quay.io/jerolimov/rhdh-loadtest-plugins:bs_1.48_catalog-tab-24!internal-backstage-plugin-catalog-tab-24
+        disabled: false
+      - package: oci://quay.io/jerolimov/rhdh-loadtest-plugins:bs_1.48_catalog-tab-25!internal-backstage-plugin-catalog-tab-25
+        disabled: false
+
+redhat-developer-hub:
+  route:
+    enabled: false
+
+  upstream:
+    backstage:
+      appConfig:
+        app:
+          title: RHDH 1.10 NFS loadtest
+
+        auth:
+          providers:
+            guest:
+              dangerouslyAllowOutsideDevelopment: true
+
+        catalog:
+          locations:
+            - type: url
+              target: https://github.com/christoph-jerolimov/rhdh-loadtests/blob/main/catalog/guest-login.yaml
+              rules:
+                - allow: [User, Group]
+            - type: url
+              target: https://github.com/christoph-jerolimov/rhdh-loadtests/blob/main/catalog/components-1000.yaml
+              rules:
+                - allow: [Component]
+            - type: url
+              target: https://github.com/christoph-jerolimov/rhdh-loadtests/blob/main/catalog/groups-100.yaml
+              rules:
+                - allow: [Group]
+            - type: url
+              target: https://github.com/christoph-jerolimov/rhdh-loadtests/blob/main/catalog/systems-100.yaml
+              rules:
+                - allow: [System]
+            - type: url
+              target: https://github.com/christoph-jerolimov/rhdh-loadtests/blob/main/catalog/apis-100.yaml
+              rules:
+                - allow: [API]
+            - type: url
+              target: https://github.com/christoph-jerolimov/rhdh-loadtests/blob/main/catalog/templates-100.yaml
+              rules:
+                - allow: [Template]
+
+        permission:
+          enabled: false
+          rbac:
+            pluginsWithPermission:
+              - catalog
+              - permission
+              - scaffolder
+            # policyFileReload: true
+            # policies-csv-file: ./rbac/rbac-policies.csv
+            # conditionalPoliciesFile: ./rbac-conditions/rbac-conditional-policies.yaml
+            admin:
+              users:
+                - name: user:default/rhdh-qe
+
+      extraEnvVars:
+        # defaults
+        - name: BACKEND_SECRET
+          valueFrom:
+            secretKeyRef:
+              key: backend-secret
+              name: '{{ include "janus-idp.backend-secret-name" $ }}'
+        - name: POSTGRESQL_ADMIN_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              key: postgres-password
+              name: '{{- include "janus-idp.postgresql.secretName" . }}'
+        # load route host (app and backend baseUrl)
+        - name: APP_CONFIG_app_baseUrl
+          valueFrom:
+            configMapKeyRef:
+              name: rhdh-baseurl-configmap
+              key: APP_CONFIG_app_baseUrl
+        - name: APP_CONFIG_backend_baseUrl
+          valueFrom:
+            configMapKeyRef:
+              name: rhdh-baseurl-configmap
+              key: APP_CONFIG_backend_baseUrl
+        - name: BASEURL
+          valueFrom:
+            configMapKeyRef:
+              name: rhdh-baseurl-configmap
+              key: BASEURL
