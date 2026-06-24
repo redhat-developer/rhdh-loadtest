@@ -1,0 +1,7 @@
+apiVersion: v2
+name: rhdh-loadtests-110
+version: 0.0.0
+dependencies:
+  - name: redhat-developer-hub
+    version: 1.10-138-CI
+    repository: "oci://quay.io/rhdh"
