@@ -1,0 +1,24 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: rhdh-loadtests-110
+  labels:
+    argocd.argoproj.io/managed-by: openshift-gitops
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  namespace: openshift-gitops
+  name: rhdh-loadtests-110
+spec:
+  project: rhdh-loadtests
+  source:
+    repoURL: 'https://github.com/christoph-jerolimov/rhdh-loadtests.git'
+    targetRevision: HEAD
+    path: helm/rhdh-110
+  destination:
+    name: in-cluster
+    namespace: rhdh-loadtests-110
+  syncPolicy:
+    automated:
+      enabled: true

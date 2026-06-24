@@ -3,7 +3,7 @@ global:
     image:
       registry: quay.io
       repository: rhdh/plugin-catalog-index
-      tag: "1.9"
+      tag: "1.10"
   dynamic:
     plugins:
       - package: ./dynamic-plugins/dist/backstage-community-plugin-rbac
