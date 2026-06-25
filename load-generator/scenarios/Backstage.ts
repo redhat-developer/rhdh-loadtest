@@ -1,0 +1,31 @@
+import type { Page } from '@playwright/test';
+
+export class Backstage {
+  constructor(public readonly page: Page) {}
+
+  get sidebar() {
+    return this.page.locator('nav');
+  }
+
+  get header() {
+    return this.page.locator(
+      'header, .bui-PluginHeader, .bui-Header, .bui-HeaderPage, .bui-HeaderTop, .bui-HeaderContent',
+    );
+  }
+
+  get pluginHeader() {
+    return this.page.locator('.bui-PluginHeader');
+  }
+
+  get tabs() {
+    return this.page.locator('[role=tablist], div[class*=BackstageHeaderTabs-tabsWrapper]');
+  }
+
+  get content() {
+    return this.page.locator('article, .bui-Header + *, .bui-HeaderPage + *');
+  }
+
+  sidebarItem(name: string) {
+    return this.sidebar.getByRole('link', { name, exact: true });
+  }
+}

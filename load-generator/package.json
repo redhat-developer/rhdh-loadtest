@@ -1,0 +1,21 @@
+{
+  "name": "tests",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "type": "commonjs",
+  "dependencies": {
+    "playwright": "^1.61.1",
+    "playwright-core": "^1.61.1"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.61.1",
+    "@types/node": "^26.0.1"
+  },
+  "scripts": {
+    "install-browser": "playwright install chromium",
+    "playwright": "playwright",
+    "analyse": "node scripts/analyse.mts",
+    "test": "playwright test && npm run analyse"
+  }
+}
