@@ -22,14 +22,21 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v7
 
-      - name: Validate YAML files in argocd/ and catalog/
+      - name: Validate YAML files
         run: |
           find .github argocd catalog helm techdocs -name '*.yaml' -o -name '*.yml' | while read -r file; do
             echo "  $file"
             yq '.' "$file" > /dev/null
           done
 
-      - name: Run shellcheck on scripts/
+      - name: Render Helm charts
+        run: |
+          for chart in helm/*/; do
+            echo "Rendering $chart..."
+            helm template test "$chart" > /dev/null
+          done
+
+      - name: Run shellcheck on scripts
         run: |
           echo "Running shellcheck on scripts/..."
           find scripts -name '*.sh' | while read -r file; do
