@@ -92,6 +92,15 @@ jobs:
         run: yarn build:all
         working-directory: plugins/${{ matrix.workspace }}
 
+      - name: Verify no changes in .github/
+        run: |
+          if [ -n "$(git status --porcelain .github/)" ]; then
+            echo "::error::Unexpected changes detected in .github/ after CI steps:"
+            git diff .github/
+            exit 1
+          fi
+          echo "No changes in .github/ — OK"
+
   plugins-check:
     if: always()
     needs: plugins
