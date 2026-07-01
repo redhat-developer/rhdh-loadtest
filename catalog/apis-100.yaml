@@ -5,7 +5,7 @@ metadata:
   title: API 1
   description: The place to be, for great artists
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
 spec:
   type: grpc
   lifecycle: experimental
@@ -29,7 +29,7 @@ metadata:
   title: API 2
   description: The place to be, for great artists
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
 spec:
   type: grpc
   lifecycle: experimental
@@ -53,7 +53,7 @@ metadata:
   title: API 3
   description: The place to be, for great artists
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
 spec:
   type: grpc
   lifecycle: experimental
@@ -77,7 +77,7 @@ metadata:
   title: API 4
   description: The place to be, for great artists
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
 spec:
   type: grpc
   lifecycle: experimental
@@ -101,7 +101,7 @@ metadata:
   title: API 5
   description: The place to be, for great artists
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
 spec:
   type: grpc
   lifecycle: experimental
@@ -125,7 +125,7 @@ metadata:
   title: API 6
   description: The place to be, for great artists
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
 spec:
   type: grpc
   lifecycle: experimental
@@ -149,7 +149,7 @@ metadata:
   title: API 7
   description: The place to be, for great artists
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
 spec:
   type: grpc
   lifecycle: experimental
@@ -173,7 +173,7 @@ metadata:
   title: API 8
   description: The place to be, for great artists
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
 spec:
   type: grpc
   lifecycle: experimental
@@ -197,7 +197,7 @@ metadata:
   title: API 9
   description: The place to be, for great artists
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
 spec:
   type: grpc
   lifecycle: experimental
@@ -221,7 +221,7 @@ metadata:
   title: API 10
   description: The place to be, for great artists
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
 spec:
   type: grpc
   lifecycle: experimental
@@ -245,7 +245,7 @@ metadata:
   title: API 11
   description: The place to be, for great artists
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
 spec:
   type: grpc
   lifecycle: experimental
@@ -269,7 +269,7 @@ metadata:
   title: API 12
   description: The place to be, for great artists
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
 spec:
   type: grpc
   lifecycle: experimental
@@ -293,7 +293,7 @@ metadata:
   title: API 13
   description: The place to be, for great artists
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
 spec:
   type: grpc
   lifecycle: experimental
@@ -317,7 +317,7 @@ metadata:
   title: API 14
   description: The place to be, for great artists
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
 spec:
   type: grpc
   lifecycle: experimental
@@ -341,7 +341,7 @@ metadata:
   title: API 15
   description: The place to be, for great artists
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
 spec:
   type: grpc
   lifecycle: experimental
@@ -365,7 +365,7 @@ metadata:
   title: API 16
   description: The place to be, for great artists
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
 spec:
   type: grpc
   lifecycle: experimental
@@ -389,7 +389,7 @@ metadata:
   title: API 17
   description: The place to be, for great artists
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
 spec:
   type: grpc
   lifecycle: experimental
@@ -413,7 +413,7 @@ metadata:
   title: API 18
   description: The place to be, for great artists
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
 spec:
   type: grpc
   lifecycle: experimental
@@ -437,7 +437,7 @@ metadata:
   title: API 19
   description: The place to be, for great artists
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
 spec:
   type: grpc
   lifecycle: experimental
@@ -461,7 +461,7 @@ metadata:
   title: API 20
   description: The place to be, for great artists
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
 spec:
   type: grpc
   lifecycle: experimental
@@ -485,7 +485,7 @@ metadata:
   title: API 21
   description: The place to be, for great artists
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
 spec:
   type: grpc
   lifecycle: experimental
@@ -509,7 +509,7 @@ metadata:
   title: API 22
   description: The place to be, for great artists
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
 spec:
   type: grpc
   lifecycle: experimental
@@ -533,7 +533,7 @@ metadata:
   title: API 23
   description: The place to be, for great artists
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
 spec:
   type: grpc
   lifecycle: experimental
@@ -557,7 +557,7 @@ metadata:
   title: API 24
   description: The place to be, for great artists
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
 spec:
   type: grpc
   lifecycle: experimental
@@ -581,7 +581,7 @@ metadata:
   title: API 25
   description: The place to be, for great artists
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
 spec:
   type: grpc
   lifecycle: experimental
@@ -605,7 +605,7 @@ metadata:
   title: API 26
   description: The place to be, for great artists
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
 spec:
   type: grpc
   lifecycle: experimental
@@ -629,7 +629,7 @@ metadata:
   title: API 27
   description: The place to be, for great artists
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
 spec:
   type: grpc
   lifecycle: experimental
@@ -653,7 +653,7 @@ metadata:
   title: API 28
   description: The place to be, for great artists
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
 spec:
   type: grpc
   lifecycle: experimental
@@ -677,7 +677,7 @@ metadata:
   title: API 29
   description: The place to be, for great artists
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
 spec:
   type: grpc
   lifecycle: experimental
@@ -701,7 +701,7 @@ metadata:
   title: API 30
   description: The place to be, for great artists
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
 spec:
   type: grpc
   lifecycle: experimental
@@ -725,7 +725,7 @@ metadata:
   title: API 31
   description: The place to be, for great artists
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
 spec:
   type: grpc
   lifecycle: experimental
@@ -749,7 +749,7 @@ metadata:
   title: API 32
   description: The place to be, for great artists
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
 spec:
   type: grpc
   lifecycle: experimental
@@ -773,7 +773,7 @@ metadata:
   title: API 33
   description: The place to be, for great artists
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
 spec:
   type: grpc
   lifecycle: experimental
@@ -797,7 +797,7 @@ metadata:
   title: API 34
   description: The place to be, for great artists
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
 spec:
   type: grpc
   lifecycle: experimental
@@ -821,7 +821,7 @@ metadata:
   title: API 35
   description: The place to be, for great artists
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
 spec:
   type: grpc
   lifecycle: experimental
@@ -845,7 +845,7 @@ metadata:
   title: API 36
   description: The place to be, for great artists
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
 spec:
   type: grpc
   lifecycle: experimental
@@ -869,7 +869,7 @@ metadata:
   title: API 37
   description: The place to be, for great artists
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
 spec:
   type: grpc
   lifecycle: experimental
@@ -893,7 +893,7 @@ metadata:
   title: API 38
   description: The place to be, for great artists
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
 spec:
   type: grpc
   lifecycle: experimental
@@ -917,7 +917,7 @@ metadata:
   title: API 39
   description: The place to be, for great artists
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
 spec:
   type: grpc
   lifecycle: experimental
@@ -941,7 +941,7 @@ metadata:
   title: API 40
   description: The place to be, for great artists
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
 spec:
   type: grpc
   lifecycle: experimental
@@ -965,7 +965,7 @@ metadata:
   title: API 41
   description: The place to be, for great artists
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
 spec:
   type: grpc
   lifecycle: experimental
@@ -989,7 +989,7 @@ metadata:
   title: API 42
   description: The place to be, for great artists
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
 spec:
   type: grpc
   lifecycle: experimental
@@ -1013,7 +1013,7 @@ metadata:
   title: API 43
   description: The place to be, for great artists
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
 spec:
   type: grpc
   lifecycle: experimental
@@ -1037,7 +1037,7 @@ metadata:
   title: API 44
   description: The place to be, for great artists
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
 spec:
   type: grpc
   lifecycle: experimental
@@ -1061,7 +1061,7 @@ metadata:
   title: API 45
   description: The place to be, for great artists
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
 spec:
   type: grpc
   lifecycle: experimental
@@ -1085,7 +1085,7 @@ metadata:
   title: API 46
   description: The place to be, for great artists
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
 spec:
   type: grpc
   lifecycle: experimental
@@ -1109,7 +1109,7 @@ metadata:
   title: API 47
   description: The place to be, for great artists
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
 spec:
   type: grpc
   lifecycle: experimental
@@ -1133,7 +1133,7 @@ metadata:
   title: API 48
   description: The place to be, for great artists
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
 spec:
   type: grpc
   lifecycle: experimental
@@ -1157,7 +1157,7 @@ metadata:
   title: API 49
   description: The place to be, for great artists
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
 spec:
   type: grpc
   lifecycle: experimental
@@ -1181,7 +1181,7 @@ metadata:
   title: API 50
   description: The place to be, for great artists
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
 spec:
   type: grpc
   lifecycle: experimental
@@ -1205,7 +1205,7 @@ metadata:
   title: API 51
   description: The place to be, for great artists
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
 spec:
   type: grpc
   lifecycle: experimental
@@ -1229,7 +1229,7 @@ metadata:
   title: API 52
   description: The place to be, for great artists
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
 spec:
   type: grpc
   lifecycle: experimental
@@ -1253,7 +1253,7 @@ metadata:
   title: API 53
   description: The place to be, for great artists
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
 spec:
   type: grpc
   lifecycle: experimental
@@ -1277,7 +1277,7 @@ metadata:
   title: API 54
   description: The place to be, for great artists
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
 spec:
   type: grpc
   lifecycle: experimental
@@ -1301,7 +1301,7 @@ metadata:
   title: API 55
   description: The place to be, for great artists
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
 spec:
   type: grpc
   lifecycle: experimental
@@ -1325,7 +1325,7 @@ metadata:
   title: API 56
   description: The place to be, for great artists
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
 spec:
   type: grpc
   lifecycle: experimental
@@ -1349,7 +1349,7 @@ metadata:
   title: API 57
   description: The place to be, for great artists
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
 spec:
   type: grpc
   lifecycle: experimental
@@ -1373,7 +1373,7 @@ metadata:
   title: API 58
   description: The place to be, for great artists
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
 spec:
   type: grpc
   lifecycle: experimental
@@ -1397,7 +1397,7 @@ metadata:
   title: API 59
   description: The place to be, for great artists
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
 spec:
   type: grpc
   lifecycle: experimental
@@ -1421,7 +1421,7 @@ metadata:
   title: API 60
   description: The place to be, for great artists
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
 spec:
   type: grpc
   lifecycle: experimental
@@ -1445,7 +1445,7 @@ metadata:
   title: API 61
   description: The place to be, for great artists
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
 spec:
   type: grpc
   lifecycle: experimental
@@ -1469,7 +1469,7 @@ metadata:
   title: API 62
   description: The place to be, for great artists
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
 spec:
   type: grpc
   lifecycle: experimental
@@ -1493,7 +1493,7 @@ metadata:
   title: API 63
   description: The place to be, for great artists
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
 spec:
   type: grpc
   lifecycle: experimental
@@ -1517,7 +1517,7 @@ metadata:
   title: API 64
   description: The place to be, for great artists
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
 spec:
   type: grpc
   lifecycle: experimental
@@ -1541,7 +1541,7 @@ metadata:
   title: API 65
   description: The place to be, for great artists
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
 spec:
   type: grpc
   lifecycle: experimental
@@ -1565,7 +1565,7 @@ metadata:
   title: API 66
   description: The place to be, for great artists
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
 spec:
   type: grpc
   lifecycle: experimental
@@ -1589,7 +1589,7 @@ metadata:
   title: API 67
   description: The place to be, for great artists
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
 spec:
   type: grpc
   lifecycle: experimental
@@ -1613,7 +1613,7 @@ metadata:
   title: API 68
   description: The place to be, for great artists
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
 spec:
   type: grpc
   lifecycle: experimental
@@ -1637,7 +1637,7 @@ metadata:
   title: API 69
   description: The place to be, for great artists
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
 spec:
   type: grpc
   lifecycle: experimental
@@ -1661,7 +1661,7 @@ metadata:
   title: API 70
   description: The place to be, for great artists
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
 spec:
   type: grpc
   lifecycle: experimental
@@ -1685,7 +1685,7 @@ metadata:
   title: API 71
   description: The place to be, for great artists
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
 spec:
   type: grpc
   lifecycle: experimental
@@ -1709,7 +1709,7 @@ metadata:
   title: API 72
   description: The place to be, for great artists
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
 spec:
   type: grpc
   lifecycle: experimental
@@ -1733,7 +1733,7 @@ metadata:
   title: API 73
   description: The place to be, for great artists
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
 spec:
   type: grpc
   lifecycle: experimental
@@ -1757,7 +1757,7 @@ metadata:
   title: API 74
   description: The place to be, for great artists
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
 spec:
   type: grpc
   lifecycle: experimental
@@ -1781,7 +1781,7 @@ metadata:
   title: API 75
   description: The place to be, for great artists
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
 spec:
   type: grpc
   lifecycle: experimental
@@ -1805,7 +1805,7 @@ metadata:
   title: API 76
   description: The place to be, for great artists
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
 spec:
   type: grpc
   lifecycle: experimental
@@ -1829,7 +1829,7 @@ metadata:
   title: API 77
   description: The place to be, for great artists
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
 spec:
   type: grpc
   lifecycle: experimental
@@ -1853,7 +1853,7 @@ metadata:
   title: API 78
   description: The place to be, for great artists
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
 spec:
   type: grpc
   lifecycle: experimental
@@ -1877,7 +1877,7 @@ metadata:
   title: API 79
   description: The place to be, for great artists
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
 spec:
   type: grpc
   lifecycle: experimental
@@ -1901,7 +1901,7 @@ metadata:
   title: API 80
   description: The place to be, for great artists
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
 spec:
   type: grpc
   lifecycle: experimental
@@ -1925,7 +1925,7 @@ metadata:
   title: API 81
   description: The place to be, for great artists
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
 spec:
   type: grpc
   lifecycle: experimental
@@ -1949,7 +1949,7 @@ metadata:
   title: API 82
   description: The place to be, for great artists
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
 spec:
   type: grpc
   lifecycle: experimental
@@ -1973,7 +1973,7 @@ metadata:
   title: API 83
   description: The place to be, for great artists
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
 spec:
   type: grpc
   lifecycle: experimental
@@ -1997,7 +1997,7 @@ metadata:
   title: API 84
   description: The place to be, for great artists
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
 spec:
   type: grpc
   lifecycle: experimental
@@ -2021,7 +2021,7 @@ metadata:
   title: API 85
   description: The place to be, for great artists
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
 spec:
   type: grpc
   lifecycle: experimental
@@ -2045,7 +2045,7 @@ metadata:
   title: API 86
   description: The place to be, for great artists
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
 spec:
   type: grpc
   lifecycle: experimental
@@ -2069,7 +2069,7 @@ metadata:
   title: API 87
   description: The place to be, for great artists
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
 spec:
   type: grpc
   lifecycle: experimental
@@ -2093,7 +2093,7 @@ metadata:
   title: API 88
   description: The place to be, for great artists
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
 spec:
   type: grpc
   lifecycle: experimental
@@ -2117,7 +2117,7 @@ metadata:
   title: API 89
   description: The place to be, for great artists
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
 spec:
   type: grpc
   lifecycle: experimental
@@ -2141,7 +2141,7 @@ metadata:
   title: API 90
   description: The place to be, for great artists
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
 spec:
   type: grpc
   lifecycle: experimental
@@ -2165,7 +2165,7 @@ metadata:
   title: API 91
   description: The place to be, for great artists
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
 spec:
   type: grpc
   lifecycle: experimental
@@ -2189,7 +2189,7 @@ metadata:
   title: API 92
   description: The place to be, for great artists
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
 spec:
   type: grpc
   lifecycle: experimental
@@ -2213,7 +2213,7 @@ metadata:
   title: API 93
   description: The place to be, for great artists
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
 spec:
   type: grpc
   lifecycle: experimental
@@ -2237,7 +2237,7 @@ metadata:
   title: API 94
   description: The place to be, for great artists
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
 spec:
   type: grpc
   lifecycle: experimental
@@ -2261,7 +2261,7 @@ metadata:
   title: API 95
   description: The place to be, for great artists
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
 spec:
   type: grpc
   lifecycle: experimental
@@ -2285,7 +2285,7 @@ metadata:
   title: API 96
   description: The place to be, for great artists
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
 spec:
   type: grpc
   lifecycle: experimental
@@ -2309,7 +2309,7 @@ metadata:
   title: API 97
   description: The place to be, for great artists
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
 spec:
   type: grpc
   lifecycle: experimental
@@ -2333,7 +2333,7 @@ metadata:
   title: API 98
   description: The place to be, for great artists
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
 spec:
   type: grpc
   lifecycle: experimental
@@ -2357,7 +2357,7 @@ metadata:
   title: API 99
   description: The place to be, for great artists
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
 spec:
   type: grpc
   lifecycle: experimental
@@ -2381,7 +2381,7 @@ metadata:
   title: API 100
   description: The place to be, for great artists
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
 spec:
   type: grpc
   lifecycle: experimental

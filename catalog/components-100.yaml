@@ -7,7 +7,7 @@ metadata:
   labels:
     example.com/custom: custom_label_value
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
     example.com/service-discovery: artistweb
   tags:
     - java
@@ -32,7 +32,7 @@ metadata:
   labels:
     example.com/custom: custom_label_value
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
     example.com/service-discovery: artistweb
   tags:
     - java
@@ -57,7 +57,7 @@ metadata:
   labels:
     example.com/custom: custom_label_value
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
     example.com/service-discovery: artistweb
   tags:
     - java
@@ -82,7 +82,7 @@ metadata:
   labels:
     example.com/custom: custom_label_value
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
     example.com/service-discovery: artistweb
   tags:
     - java
@@ -107,7 +107,7 @@ metadata:
   labels:
     example.com/custom: custom_label_value
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
     example.com/service-discovery: artistweb
   tags:
     - java
@@ -132,7 +132,7 @@ metadata:
   labels:
     example.com/custom: custom_label_value
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
     example.com/service-discovery: artistweb
   tags:
     - java
@@ -157,7 +157,7 @@ metadata:
   labels:
     example.com/custom: custom_label_value
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
     example.com/service-discovery: artistweb
   tags:
     - java
@@ -182,7 +182,7 @@ metadata:
   labels:
     example.com/custom: custom_label_value
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
     example.com/service-discovery: artistweb
   tags:
     - java
@@ -207,7 +207,7 @@ metadata:
   labels:
     example.com/custom: custom_label_value
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
     example.com/service-discovery: artistweb
   tags:
     - java
@@ -232,7 +232,7 @@ metadata:
   labels:
     example.com/custom: custom_label_value
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
     example.com/service-discovery: artistweb
   tags:
     - java
@@ -257,7 +257,7 @@ metadata:
   labels:
     example.com/custom: custom_label_value
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
     example.com/service-discovery: artistweb
   tags:
     - java
@@ -282,7 +282,7 @@ metadata:
   labels:
     example.com/custom: custom_label_value
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
     example.com/service-discovery: artistweb
   tags:
     - java
@@ -307,7 +307,7 @@ metadata:
   labels:
     example.com/custom: custom_label_value
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
     example.com/service-discovery: artistweb
   tags:
     - java
@@ -332,7 +332,7 @@ metadata:
   labels:
     example.com/custom: custom_label_value
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
     example.com/service-discovery: artistweb
   tags:
     - java
@@ -357,7 +357,7 @@ metadata:
   labels:
     example.com/custom: custom_label_value
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
     example.com/service-discovery: artistweb
   tags:
     - java
@@ -382,7 +382,7 @@ metadata:
   labels:
     example.com/custom: custom_label_value
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
     example.com/service-discovery: artistweb
   tags:
     - java
@@ -407,7 +407,7 @@ metadata:
   labels:
     example.com/custom: custom_label_value
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
     example.com/service-discovery: artistweb
   tags:
     - java
@@ -432,7 +432,7 @@ metadata:
   labels:
     example.com/custom: custom_label_value
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
     example.com/service-discovery: artistweb
   tags:
     - java
@@ -457,7 +457,7 @@ metadata:
   labels:
     example.com/custom: custom_label_value
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
     example.com/service-discovery: artistweb
   tags:
     - java
@@ -482,7 +482,7 @@ metadata:
   labels:
     example.com/custom: custom_label_value
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
     example.com/service-discovery: artistweb
   tags:
     - java
@@ -507,7 +507,7 @@ metadata:
   labels:
     example.com/custom: custom_label_value
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
     example.com/service-discovery: artistweb
   tags:
     - java
@@ -532,7 +532,7 @@ metadata:
   labels:
     example.com/custom: custom_label_value
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
     example.com/service-discovery: artistweb
   tags:
     - java
@@ -557,7 +557,7 @@ metadata:
   labels:
     example.com/custom: custom_label_value
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
     example.com/service-discovery: artistweb
   tags:
     - java
@@ -582,7 +582,7 @@ metadata:
   labels:
     example.com/custom: custom_label_value
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
     example.com/service-discovery: artistweb
   tags:
     - java
@@ -607,7 +607,7 @@ metadata:
   labels:
     example.com/custom: custom_label_value
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
     example.com/service-discovery: artistweb
   tags:
     - java
@@ -632,7 +632,7 @@ metadata:
   labels:
     example.com/custom: custom_label_value
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
     example.com/service-discovery: artistweb
   tags:
     - java
@@ -657,7 +657,7 @@ metadata:
   labels:
     example.com/custom: custom_label_value
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
     example.com/service-discovery: artistweb
   tags:
     - java
@@ -682,7 +682,7 @@ metadata:
   labels:
     example.com/custom: custom_label_value
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
     example.com/service-discovery: artistweb
   tags:
     - java
@@ -707,7 +707,7 @@ metadata:
   labels:
     example.com/custom: custom_label_value
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
     example.com/service-discovery: artistweb
   tags:
     - java
@@ -732,7 +732,7 @@ metadata:
   labels:
     example.com/custom: custom_label_value
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
     example.com/service-discovery: artistweb
   tags:
     - java
@@ -757,7 +757,7 @@ metadata:
   labels:
     example.com/custom: custom_label_value
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
     example.com/service-discovery: artistweb
   tags:
     - java
@@ -782,7 +782,7 @@ metadata:
   labels:
     example.com/custom: custom_label_value
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
     example.com/service-discovery: artistweb
   tags:
     - java
@@ -807,7 +807,7 @@ metadata:
   labels:
     example.com/custom: custom_label_value
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
     example.com/service-discovery: artistweb
   tags:
     - java
@@ -832,7 +832,7 @@ metadata:
   labels:
     example.com/custom: custom_label_value
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
     example.com/service-discovery: artistweb
   tags:
     - java
@@ -857,7 +857,7 @@ metadata:
   labels:
     example.com/custom: custom_label_value
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
     example.com/service-discovery: artistweb
   tags:
     - java
@@ -882,7 +882,7 @@ metadata:
   labels:
     example.com/custom: custom_label_value
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
     example.com/service-discovery: artistweb
   tags:
     - java
@@ -907,7 +907,7 @@ metadata:
   labels:
     example.com/custom: custom_label_value
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
     example.com/service-discovery: artistweb
   tags:
     - java
@@ -932,7 +932,7 @@ metadata:
   labels:
     example.com/custom: custom_label_value
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
     example.com/service-discovery: artistweb
   tags:
     - java
@@ -957,7 +957,7 @@ metadata:
   labels:
     example.com/custom: custom_label_value
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
     example.com/service-discovery: artistweb
   tags:
     - java
@@ -982,7 +982,7 @@ metadata:
   labels:
     example.com/custom: custom_label_value
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
     example.com/service-discovery: artistweb
   tags:
     - java
@@ -1007,7 +1007,7 @@ metadata:
   labels:
     example.com/custom: custom_label_value
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
     example.com/service-discovery: artistweb
   tags:
     - java
@@ -1032,7 +1032,7 @@ metadata:
   labels:
     example.com/custom: custom_label_value
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
     example.com/service-discovery: artistweb
   tags:
     - java
@@ -1057,7 +1057,7 @@ metadata:
   labels:
     example.com/custom: custom_label_value
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
     example.com/service-discovery: artistweb
   tags:
     - java
@@ -1082,7 +1082,7 @@ metadata:
   labels:
     example.com/custom: custom_label_value
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
     example.com/service-discovery: artistweb
   tags:
     - java
@@ -1107,7 +1107,7 @@ metadata:
   labels:
     example.com/custom: custom_label_value
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
     example.com/service-discovery: artistweb
   tags:
     - java
@@ -1132,7 +1132,7 @@ metadata:
   labels:
     example.com/custom: custom_label_value
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
     example.com/service-discovery: artistweb
   tags:
     - java
@@ -1157,7 +1157,7 @@ metadata:
   labels:
     example.com/custom: custom_label_value
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
     example.com/service-discovery: artistweb
   tags:
     - java
@@ -1182,7 +1182,7 @@ metadata:
   labels:
     example.com/custom: custom_label_value
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
     example.com/service-discovery: artistweb
   tags:
     - java
@@ -1207,7 +1207,7 @@ metadata:
   labels:
     example.com/custom: custom_label_value
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
     example.com/service-discovery: artistweb
   tags:
     - java
@@ -1232,7 +1232,7 @@ metadata:
   labels:
     example.com/custom: custom_label_value
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
     example.com/service-discovery: artistweb
   tags:
     - java
@@ -1257,7 +1257,7 @@ metadata:
   labels:
     example.com/custom: custom_label_value
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
     example.com/service-discovery: artistweb
   tags:
     - java
@@ -1282,7 +1282,7 @@ metadata:
   labels:
     example.com/custom: custom_label_value
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
     example.com/service-discovery: artistweb
   tags:
     - java
@@ -1307,7 +1307,7 @@ metadata:
   labels:
     example.com/custom: custom_label_value
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
     example.com/service-discovery: artistweb
   tags:
     - java
@@ -1332,7 +1332,7 @@ metadata:
   labels:
     example.com/custom: custom_label_value
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
     example.com/service-discovery: artistweb
   tags:
     - java
@@ -1357,7 +1357,7 @@ metadata:
   labels:
     example.com/custom: custom_label_value
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
     example.com/service-discovery: artistweb
   tags:
     - java
@@ -1382,7 +1382,7 @@ metadata:
   labels:
     example.com/custom: custom_label_value
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
     example.com/service-discovery: artistweb
   tags:
     - java
@@ -1407,7 +1407,7 @@ metadata:
   labels:
     example.com/custom: custom_label_value
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
     example.com/service-discovery: artistweb
   tags:
     - java
@@ -1432,7 +1432,7 @@ metadata:
   labels:
     example.com/custom: custom_label_value
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
     example.com/service-discovery: artistweb
   tags:
     - java
@@ -1457,7 +1457,7 @@ metadata:
   labels:
     example.com/custom: custom_label_value
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
     example.com/service-discovery: artistweb
   tags:
     - java
@@ -1482,7 +1482,7 @@ metadata:
   labels:
     example.com/custom: custom_label_value
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
     example.com/service-discovery: artistweb
   tags:
     - java
@@ -1507,7 +1507,7 @@ metadata:
   labels:
     example.com/custom: custom_label_value
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
     example.com/service-discovery: artistweb
   tags:
     - java
@@ -1532,7 +1532,7 @@ metadata:
   labels:
     example.com/custom: custom_label_value
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
     example.com/service-discovery: artistweb
   tags:
     - java
@@ -1557,7 +1557,7 @@ metadata:
   labels:
     example.com/custom: custom_label_value
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
     example.com/service-discovery: artistweb
   tags:
     - java
@@ -1582,7 +1582,7 @@ metadata:
   labels:
     example.com/custom: custom_label_value
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
     example.com/service-discovery: artistweb
   tags:
     - java
@@ -1607,7 +1607,7 @@ metadata:
   labels:
     example.com/custom: custom_label_value
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
     example.com/service-discovery: artistweb
   tags:
     - java
@@ -1632,7 +1632,7 @@ metadata:
   labels:
     example.com/custom: custom_label_value
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
     example.com/service-discovery: artistweb
   tags:
     - java
@@ -1657,7 +1657,7 @@ metadata:
   labels:
     example.com/custom: custom_label_value
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
     example.com/service-discovery: artistweb
   tags:
     - java
@@ -1682,7 +1682,7 @@ metadata:
   labels:
     example.com/custom: custom_label_value
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
     example.com/service-discovery: artistweb
   tags:
     - java
@@ -1707,7 +1707,7 @@ metadata:
   labels:
     example.com/custom: custom_label_value
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
     example.com/service-discovery: artistweb
   tags:
     - java
@@ -1732,7 +1732,7 @@ metadata:
   labels:
     example.com/custom: custom_label_value
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
     example.com/service-discovery: artistweb
   tags:
     - java
@@ -1757,7 +1757,7 @@ metadata:
   labels:
     example.com/custom: custom_label_value
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
     example.com/service-discovery: artistweb
   tags:
     - java
@@ -1782,7 +1782,7 @@ metadata:
   labels:
     example.com/custom: custom_label_value
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
     example.com/service-discovery: artistweb
   tags:
     - java
@@ -1807,7 +1807,7 @@ metadata:
   labels:
     example.com/custom: custom_label_value
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
     example.com/service-discovery: artistweb
   tags:
     - java
@@ -1832,7 +1832,7 @@ metadata:
   labels:
     example.com/custom: custom_label_value
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
     example.com/service-discovery: artistweb
   tags:
     - java
@@ -1857,7 +1857,7 @@ metadata:
   labels:
     example.com/custom: custom_label_value
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
     example.com/service-discovery: artistweb
   tags:
     - java
@@ -1882,7 +1882,7 @@ metadata:
   labels:
     example.com/custom: custom_label_value
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
     example.com/service-discovery: artistweb
   tags:
     - java
@@ -1907,7 +1907,7 @@ metadata:
   labels:
     example.com/custom: custom_label_value
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
     example.com/service-discovery: artistweb
   tags:
     - java
@@ -1932,7 +1932,7 @@ metadata:
   labels:
     example.com/custom: custom_label_value
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
     example.com/service-discovery: artistweb
   tags:
     - java
@@ -1957,7 +1957,7 @@ metadata:
   labels:
     example.com/custom: custom_label_value
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
     example.com/service-discovery: artistweb
   tags:
     - java
@@ -1982,7 +1982,7 @@ metadata:
   labels:
     example.com/custom: custom_label_value
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
     example.com/service-discovery: artistweb
   tags:
     - java
@@ -2007,7 +2007,7 @@ metadata:
   labels:
     example.com/custom: custom_label_value
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
     example.com/service-discovery: artistweb
   tags:
     - java
@@ -2032,7 +2032,7 @@ metadata:
   labels:
     example.com/custom: custom_label_value
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
     example.com/service-discovery: artistweb
   tags:
     - java
@@ -2057,7 +2057,7 @@ metadata:
   labels:
     example.com/custom: custom_label_value
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
     example.com/service-discovery: artistweb
   tags:
     - java
@@ -2082,7 +2082,7 @@ metadata:
   labels:
     example.com/custom: custom_label_value
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
     example.com/service-discovery: artistweb
   tags:
     - java
@@ -2107,7 +2107,7 @@ metadata:
   labels:
     example.com/custom: custom_label_value
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
     example.com/service-discovery: artistweb
   tags:
     - java
@@ -2132,7 +2132,7 @@ metadata:
   labels:
     example.com/custom: custom_label_value
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
     example.com/service-discovery: artistweb
   tags:
     - java
@@ -2157,7 +2157,7 @@ metadata:
   labels:
     example.com/custom: custom_label_value
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
     example.com/service-discovery: artistweb
   tags:
     - java
@@ -2182,7 +2182,7 @@ metadata:
   labels:
     example.com/custom: custom_label_value
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
     example.com/service-discovery: artistweb
   tags:
     - java
@@ -2207,7 +2207,7 @@ metadata:
   labels:
     example.com/custom: custom_label_value
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
     example.com/service-discovery: artistweb
   tags:
     - java
@@ -2232,7 +2232,7 @@ metadata:
   labels:
     example.com/custom: custom_label_value
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
     example.com/service-discovery: artistweb
   tags:
     - java
@@ -2257,7 +2257,7 @@ metadata:
   labels:
     example.com/custom: custom_label_value
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
     example.com/service-discovery: artistweb
   tags:
     - java
@@ -2282,7 +2282,7 @@ metadata:
   labels:
     example.com/custom: custom_label_value
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
     example.com/service-discovery: artistweb
   tags:
     - java
@@ -2307,7 +2307,7 @@ metadata:
   labels:
     example.com/custom: custom_label_value
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
     example.com/service-discovery: artistweb
   tags:
     - java
@@ -2332,7 +2332,7 @@ metadata:
   labels:
     example.com/custom: custom_label_value
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
     example.com/service-discovery: artistweb
   tags:
     - java
@@ -2357,7 +2357,7 @@ metadata:
   labels:
     example.com/custom: custom_label_value
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
     example.com/service-discovery: artistweb
   tags:
     - java
@@ -2382,7 +2382,7 @@ metadata:
   labels:
     example.com/custom: custom_label_value
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
     example.com/service-discovery: artistweb
   tags:
     - java
@@ -2407,7 +2407,7 @@ metadata:
   labels:
     example.com/custom: custom_label_value
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
     example.com/service-discovery: artistweb
   tags:
     - java
@@ -2432,7 +2432,7 @@ metadata:
   labels:
     example.com/custom: custom_label_value
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
     example.com/service-discovery: artistweb
   tags:
     - java
@@ -2457,7 +2457,7 @@ metadata:
   labels:
     example.com/custom: custom_label_value
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
     example.com/service-discovery: artistweb
   tags:
     - java
@@ -2482,7 +2482,7 @@ metadata:
   labels:
     example.com/custom: custom_label_value
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
     example.com/service-discovery: artistweb
   tags:
     - java

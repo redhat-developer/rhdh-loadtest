@@ -13,7 +13,7 @@ metadata:
 spec:
   project: rhdh-loadtests
   source:
-    repoURL: 'https://github.com/christoph-jerolimov/rhdh-loadtests.git'
+    repoURL: 'https://github.com/redhat-developer/rhdh-loadtest.git'
     targetRevision: HEAD
     path: helm/rhdh-110-nfs
   destination:

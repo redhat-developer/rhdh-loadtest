@@ -1,4 +1,4 @@
-# [RHDH](https://developers.redhat.com/rhdh) loadtests 🧪
+# [RHDH](https://developers.redhat.com/rhdh) lightweight loadtest tools
 
 This repository contains ArgoCD resources, Helm charts and other resources
 to setup different RHDH versions on Kubernetes with up to 200 dynamic (frontend) plugins
@@ -71,23 +71,23 @@ upstream:
       catalog:
         locations:
           - type: url
-            target: https://github.com/christoph-jerolimov/rhdh-loadtests/blob/main/catalog/components-1000.yaml
+            target: https://github.com/redhat-developer/rhdh-loadtest/blob/main/catalog/components-1000.yaml
             rules:
               - allow: [Component]
           - type: url
-            target: https://github.com/christoph-jerolimov/rhdh-loadtests/blob/main/catalog/groups-100.yaml
+            target: https://github.com/redhat-developer/rhdh-loadtest/blob/main/catalog/groups-100.yaml
             rules:
               - allow: [Group]
           - type: url
-            target: https://github.com/christoph-jerolimov/rhdh-loadtests/blob/main/catalog/systems-100.yaml
+            target: https://github.com/redhat-developer/rhdh-loadtest/blob/main/catalog/systems-100.yaml
             rules:
               - allow: [System]
           - type: url
-            target: https://github.com/christoph-jerolimov/rhdh-loadtests/blob/main/catalog/apis-100.yaml
+            target: https://github.com/redhat-developer/rhdh-loadtest/blob/main/catalog/apis-100.yaml
             rules:
               - allow: [API]
           - type: url
-            target: https://github.com/christoph-jerolimov/rhdh-loadtests/blob/main/catalog/templates-100.yaml
+            target: https://github.com/redhat-developer/rhdh-loadtest/blob/main/catalog/templates-100.yaml
             rules:
               - allow: [Template]
 ```

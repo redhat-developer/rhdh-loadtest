@@ -14,7 +14,7 @@ metadata:
   title: API $i
   description: The place to be, for great artists
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
 spec:
   type: grpc
   lifecycle: experimental
@@ -49,7 +49,7 @@ metadata:
   labels:
     example.com/custom: custom_label_value
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
     example.com/service-discovery: artistweb
   tags:
     - java
@@ -81,7 +81,7 @@ metadata:
   title: Group $i
   description: The place to be, for great artists
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
 spec:
   type: team
   children: []
@@ -103,7 +103,7 @@ metadata:
   title: System $i
   description: The place to be, for great artists
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
 spec:
   owner: group-$i
 ---
@@ -123,7 +123,7 @@ metadata:
   title: Template $i
   description: An example template
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
 spec:
   owner: group-$i
   type: service

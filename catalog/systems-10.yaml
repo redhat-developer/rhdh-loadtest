@@ -5,7 +5,7 @@ metadata:
   title: System 1
   description: The place to be, for great artists
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
 spec:
   owner: group-1
 ---
@@ -16,7 +16,7 @@ metadata:
   title: System 2
   description: The place to be, for great artists
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
 spec:
   owner: group-2
 ---
@@ -27,7 +27,7 @@ metadata:
   title: System 3
   description: The place to be, for great artists
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
 spec:
   owner: group-3
 ---
@@ -38,7 +38,7 @@ metadata:
   title: System 4
   description: The place to be, for great artists
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
 spec:
   owner: group-4
 ---
@@ -49,7 +49,7 @@ metadata:
   title: System 5
   description: The place to be, for great artists
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
 spec:
   owner: group-5
 ---
@@ -60,7 +60,7 @@ metadata:
   title: System 6
   description: The place to be, for great artists
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
 spec:
   owner: group-6
 ---
@@ -71,7 +71,7 @@ metadata:
   title: System 7
   description: The place to be, for great artists
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
 spec:
   owner: group-7
 ---
@@ -82,7 +82,7 @@ metadata:
   title: System 8
   description: The place to be, for great artists
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
 spec:
   owner: group-8
 ---
@@ -93,7 +93,7 @@ metadata:
   title: System 9
   description: The place to be, for great artists
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
 spec:
   owner: group-9
 ---
@@ -104,7 +104,7 @@ metadata:
   title: System 10
   description: The place to be, for great artists
   annotations:
-    backstage.io/techdocs-ref: url:https://github.com/christoph-jerolimov/rhdh-loadtests/tree/main/techdocs
+    backstage.io/techdocs-ref: url:https://github.com/redhat-developer/rhdh-loadtest/tree/main/techdocs
 spec:
   owner: group-10
 ---

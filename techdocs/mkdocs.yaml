@@ -1,6 +1,6 @@
 site_name: TechDocs Demo
 site_description: This is a small demo
-repo_url: https://github.com/christoph-jerolimov/rhdh-loadtests
+repo_url: https://github.com/redhat-developer/rhdh-loadtest
 edit_uri: edit/main/techdocs/docs
 
 #plugins:
