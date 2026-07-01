@@ -14,7 +14,7 @@ fi
 for workspace in plugins/backstage-*; do
   echo "Setting resolutions for workspace $workspace"
 
-  backstage_version=$(cat "$workspace/backstage.json" | jq -r ".version")
+  backstage_version=$(jq -r ".version" < "$workspace/backstage.json")
 
   echo "  Backstage version: $backstage_version"
   echo
