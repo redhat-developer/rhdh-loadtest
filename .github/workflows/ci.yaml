@@ -45,3 +45,48 @@ jobs:
             exit 1
           fi
           echo "No changes in .github/ — OK"
+
+  plugins:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        workspace:
+          - backstage-1.42
+          - backstage-1.45
+          - backstage-1.49
+          - backstage-1.52
+
+    steps:
+      - name: Harden runner
+        uses: step-security/harden-runner@v2
+        with:
+          egress-policy: audit
+
+      - name: Checkout
+        uses: actions/checkout@v7
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: plugins/${{ matrix.workspace }}/package.json
+
+      - name: Install dependencies
+        run: yarn install --immutable
+        working-directory: plugins/${{ matrix.workspace }}
+
+      - name: TypeScript type check
+        run: yarn tsc
+        working-directory: plugins/${{ matrix.workspace }}
+
+      - name: Lint
+        run: yarn lint:all
+        working-directory: plugins/${{ matrix.workspace }}
+
+      - name: Check formatting
+        run: yarn prettier:check
+        working-directory: plugins/${{ matrix.workspace }}
+
+      - name: Build
+        run: yarn build:all
+        working-directory: plugins/${{ matrix.workspace }}
