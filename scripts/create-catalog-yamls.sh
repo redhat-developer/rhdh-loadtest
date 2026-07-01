@@ -5,7 +5,7 @@ set -e
 # Create apis
 function apis() {
     local n=$1
-    for i in $(seq 1 $n); do
+    for i in $(seq 1 "$n"); do
     cat <<EOF
 apiVersion: backstage.io/v1alpha1
 kind: API
@@ -38,7 +38,7 @@ EOF
 # Example from https://backstage.io/docs/features/software-catalog/descriptor-format/
 function components() {
     local n=$1
-    for i in $(seq 1 $n); do
+    for i in $(seq 1 "$n"); do
     cat <<EOF
 apiVersion: backstage.io/v1alpha1
 kind: Component
@@ -72,7 +72,7 @@ EOF
 # Create groups
 function groups() {
     local n=$1
-    for i in $(seq 1 $n); do
+    for i in $(seq 1 "$n"); do
     cat <<EOF
 apiVersion: backstage.io/v1alpha1
 kind: Group
@@ -94,7 +94,7 @@ EOF
 # Create systems
 function systems() {
     local n=$1
-    for i in $(seq 1 $n); do
+    for i in $(seq 1 "$n"); do
     cat <<EOF
 apiVersion: backstage.io/v1alpha1
 kind: System
@@ -114,7 +114,7 @@ EOF
 # Create templates
 function templates() {
     local n=$1
-    for i in $(seq 1 $n); do
+    for i in $(seq 1 "$n"); do
     cat <<EOF
 apiVersion: scaffolder.backstage.io/v1beta3
 kind: Template
@@ -156,7 +156,7 @@ for n in 10 100 1000 10000; do
   apis $n > "catalog/apis-$n.yaml"
   # get only the file size only in human readable format
   echo -n " done."
-  echo -n -e "\tFile size: $(ls -lh "catalog/apis-$n.yaml" | awk '{print $5}')  "
+  echo -n -e "\tFile size: $(wc -l < "catalog/apis-$n.yaml" | numfmt --to=iec)  "
   # print loc
   echo -n -e "\tLines of code: $(wc -l < "catalog/apis-$n.yaml")"
   echo
@@ -168,7 +168,7 @@ for n in 10 100 1000 10000; do
   components $n > "catalog/components-$n.yaml"
   # get only the file size only in human readable format
   echo -n " done."
-  echo -n -e "\tFile size: $(ls -lh "catalog/components-$n.yaml" | awk '{print $5}')  "
+  echo -n -e "\tFile size: $(wc -l < "catalog/components-$n.yaml" | numfmt --to=iec)  "
   # print loc
   echo -n -e "\tLines of code: $(wc -l < "catalog/components-$n.yaml")"
   echo
@@ -180,7 +180,7 @@ for n in 10 100 1000 10000; do
   groups $n > "catalog/groups-$n.yaml"
   # get only the file size only in human readable format
   echo -n " done."
-  echo -n -e "\tFile size: $(ls -lh "catalog/groups-$n.yaml" | awk '{print $5}')  "
+  echo -n -e "\tFile size: $(wc -l < "catalog/groups-$n.yaml" | numfmt --to=iec)  "
   # print loc
   echo -n -e "\tLines of code: $(wc -l < "catalog/groups-$n.yaml")"
   echo
@@ -192,7 +192,7 @@ for n in 10 100 1000 10000; do
   systems $n > "catalog/systems-$n.yaml"
   # get only the file size only in human readable format
   echo -n " done."
-  echo -n -e "\tFile size: $(ls -lh "catalog/systems-$n.yaml" | awk '{print $5}')  "
+  echo -n -e "\tFile size: $(wc -l < "catalog/systems-$n.yaml" | numfmt --to=iec)  "
   # print loc
   echo -n -e "\tLines of code: $(wc -l < "catalog/systems-$n.yaml")"
   echo
@@ -204,7 +204,7 @@ for n in 10 100 1000 10000; do
   templates $n > "catalog/templates-$n.yaml"
   # get only the file size only in human readable format
   echo -n " done."
-  echo -n -e "\tFile size: $(ls -lh "catalog/templates-$n.yaml" | awk '{print $5}')  "
+  echo -n -e "\tFile size: $(wc -l < "catalog/templates-$n.yaml" | numfmt --to=iec)  "
   # print loc
   echo -n -e "\tLines of code: $(wc -l < "catalog/templates-$n.yaml")"
   echo
