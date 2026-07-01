@@ -12,105 +12,105 @@ global:
         disabled: false
       - package: ./dynamic-plugins/dist/red-hat-developer-hub-backstage-plugin-bulk-import-backend-dynamic
         disabled: false
-      - package: oci://quay.io/jerolimov/rhdh-loadtest-plugins:bs_1.48_page-1!internal-backstage-plugin-page-1
+      - package: oci://quay.io/jerolimov/rhdh-loadtest-plugins:bs_1.49_page-1!internal-backstage-plugin-page-1
         disabled: false
-      - package: oci://quay.io/jerolimov/rhdh-loadtest-plugins:bs_1.48_page-2!internal-backstage-plugin-page-2
+      - package: oci://quay.io/jerolimov/rhdh-loadtest-plugins:bs_1.49_page-2!internal-backstage-plugin-page-2
         disabled: false
-      - package: oci://quay.io/jerolimov/rhdh-loadtest-plugins:bs_1.48_page-3!internal-backstage-plugin-page-3
+      - package: oci://quay.io/jerolimov/rhdh-loadtest-plugins:bs_1.49_page-3!internal-backstage-plugin-page-3
         disabled: false
-      - package: oci://quay.io/jerolimov/rhdh-loadtest-plugins:bs_1.48_page-4!internal-backstage-plugin-page-4
+      - package: oci://quay.io/jerolimov/rhdh-loadtest-plugins:bs_1.49_page-4!internal-backstage-plugin-page-4
         disabled: false
-      - package: oci://quay.io/jerolimov/rhdh-loadtest-plugins:bs_1.48_page-5!internal-backstage-plugin-page-5
+      - package: oci://quay.io/jerolimov/rhdh-loadtest-plugins:bs_1.49_page-5!internal-backstage-plugin-page-5
         disabled: false
-      - package: oci://quay.io/jerolimov/rhdh-loadtest-plugins:bs_1.48_page-6!internal-backstage-plugin-page-6
+      - package: oci://quay.io/jerolimov/rhdh-loadtest-plugins:bs_1.49_page-6!internal-backstage-plugin-page-6
         disabled: false
-      - package: oci://quay.io/jerolimov/rhdh-loadtest-plugins:bs_1.48_page-7!internal-backstage-plugin-page-7
+      - package: oci://quay.io/jerolimov/rhdh-loadtest-plugins:bs_1.49_page-7!internal-backstage-plugin-page-7
         disabled: false
-      - package: oci://quay.io/jerolimov/rhdh-loadtest-plugins:bs_1.48_page-8!internal-backstage-plugin-page-8
+      - package: oci://quay.io/jerolimov/rhdh-loadtest-plugins:bs_1.49_page-8!internal-backstage-plugin-page-8
         disabled: false
-      - package: oci://quay.io/jerolimov/rhdh-loadtest-plugins:bs_1.48_page-9!internal-backstage-plugin-page-9
+      - package: oci://quay.io/jerolimov/rhdh-loadtest-plugins:bs_1.49_page-9!internal-backstage-plugin-page-9
         disabled: false
-      - package: oci://quay.io/jerolimov/rhdh-loadtest-plugins:bs_1.48_page-10!internal-backstage-plugin-page-10
+      - package: oci://quay.io/jerolimov/rhdh-loadtest-plugins:bs_1.49_page-10!internal-backstage-plugin-page-10
         disabled: false
-      - package: oci://quay.io/jerolimov/rhdh-loadtest-plugins:bs_1.48_page-11!internal-backstage-plugin-page-11
+      - package: oci://quay.io/jerolimov/rhdh-loadtest-plugins:bs_1.49_page-11!internal-backstage-plugin-page-11
         disabled: false
-      - package: oci://quay.io/jerolimov/rhdh-loadtest-plugins:bs_1.48_page-12!internal-backstage-plugin-page-12
+      - package: oci://quay.io/jerolimov/rhdh-loadtest-plugins:bs_1.49_page-12!internal-backstage-plugin-page-12
         disabled: false
-      - package: oci://quay.io/jerolimov/rhdh-loadtest-plugins:bs_1.48_page-13!internal-backstage-plugin-page-13
+      - package: oci://quay.io/jerolimov/rhdh-loadtest-plugins:bs_1.49_page-13!internal-backstage-plugin-page-13
         disabled: false
-      - package: oci://quay.io/jerolimov/rhdh-loadtest-plugins:bs_1.48_page-14!internal-backstage-plugin-page-14
+      - package: oci://quay.io/jerolimov/rhdh-loadtest-plugins:bs_1.49_page-14!internal-backstage-plugin-page-14
         disabled: false
-      - package: oci://quay.io/jerolimov/rhdh-loadtest-plugins:bs_1.48_page-15!internal-backstage-plugin-page-15
+      - package: oci://quay.io/jerolimov/rhdh-loadtest-plugins:bs_1.49_page-15!internal-backstage-plugin-page-15
         disabled: false
-      - package: oci://quay.io/jerolimov/rhdh-loadtest-plugins:bs_1.48_page-16!internal-backstage-plugin-page-16
+      - package: oci://quay.io/jerolimov/rhdh-loadtest-plugins:bs_1.49_page-16!internal-backstage-plugin-page-16
         disabled: false
-      - package: oci://quay.io/jerolimov/rhdh-loadtest-plugins:bs_1.48_page-17!internal-backstage-plugin-page-17
+      - package: oci://quay.io/jerolimov/rhdh-loadtest-plugins:bs_1.49_page-17!internal-backstage-plugin-page-17
         disabled: false
-      - package: oci://quay.io/jerolimov/rhdh-loadtest-plugins:bs_1.48_page-18!internal-backstage-plugin-page-18
+      - package: oci://quay.io/jerolimov/rhdh-loadtest-plugins:bs_1.49_page-18!internal-backstage-plugin-page-18
         disabled: false
-      - package: oci://quay.io/jerolimov/rhdh-loadtest-plugins:bs_1.48_page-19!internal-backstage-plugin-page-19
+      - package: oci://quay.io/jerolimov/rhdh-loadtest-plugins:bs_1.49_page-19!internal-backstage-plugin-page-19
         disabled: false
-      - package: oci://quay.io/jerolimov/rhdh-loadtest-plugins:bs_1.48_page-20!internal-backstage-plugin-page-20
+      - package: oci://quay.io/jerolimov/rhdh-loadtest-plugins:bs_1.49_page-20!internal-backstage-plugin-page-20
         disabled: false
-      - package: oci://quay.io/jerolimov/rhdh-loadtest-plugins:bs_1.48_page-21!internal-backstage-plugin-page-21
+      - package: oci://quay.io/jerolimov/rhdh-loadtest-plugins:bs_1.49_page-21!internal-backstage-plugin-page-21
         disabled: false
-      - package: oci://quay.io/jerolimov/rhdh-loadtest-plugins:bs_1.48_page-22!internal-backstage-plugin-page-22
+      - package: oci://quay.io/jerolimov/rhdh-loadtest-plugins:bs_1.49_page-22!internal-backstage-plugin-page-22
         disabled: false
-      - package: oci://quay.io/jerolimov/rhdh-loadtest-plugins:bs_1.48_page-23!internal-backstage-plugin-page-23
+      - package: oci://quay.io/jerolimov/rhdh-loadtest-plugins:bs_1.49_page-23!internal-backstage-plugin-page-23
         disabled: false
-      - package: oci://quay.io/jerolimov/rhdh-loadtest-plugins:bs_1.48_page-24!internal-backstage-plugin-page-24
+      - package: oci://quay.io/jerolimov/rhdh-loadtest-plugins:bs_1.49_page-24!internal-backstage-plugin-page-24
         disabled: false
-      - package: oci://quay.io/jerolimov/rhdh-loadtest-plugins:bs_1.48_page-25!internal-backstage-plugin-page-25
+      - package: oci://quay.io/jerolimov/rhdh-loadtest-plugins:bs_1.49_page-25!internal-backstage-plugin-page-25
         disabled: false
-      - package: oci://quay.io/jerolimov/rhdh-loadtest-plugins:bs_1.48_catalog-tab-1!internal-backstage-plugin-catalog-tab-1
+      - package: oci://quay.io/jerolimov/rhdh-loadtest-plugins:bs_1.49_catalog-tab-1!internal-backstage-plugin-catalog-tab-1
         disabled: false
-      - package: oci://quay.io/jerolimov/rhdh-loadtest-plugins:bs_1.48_catalog-tab-2!internal-backstage-plugin-catalog-tab-2
+      - package: oci://quay.io/jerolimov/rhdh-loadtest-plugins:bs_1.49_catalog-tab-2!internal-backstage-plugin-catalog-tab-2
         disabled: false
-      - package: oci://quay.io/jerolimov/rhdh-loadtest-plugins:bs_1.48_catalog-tab-3!internal-backstage-plugin-catalog-tab-3
+      - package: oci://quay.io/jerolimov/rhdh-loadtest-plugins:bs_1.49_catalog-tab-3!internal-backstage-plugin-catalog-tab-3
         disabled: false
-      - package: oci://quay.io/jerolimov/rhdh-loadtest-plugins:bs_1.48_catalog-tab-4!internal-backstage-plugin-catalog-tab-4
+      - package: oci://quay.io/jerolimov/rhdh-loadtest-plugins:bs_1.49_catalog-tab-4!internal-backstage-plugin-catalog-tab-4
         disabled: false
-      - package: oci://quay.io/jerolimov/rhdh-loadtest-plugins:bs_1.48_catalog-tab-5!internal-backstage-plugin-catalog-tab-5
+      - package: oci://quay.io/jerolimov/rhdh-loadtest-plugins:bs_1.49_catalog-tab-5!internal-backstage-plugin-catalog-tab-5
         disabled: false
-      - package: oci://quay.io/jerolimov/rhdh-loadtest-plugins:bs_1.48_catalog-tab-6!internal-backstage-plugin-catalog-tab-6
+      - package: oci://quay.io/jerolimov/rhdh-loadtest-plugins:bs_1.49_catalog-tab-6!internal-backstage-plugin-catalog-tab-6
         disabled: false
-      - package: oci://quay.io/jerolimov/rhdh-loadtest-plugins:bs_1.48_catalog-tab-7!internal-backstage-plugin-catalog-tab-7
+      - package: oci://quay.io/jerolimov/rhdh-loadtest-plugins:bs_1.49_catalog-tab-7!internal-backstage-plugin-catalog-tab-7
         disabled: false
-      - package: oci://quay.io/jerolimov/rhdh-loadtest-plugins:bs_1.48_catalog-tab-8!internal-backstage-plugin-catalog-tab-8
+      - package: oci://quay.io/jerolimov/rhdh-loadtest-plugins:bs_1.49_catalog-tab-8!internal-backstage-plugin-catalog-tab-8
         disabled: false
-      - package: oci://quay.io/jerolimov/rhdh-loadtest-plugins:bs_1.48_catalog-tab-9!internal-backstage-plugin-catalog-tab-9
+      - package: oci://quay.io/jerolimov/rhdh-loadtest-plugins:bs_1.49_catalog-tab-9!internal-backstage-plugin-catalog-tab-9
         disabled: false
-      - package: oci://quay.io/jerolimov/rhdh-loadtest-plugins:bs_1.48_catalog-tab-10!internal-backstage-plugin-catalog-tab-10
+      - package: oci://quay.io/jerolimov/rhdh-loadtest-plugins:bs_1.49_catalog-tab-10!internal-backstage-plugin-catalog-tab-10
         disabled: false
-      - package: oci://quay.io/jerolimov/rhdh-loadtest-plugins:bs_1.48_catalog-tab-11!internal-backstage-plugin-catalog-tab-11
+      - package: oci://quay.io/jerolimov/rhdh-loadtest-plugins:bs_1.49_catalog-tab-11!internal-backstage-plugin-catalog-tab-11
         disabled: false
-      - package: oci://quay.io/jerolimov/rhdh-loadtest-plugins:bs_1.48_catalog-tab-12!internal-backstage-plugin-catalog-tab-12
+      - package: oci://quay.io/jerolimov/rhdh-loadtest-plugins:bs_1.49_catalog-tab-12!internal-backstage-plugin-catalog-tab-12
         disabled: false
-      - package: oci://quay.io/jerolimov/rhdh-loadtest-plugins:bs_1.48_catalog-tab-13!internal-backstage-plugin-catalog-tab-13
+      - package: oci://quay.io/jerolimov/rhdh-loadtest-plugins:bs_1.49_catalog-tab-13!internal-backstage-plugin-catalog-tab-13
         disabled: false
-      - package: oci://quay.io/jerolimov/rhdh-loadtest-plugins:bs_1.48_catalog-tab-14!internal-backstage-plugin-catalog-tab-14
+      - package: oci://quay.io/jerolimov/rhdh-loadtest-plugins:bs_1.49_catalog-tab-14!internal-backstage-plugin-catalog-tab-14
         disabled: false
-      - package: oci://quay.io/jerolimov/rhdh-loadtest-plugins:bs_1.48_catalog-tab-15!internal-backstage-plugin-catalog-tab-15
+      - package: oci://quay.io/jerolimov/rhdh-loadtest-plugins:bs_1.49_catalog-tab-15!internal-backstage-plugin-catalog-tab-15
         disabled: false
-      - package: oci://quay.io/jerolimov/rhdh-loadtest-plugins:bs_1.48_catalog-tab-16!internal-backstage-plugin-catalog-tab-16
+      - package: oci://quay.io/jerolimov/rhdh-loadtest-plugins:bs_1.49_catalog-tab-16!internal-backstage-plugin-catalog-tab-16
         disabled: false
-      - package: oci://quay.io/jerolimov/rhdh-loadtest-plugins:bs_1.48_catalog-tab-17!internal-backstage-plugin-catalog-tab-17
+      - package: oci://quay.io/jerolimov/rhdh-loadtest-plugins:bs_1.49_catalog-tab-17!internal-backstage-plugin-catalog-tab-17
         disabled: false
-      - package: oci://quay.io/jerolimov/rhdh-loadtest-plugins:bs_1.48_catalog-tab-18!internal-backstage-plugin-catalog-tab-18
+      - package: oci://quay.io/jerolimov/rhdh-loadtest-plugins:bs_1.49_catalog-tab-18!internal-backstage-plugin-catalog-tab-18
         disabled: false
-      - package: oci://quay.io/jerolimov/rhdh-loadtest-plugins:bs_1.48_catalog-tab-19!internal-backstage-plugin-catalog-tab-19
+      - package: oci://quay.io/jerolimov/rhdh-loadtest-plugins:bs_1.49_catalog-tab-19!internal-backstage-plugin-catalog-tab-19
         disabled: false
-      - package: oci://quay.io/jerolimov/rhdh-loadtest-plugins:bs_1.48_catalog-tab-20!internal-backstage-plugin-catalog-tab-20
+      - package: oci://quay.io/jerolimov/rhdh-loadtest-plugins:bs_1.49_catalog-tab-20!internal-backstage-plugin-catalog-tab-20
         disabled: false
-      - package: oci://quay.io/jerolimov/rhdh-loadtest-plugins:bs_1.48_catalog-tab-21!internal-backstage-plugin-catalog-tab-21
+      - package: oci://quay.io/jerolimov/rhdh-loadtest-plugins:bs_1.49_catalog-tab-21!internal-backstage-plugin-catalog-tab-21
         disabled: false
-      - package: oci://quay.io/jerolimov/rhdh-loadtest-plugins:bs_1.48_catalog-tab-22!internal-backstage-plugin-catalog-tab-22
+      - package: oci://quay.io/jerolimov/rhdh-loadtest-plugins:bs_1.49_catalog-tab-22!internal-backstage-plugin-catalog-tab-22
         disabled: false
-      - package: oci://quay.io/jerolimov/rhdh-loadtest-plugins:bs_1.48_catalog-tab-23!internal-backstage-plugin-catalog-tab-23
+      - package: oci://quay.io/jerolimov/rhdh-loadtest-plugins:bs_1.49_catalog-tab-23!internal-backstage-plugin-catalog-tab-23
         disabled: false
-      - package: oci://quay.io/jerolimov/rhdh-loadtest-plugins:bs_1.48_catalog-tab-24!internal-backstage-plugin-catalog-tab-24
+      - package: oci://quay.io/jerolimov/rhdh-loadtest-plugins:bs_1.49_catalog-tab-24!internal-backstage-plugin-catalog-tab-24
         disabled: false
-      - package: oci://quay.io/jerolimov/rhdh-loadtest-plugins:bs_1.48_catalog-tab-25!internal-backstage-plugin-catalog-tab-25
+      - package: oci://quay.io/jerolimov/rhdh-loadtest-plugins:bs_1.49_catalog-tab-25!internal-backstage-plugin-catalog-tab-25
         disabled: false
 
 redhat-developer-hub:

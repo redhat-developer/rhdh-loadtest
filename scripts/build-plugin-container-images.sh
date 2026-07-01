@@ -2,7 +2,7 @@
 
 # This script builds hunderts of container images!
 # For each Backstage workspace it builds both plugins 100 times.
-# Currently, 3 * 2 * 101 = 606 container images will be built!
+# Currently, 4 * 2 * 101 = 808 container images will be built!
 
 set -e
 
@@ -51,18 +51,34 @@ build_container_images() {
       cd ../..
 
       ;;
-    *1.48*)
+    *1.49*)
       echo
-      echo "Build plugins with suffix $suffix for Backstage 1.48 plugins with @red-hat-developer-hub/cli@1.10.7"
+      echo "Build plugins with suffix $suffix for Backstage 1.49 plugins with @red-hat-developer-hub/cli@1.10.7"
       echo
       cd "$workspace"
       cd plugins/page-n
       rm -rf dist dist-dynamic dist-scalprum
-      npx --yes @red-hat-developer-hub/cli@1.10.7 plugin package --tag "rhdh-loadtest-plugins:bs_1.48_page-$suffix"
+      npx --yes @red-hat-developer-hub/cli@1.10.7 plugin package --tag "rhdh-loadtest-plugins:bs_1.49_page-$suffix"
       cd ../..
       cd plugins/catalog-tab-n
       rm -rf dist dist-dynamic dist-scalprum
-      npx --yes @red-hat-developer-hub/cli@1.10.7 plugin package --tag "rhdh-loadtest-plugins:bs_1.48_catalog-tab-$suffix"
+      npx --yes @red-hat-developer-hub/cli@1.10.7 plugin package --tag "rhdh-loadtest-plugins:bs_1.49_catalog-tab-$suffix"
+      cd ../..
+      cd ../..
+
+      ;;
+    *1.52*)
+      echo
+      echo "Build plugins with suffix $suffix for Backstage 1.52 plugins with @red-hat-developer-hub/cli@1.11.1"
+      echo
+      cd "$workspace"
+      cd plugins/page-n
+      rm -rf dist dist-dynamic dist-scalprum
+      npx --yes @red-hat-developer-hub/cli@1.11.1 plugin package --tag "rhdh-loadtest-plugins:bs_1.52_page-$suffix"
+      cd ../..
+      cd plugins/catalog-tab-n
+      rm -rf dist dist-dynamic dist-scalprum
+      npx --yes @red-hat-developer-hub/cli@1.11.1 plugin package --tag "rhdh-loadtest-plugins:bs_1.52_catalog-tab-$suffix"
       cd ../..
       cd ../..
 
@@ -73,7 +89,7 @@ build_container_images() {
   esac
 }
 
-for workspace in plugins/backstage-1.42 plugins/backstage-1.45 plugins/backstage-1.48; do
+for workspace in plugins/backstage-1.42 plugins/backstage-1.45 plugins/backstage-1.49 plugins/backstage-1.52; do
   if [ ! -d "$workspace" ]; then
     continue
   fi

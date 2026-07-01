@@ -98,7 +98,7 @@ TODO
 
 ## Dynamic Plugins (Example container images for different RHDH versions)
 
-The `plugins` folder contains multiple Backstage workspaces for different Backstage versions (1.42, 1.45 and 1.48).
+The `plugins` folder contains multiple Backstage workspaces for different Backstage versions (1.42, 1.45, 1.49 and 1.52).
 Each workspace contains currently two plugins.
 One that adds a new page to the main navigation and one that adds a new tab to the catalog details page.
 
@@ -109,7 +109,7 @@ They are published as one container image under [quay.io/jerolimov/rhdh-loadtest
 * `quay.io/jerolimov/rhdh-loadtest-plugins:bs_1.42_page-n`
 * `quay.io/jerolimov/rhdh-loadtest-plugins:bs_1.42_catalog-tab-n`
 
-The Backstage version can be replaced with `bs_1.42`, `bs_1.45` or `bs_1.45` and the `-n` can be replaced with a 1 to 100 so that up to 200 dynamic (frontend) plugins can be loaded for each RHDH release.
+The Backstage version can be replaced with `bs_1.42`, `bs_1.45`, `bs_1.49` or `bs_1.52` and the `-n` can be replaced with a 1 to 100 so that up to 200 dynamic (frontend) plugins can be loaded for each RHDH release.
 
 To integrate these into your local setup apply these RHDH dynamic plugin configurations:
 
