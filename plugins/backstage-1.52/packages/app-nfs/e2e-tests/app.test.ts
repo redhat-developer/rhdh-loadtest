@@ -23,5 +23,6 @@ test('App should render the welcome page', async ({ page }) => {
   await expect(enterButton).toBeVisible();
   await enterButton.click();
 
+  await page.goto('/catalog');
   await expect(page.getByText('My Company Catalog')).toBeVisible();
 });

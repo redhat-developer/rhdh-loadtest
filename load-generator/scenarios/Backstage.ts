@@ -28,4 +28,10 @@ export class Backstage {
   sidebarItem(name: string) {
     return this.sidebar.getByRole('link', { name, exact: true });
   }
+
+  sidebarNavItem(name: string) {
+    return this.sidebar
+      .locator('span.MuiTypography-subtitle2')
+      .filter({ hasText: new RegExp(`^${name}$`) });
+  }
 }

@@ -122,6 +122,14 @@ redhat-developer-hub:
       appConfig:
         app:
           title: RHDH 1.10 NFS loadtest
+          packages: all
+          extensions:
+            - page:home:
+                config:
+                  path: /
+            - page:catalog:
+                config:
+                  path: /catalog
 
         auth:
           providers:
