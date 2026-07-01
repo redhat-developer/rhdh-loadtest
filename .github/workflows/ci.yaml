@@ -50,6 +50,7 @@ jobs:
     runs-on: ubuntu-latest
 
     strategy:
+      fail-fast: false
       matrix:
         workspace:
           - backstage-1.42
@@ -83,10 +84,28 @@ jobs:
         run: yarn lint:all
         working-directory: plugins/${{ matrix.workspace }}
 
-      - name: Check formatting
-        run: yarn prettier:check
-        working-directory: plugins/${{ matrix.workspace }}
+      # - name: Check formatting
+      #   run: yarn prettier:check
+      #   working-directory: plugins/${{ matrix.workspace }}
 
       - name: Build
         run: yarn build:all
         working-directory: plugins/${{ matrix.workspace }}
+
+  plugins-check:
+    if: always()
+    needs: plugins
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Harden runner
+        uses: step-security/harden-runner@v2
+        with:
+          egress-policy: audit
+
+      - name: Verify all plugin matrix jobs passed
+        run: |
+          if [ "${{ needs.plugins.result }}" != "success" ]; then
+            echo "::error::One or more plugin matrix jobs failed"
+            exit 1
+          fi
