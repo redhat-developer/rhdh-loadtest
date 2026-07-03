@@ -6,7 +6,7 @@ const test = base.extend<{ backstage: Backstage }>({
   backstage: ({ page }, use) => use(new Backstage(page)),
 });
 
-const loops = 100; // TODO: use an env var to override this
+const loops = Number(process.env.LOOPS ?? 100);
 
 for (let i = 1; i <= loops; i++) {
   test(`run ${i} of ${loops}`, async ({ backstage, page }) => {

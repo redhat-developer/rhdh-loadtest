@@ -3,9 +3,12 @@ app:
   baseUrl: http://localhost:3000
   packages: all
   extensions:
-    - page:catalog:
+    - page:home:
         config:
           path: /
+    - page:catalog:
+        config:
+          path: /catalog
     - api:app/app-language:
         config:
           availableLanguages: ['en', 'de', 'es', 'fr', 'it', 'ja']

@@ -16,6 +16,9 @@
     "install-browser": "playwright install chromium",
     "playwright": "playwright",
     "analyse": "node scripts/analyse.mts",
-    "test": "playwright test && npm run analyse"
+    "test": "playwright test && npm run analyse",
+    "test:ofs:ui": "playwright test --ui && npm run analyse",
+    "test:nfs": "RHDH_FRONTEND=nfs playwright test && npm run analyse",
+    "test:nfs:ui": "RHDH_FRONTEND=nfs playwright test --ui && npm run analyse"
   }
 }
