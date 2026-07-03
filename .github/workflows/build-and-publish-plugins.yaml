@@ -1,0 +1,87 @@
+name: Build and Publish plugins
+
+on:
+  workflow_dispatch:
+    inputs:
+      workspace:
+        description: Plugin workspace to build
+        required: true
+        type: choice
+        options:
+          - backstage-1.42
+          - backstage-1.45
+          - backstage-1.49
+          - backstage-1.52
+      start:
+        description: Start number of plugin instances (1-100)
+        required: true
+        default: 1
+        type: number
+      end:
+        description: End number of plugin instances (1-100)
+        required: true
+        default: 3
+        type: number
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Harden runner
+        uses: step-security/harden-runner@v2
+        with:
+          egress-policy: audit
+
+      - name: Validate inputs
+        run: |
+          start=${{ inputs.start }}
+          end=${{ inputs.end }}
+
+          if [ "$start" -lt 1 ] || [ "$start" -gt 100 ]; then
+            echo "::error::start must be between 1 and 100, got $start"
+            exit 1
+          fi
+
+          if [ "$end" -lt 1 ] || [ "$end" -gt 100 ]; then
+            echo "::error::end must be between 1 and 100, got $end"
+            exit 1
+          fi
+
+          if [ "$start" -gt "$end" ]; then
+            echo "::error::start ($start) must be less than or equal to end ($end)"
+            exit 1
+          fi
+
+      - name: Checkout
+        uses: actions/checkout@v7
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: plugins/${{ inputs.workspace }}/package.json
+
+      - name: Install dependencies
+        run: yarn install --immutable
+        working-directory: plugins/${{ inputs.workspace }}
+
+      - name: Build plugin instances
+        run: |
+          echo "Building plugin instance n"
+          for i in $(seq ${{ inputs.start }} ${{ inputs.end }}); do
+            echo "Building plugin instance $i"
+          done
+          echo "Reset to plugin instance n"
+        working-directory: plugins/${{ inputs.workspace }}
+
+      - name: Verify no changes in .github/
+        run: |
+          if [ -n "$(git status --porcelain .github/)" ]; then
+            echo "::error::Unexpected changes detected in .github/ after CI steps:"
+            git diff .github/
+            exit 1
+          fi
+          echo "No changes in .github/ — OK"
