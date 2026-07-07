@@ -10,30 +10,23 @@ set -e
 
 workspace="$1"
 suffix="$2"
+suffix_upper="${suffix^^}"
 
 echo "Prepare source code in workspace $workspace with suffix $suffix"
 
-# page-n
-sed -i -E "s/page-(n|[0-9]+)/page-$suffix/g" \
-    "$workspace/plugins/page-n/README.md" \
-    "$workspace/plugins/page-n/package.json" \
-    "$workspace/plugins/page-n/src/plugin.ts" \
-    "$workspace/plugins/page-n/src/routes.ts" \
-    "$workspace/plugins/page-n/src/alpha/plugin.tsx" \
-    "$workspace/plugins/page-n/src/components/ExampleComponent/ExampleComponent.tsx" \
-    "$workspace/plugins/page-n/dev/index.tsx" \
-    "$workspace/plugins/page-n/dev/legacy.tsx" \
-    "$workspace/plugins/page-n/dev/alpha.tsx"
+replace_in_plugin() {
+  local plugin_dir="$1"
+  local kebab="$2"
+  local title="$3"
 
-# catalog-tab-n
-sed -i -E "s/catalog-tab-(n|[0-9]+)/catalog-tab-$suffix/g" \
-    "$workspace/plugins/catalog-tab-n/README.md" \
-    "$workspace/plugins/catalog-tab-n/package.json" \
-    "$workspace/plugins/catalog-tab-n/src/plugin.ts" \
-    "$workspace/plugins/catalog-tab-n/src/alpha/plugin.tsx" \
-    "$workspace/plugins/catalog-tab-n/src/components/ExampleComponent/ExampleComponent.tsx" \
-    "$workspace/plugins/catalog-tab-n/dev/index.tsx" \
-    "$workspace/plugins/catalog-tab-n/dev/legacy.tsx" \
-    "$workspace/plugins/catalog-tab-n/dev/alpha.tsx"
+  find "$plugin_dir" \( -name "*.json" -o -name "*.ts" -o -name "*.tsx" \) -exec \
+    sed -i -E \
+      -e "s/${kebab}-(n|[0-9]+)/${kebab}-${suffix}/g" \
+      -e "s/${title} (N|[0-9]+)/${title} ${suffix_upper}/g" \
+      {} +
+}
+
+replace_in_plugin "$workspace/plugins/page-n" "page" "Page"
+replace_in_plugin "$workspace/plugins/catalog-tab-n" "catalog-tab" "Catalog Tab"
 
 echo Done.
