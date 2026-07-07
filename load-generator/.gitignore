@@ -1,5 +1,8 @@
 /node_modules
 
+# Yarn
+.yarn/install-state.gz
+
 # Playwright
 /test-results.json
 /test-results/

@@ -4,6 +4,10 @@
   "description": "",
   "private": true,
   "type": "commonjs",
+  "packageManager": "yarn@4.4.1",
+  "engines": {
+    "node": "24"
+  },
   "dependencies": {
     "playwright": "^1.61.1",
     "playwright-core": "^1.61.1"
@@ -16,9 +20,9 @@
     "install-browser": "playwright install chromium",
     "playwright": "playwright",
     "analyse": "node scripts/analyse.mts",
-    "test": "playwright test && npm run analyse",
-    "test:ofs:ui": "playwright test --ui && npm run analyse",
-    "test:nfs": "RHDH_FRONTEND=nfs playwright test && npm run analyse",
-    "test:nfs:ui": "RHDH_FRONTEND=nfs playwright test --ui && npm run analyse"
+    "test": "playwright test && yarn analyse",
+    "test:ofs:ui": "playwright test --ui && yarn analyse",
+    "test:nfs": "RHDH_FRONTEND=nfs playwright test && yarn analyse",
+    "test:nfs:ui": "RHDH_FRONTEND=nfs playwright test --ui && yarn analyse"
   }
 }
