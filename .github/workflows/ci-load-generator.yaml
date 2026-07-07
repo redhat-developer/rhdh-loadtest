@@ -1,0 +1,36 @@
+name: CI load-generator
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  load-generator:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Harden runner
+        uses: step-security/harden-runner@v2
+        with:
+          egress-policy: audit
+
+      - name: Checkout
+        uses: actions/checkout@v7
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Install dependencies
+        run: npm ci
+        working-directory: load-generator
+
+      - name: Build container image
+        run: podman build -t localhost/rhdh-loadtest:ci .
+        working-directory: load-generator
