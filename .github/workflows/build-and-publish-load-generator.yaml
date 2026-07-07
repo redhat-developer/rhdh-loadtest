@@ -1,0 +1,38 @@
+name: Build and Publish load-generator
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - load-generator/**
+      - .github/workflows/build-and-publish-load-generator.yaml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Harden runner
+        uses: step-security/harden-runner@v2
+        with:
+          egress-policy: audit
+
+      - name: Checkout
+        uses: actions/checkout@v7
+
+      - name: Build container image
+        run: podman build -t quay.io/rhdh-community/rhdh-loadtest-generator:latest .
+        working-directory: load-generator
+
+      - name: Login to Quay
+        run: podman login -u "$QUAY_USERNAME" -p "$QUAY_PASSWORD" quay.io
+        env:
+          QUAY_USERNAME: ${{ secrets.QUAY_USERNAME }}
+          QUAY_PASSWORD: ${{ secrets.QUAY_PASSWORD }}
+
+      - name: Push container image
+        run: podman push quay.io/rhdh-community/rhdh-loadtest-generator:latest
