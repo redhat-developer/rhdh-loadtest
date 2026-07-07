@@ -10,8 +10,8 @@ on:
         options:
           - backstage-1.42
           - backstage-1.45
-          # - backstage-1.49
-          # - backstage-1.52
+          - backstage-1.49
+          - backstage-1.52
       start:
         description: Start number of plugin instances (1-100)
         required: true
