@@ -2803,6 +2803,26 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@backstage/frontend-dev-utils@npm:0.1.0":
+  version: 0.1.0
+  resolution: "@backstage/frontend-dev-utils@npm:0.1.0"
+  dependencies:
+    "@backstage/frontend-defaults": "npm:^0.5.0"
+    "@backstage/frontend-plugin-api": "npm:^0.15.0"
+    "@backstage/plugin-app": "npm:^0.4.1"
+    "@backstage/ui": "npm:^0.13.0"
+  peerDependencies:
+    "@types/react": ^17.0.0 || ^18.0.0
+    react: ^17.0.0 || ^18.0.0
+    react-dom: ^17.0.0 || ^18.0.0
+    react-router-dom: ^6.30.2
+  peerDependenciesMeta:
+    "@types/react":
+      optional: true
+  checksum: 10c0/243865e1cfcc6c03815c30ac9b01c4ff77caf82f04901cab413858c5c1f3a45af8c8d9fa32cbf881f07f63b6080dc43af78307cdcaf6be859972fbd3b01bc9fa
+  languageName: node
+  linkType: hard
+
 "@backstage/frontend-plugin-api@npm:0.16.2":
   version: 0.16.2
   resolution: "@backstage/frontend-plugin-api@npm:0.16.2"
@@ -5711,6 +5731,7 @@ __metadata:
     "@backstage/core-plugin-api": "npm:^1.12.4"
     "@backstage/dev-utils": "npm:^1.1.21"
     "@backstage/frontend-defaults": "npm:^0.5.0"
+    "@backstage/frontend-dev-utils": "npm:^0.1.0"
     "@backstage/frontend-plugin-api": "npm:^0.15.1"
     "@backstage/frontend-test-utils": "npm:^0.5.1"
     "@backstage/plugin-catalog": "npm:^2.0.1"
@@ -5745,6 +5766,7 @@ __metadata:
     "@backstage/core-plugin-api": "npm:^1.12.4"
     "@backstage/dev-utils": "npm:^1.1.21"
     "@backstage/frontend-defaults": "npm:^0.5.0"
+    "@backstage/frontend-dev-utils": "npm:^0.1.0"
     "@backstage/frontend-plugin-api": "npm:^0.15.1"
     "@backstage/frontend-test-utils": "npm:^0.5.1"
     "@backstage/test-utils": "npm:^1.7.16"
