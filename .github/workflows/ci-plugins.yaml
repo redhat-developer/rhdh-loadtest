@@ -48,9 +48,9 @@ jobs:
         run: yarn lint:all
         working-directory: plugins/${{ matrix.workspace }}
 
-      # - name: Check formatting
-      #   run: yarn prettier:check
-      #   working-directory: plugins/${{ matrix.workspace }}
+      - name: Check formatting
+        run: yarn prettier:check
+        working-directory: plugins/${{ matrix.workspace }}
 
       - name: Build
         run: yarn build:all

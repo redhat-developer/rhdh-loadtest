@@ -23,6 +23,9 @@ test('App should render the welcome page', async ({ page }) => {
   await expect(enterButton).toBeVisible();
   await enterButton.click();
 
-  await page.locator('nav').getByRole('link', { name: 'Catalog', exact: true }).click();
+  await page
+    .locator('nav')
+    .getByRole('link', { name: 'Catalog', exact: true })
+    .click();
   await expect(page.getByText('My Company Catalog')).toBeVisible();
 });

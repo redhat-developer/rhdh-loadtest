@@ -1,7 +1,5 @@
 import { Typography, Grid } from '@material-ui/core';
-import {
-  InfoCard,
-} from '@backstage/core-components';
+import { InfoCard } from '@backstage/core-components';
 import { ExampleFetchComponent } from '../ExampleFetchComponent';
 
 export const ExampleComponent = () => (

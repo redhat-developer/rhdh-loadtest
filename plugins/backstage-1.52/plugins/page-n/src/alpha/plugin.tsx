@@ -13,7 +13,9 @@ export const page: any = PageBlueprint.make({
     title: 'Page N',
     icon: <ExtensionIcon />,
     loader: () =>
-      import('../components/ExampleComponent').then(m => <m.ExampleComponent />),
+      import('../components/ExampleComponent').then(m => (
+        <m.ExampleComponent />
+      )),
   },
 });
 
