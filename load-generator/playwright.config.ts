@@ -9,14 +9,19 @@ import { defineConfig, devices } from '@playwright/test';
 // dotenv.config({ path: path.resolve(__dirname, '.env') });
 
 const nfs = (process.env.RHDH_FRONTEND ?? 'ofs').toLowerCase() === 'nfs';
+
 const testMatch =
   nfs ? 'guest-login-home-catalog-nfs.spec.ts' : 'guest-login-home-catalog.spec.ts';
+
 // NFS (module federation) needs longer waits for remotes to load
 const testTimeout = Number(
   process.env.PLAYWRIGHT_TEST_TIMEOUT ?? (nfs ? 120_000 : 30_000),
 );
 const expectTimeout = Number(
   process.env.PLAYWRIGHT_EXPECT_TIMEOUT ?? (nfs ? 120_000 : 20_000),
+);
+const navigationTimeout = Number(
+  process.env.PLAYWRIGHT_NAVIGATION_TIMEOUT ?? (nfs ? 120_000 : 30_000),
 );
 
 /**
@@ -49,7 +54,7 @@ export default defineConfig({
     /* Base URL to use in actions like `await page.goto('')`. */
     baseURL: process.env.RHDH_URL || process.env.PLAYWRIGHT_BASEURL,
 
-    navigationTimeout: nfs ? 120_000 : 30_000,
+    navigationTimeout: navigationTimeout,
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on-first-retry',

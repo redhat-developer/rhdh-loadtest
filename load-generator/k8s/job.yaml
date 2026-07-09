@@ -1,0 +1,19 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  generateName: rhdh-loadtest-
+spec:
+  ttlSecondsAfterFinished: 86400
+  backoffLimit: 0
+  template:
+    spec:
+      restartPolicy: Never
+      containers:
+        - name: loadtest
+          image: quay.io/rhdh-community/rhdh-loadtest-generator
+          env:
+            - name: COREPACK_HOME
+              value: /tmp/corepack
+            - name: HOME
+              value: /tmp
+          command: ["yarn", "playwright", "test", "--output", "/tmp/test-results"]

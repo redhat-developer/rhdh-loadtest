@@ -6,10 +6,10 @@ const test = base.extend<{ backstage: Backstage }>({
   backstage: ({ page }, use) => use(new Backstage(page)),
 });
 
-const loops = Number(process.env.LOOPS ?? 100);
+const loops = Number(process.env.LOOPS ?? 1);
 
 for (let i = 1; i <= loops; i++) {
-  test(`run ${i} of ${loops}`, async ({ backstage, page }) => {
+  test(`run ${i} of ${loops}`, { tag: '@nfs' }, async ({ backstage, page }) => {
     await test.step("login", async () => {
       await page.goto("/");
       await expect(page.getByRole("button", { name: "Enter" })).toBeVisible();
@@ -58,7 +58,7 @@ for (let i = 1; i <= loops; i++) {
     await test.step("page-n", async () => {
       await backstage.sidebarItem("Page 1").click();
       await expect(
-        backstage.header.getByText("Welcome to page-1!"),
+        backstage.header.getByText("Welcome to Page 1!"),
       ).toBeVisible();
       await expect(
         backstage.content.getByText("Information card"),
