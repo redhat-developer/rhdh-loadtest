@@ -22,7 +22,7 @@ describe('ExampleComponent', () => {
   it('should render', async () => {
     await renderInTestApp(<ExampleComponent />);
     expect(
-      screen.getByText('Welcome to catalog-tab-n!'),
+      screen.getByText('Welcome to Catalog Tab N!'),
     ).toBeInTheDocument();
   });
 });

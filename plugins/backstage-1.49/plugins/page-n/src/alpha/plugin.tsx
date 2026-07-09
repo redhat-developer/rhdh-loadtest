@@ -6,18 +6,11 @@ import ExtensionIcon from '@material-ui/icons/Extension';
 
 import { rootRouteRef } from './routes';
 
-const PLUGIN_ID = 'page-n';
-
-function pageDisplayTitle(pluginId: string): string {
-  const suffix = pluginId.replace(/^page-/, '');
-  return `Page ${suffix === 'n' ? 'N' : suffix}`;
-}
-
 export const page: any = PageBlueprint.make({
   params: {
-    path: `/${PLUGIN_ID}`,
+    path: `/page-n`,
     routeRef: rootRouteRef,
-    title: pageDisplayTitle(PLUGIN_ID),
+    title: 'Page N',
     icon: <ExtensionIcon />,
     loader: () =>
       import('../components/ExampleComponent').then(m => (
@@ -27,6 +20,6 @@ export const page: any = PageBlueprint.make({
 });
 
 export const pagePlugin = createFrontendPlugin({
-  pluginId: PLUGIN_ID,
+  pluginId: 'page-n',
   extensions: [page],
 });
