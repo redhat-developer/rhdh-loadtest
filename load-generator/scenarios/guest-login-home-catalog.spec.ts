@@ -1,6 +1,8 @@
 import { test as base, expect } from '@playwright/test';
 
 import { Backstage } from './Backstage';
+import { addNetworkListeners } from './network-stats';
+import { setupNetworkThrottling } from './network-throttling';
 
 const test = base.extend<{ backstage: Backstage }>({
   backstage: ({ page }, use) => use(new Backstage(page)),
@@ -9,7 +11,10 @@ const test = base.extend<{ backstage: Backstage }>({
 const loops = Number(process.env.LOOPS || 1);
 
 for (let i = 1; i <= loops; i++) {
-  test(`run ${i} of ${loops}`, { tag: '@ofs' }, async ({ backstage, page }) => {
+  test(`run ${i} of ${loops}`, { tag: '@ofs' }, async ({ backstage, page, context }) => {
+    const networkListeners = await addNetworkListeners(page);
+    await setupNetworkThrottling(context);
+    
     await test.step('login', async () => {
       await page.goto('/');
       await expect(page.getByRole('button', { name: 'Enter' })).toBeVisible();
@@ -52,5 +57,7 @@ for (let i = 1; i <= loops; i++) {
       await expect(backstage.content.getByText('Information card')).toBeVisible();
       await expect(backstage.content.getByText('Example User List')).toBeVisible();
     });
+
+    networkListeners.logStatsAndErrors();
   });
 }
