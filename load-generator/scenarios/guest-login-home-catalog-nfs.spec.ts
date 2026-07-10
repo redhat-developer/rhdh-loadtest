@@ -6,7 +6,7 @@ const test = base.extend<{ backstage: Backstage }>({
   backstage: ({ page }, use) => use(new Backstage(page)),
 });
 
-const loops = Number(process.env.LOOPS ?? 1);
+const loops = Number(process.env.LOOPS || 1);
 
 for (let i = 1; i <= loops; i++) {
   test(`run ${i} of ${loops}`, { tag: '@nfs' }, async ({ backstage, page }) => {
