@@ -2,6 +2,7 @@ FROM mcr.microsoft.com/playwright:v1.61.1-resolute
 WORKDIR /app
 COPY package.json yarn.lock .yarnrc.yml ./
 COPY .yarn .yarn
-RUN corepack yarn install --immutable
+RUN corepack prepare
+RUN yarn install --immutable
 COPY . .
-CMD ["corepack", "yarn", "test"]
+CMD ["yarn", "test"]
