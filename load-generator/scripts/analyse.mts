@@ -2,7 +2,7 @@ import { readFileSync } from 'node:fs';
 
 import type { JSONReport } from '@playwright/test/reporter';
 
-const filename = process.argv[2] ?? process.env.PLAYWRIGHT_JSON_OUTPUT_FILE ?? 'test-results.json';
+const filename = process.env.PLAYWRIGHT_JSON_OUTPUT_FILE ?? 'test-results.json';
 
 console.log(`Analyse ${filename}`);
 
