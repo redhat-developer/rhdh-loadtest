@@ -16,4 +16,4 @@ spec:
               value: "true"
             - name: PLAYWRIGHT_JSON_OUTPUT_FILE
               value: /tmp/playwright/test-results.json
-          command: ["sh", "-c", "yarn playwright test --output /tmp/playwright && yarn analyse"]
+          command: ["sh", "-c", "yarn playwright test --output /tmp/playwright/test-results && yarn analyse"]
