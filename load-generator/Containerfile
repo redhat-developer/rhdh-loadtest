@@ -1,8 +1,10 @@
 FROM mcr.microsoft.com/playwright:v1.61.1-resolute
+RUN corepack disable
+RUN npm install -g yarn
+
 WORKDIR /app
 COPY package.json yarn.lock .yarnrc.yml ./
 COPY .yarn .yarn
-RUN corepack prepare
 RUN yarn install --immutable
 COPY . .
 CMD ["yarn", "test"]
