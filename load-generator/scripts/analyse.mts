@@ -2,7 +2,7 @@ import { readFileSync } from 'node:fs';
 
 import type { JSONReport } from '@playwright/test/reporter';
 
-const filename = 'test-results.json';
+const filename = process.argv[2] ?? 'test-results.json';
 
 console.log(`Analyse ${filename}`);
 
