@@ -58,6 +58,6 @@ for (let i = 1; i <= loops; i++) {
       await expect(backstage.content.getByText('Example User List')).toBeVisible();
     });
 
-    networkListeners.logStatsAndErrors();
+    await networkListeners.logStatsAndErrors();
   });
 }
