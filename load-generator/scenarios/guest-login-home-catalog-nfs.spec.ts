@@ -73,6 +73,6 @@ for (let i = 1; i <= loops; i++) {
       ).toBeVisible();
     });
 
-    networkListeners.logStatsAndErrors();
+    await networkListeners.logStatsAndErrors();
   });
 }

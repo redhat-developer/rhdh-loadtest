@@ -10,6 +10,25 @@ const report: JSONReport = JSON.parse(readFileSync(filename, 'utf-8'));
 
 const stepDurations = new Map<string, number[]>();
 
+function stripAnsi(s: string): string {
+  return s.replace(/\x1b\[[0-9;]*m/g, '');
+}
+
+function parseStatsObject(text: string): Record<string, unknown> | null {
+  const clean = stripAnsi(text).trim();
+  if (!clean.startsWith('Stats:')) return null;
+  const objStr = clean.slice('Stats:'.length).trim();
+  let json = objStr.replace(/(?<=[\s,{])(\w+)(?=\s*:)/g, '"$1"');
+  json = json.replace(/'/g, '"');
+  try {
+    return JSON.parse(json);
+  } catch {
+    return null;
+  }
+}
+
+const networkStats: Record<string, unknown>[] = [];
+
 for (const suite of report.suites) {
   for (const spec of suite.specs) {
     if (!spec.ok) {
@@ -35,6 +54,14 @@ for (const suite of report.suites) {
           const durations = stepDurations.get('all') ?? [];
           durations.push(result.duration);
           stepDurations.set('all', durations);
+        }
+        if (result.stdout) {
+          for (const entry of result.stdout) {
+            if (typeof entry === 'object' && 'text' in entry) {
+              const stats = parseStatsObject((entry as { text: string }).text);
+              if (stats) networkStats.push(stats);
+            }
+          }
         }
       }
     }
@@ -78,3 +105,60 @@ for (const [title, durations] of stepDurations) {
 }
 
 console.log('');
+
+if (networkStats.length > 0) {
+  const topLevel = new Map<string, number>();
+  const nested = new Map<string, Map<string, number>>();
+
+  for (const stats of networkStats) {
+    for (const [key, value] of Object.entries(stats)) {
+      if (typeof value === 'number') {
+        topLevel.set(key, (topLevel.get(key) ?? 0) + value);
+      } else if (typeof value === 'object' && value !== null) {
+        const sub = nested.get(key) ?? new Map<string, number>();
+        for (const [subKey, subValue] of Object.entries(value as Record<string, number>)) {
+          sub.set(subKey, (sub.get(subKey) ?? 0) + subValue);
+        }
+        nested.set(key, sub);
+      }
+    }
+  }
+
+  const count = networkStats.length;
+
+  console.log('Network Stats (based on %d runs)', count);
+  console.log(
+    'Metric'.padEnd(25),
+    'Sum'.padStart(10),
+    'Avg'.padStart(10),
+  );
+  console.log('-'.repeat(50));
+
+  for (const [key, sum] of topLevel) {
+    console.log(
+      key.padEnd(25),
+      String(sum).padStart(10),
+      (sum / count).toFixed(1).padStart(10),
+    );
+  }
+
+  for (const [category, sums] of nested) {
+    console.log('');
+    console.log(category);
+    console.log(
+      'Key'.padEnd(25),
+      'Sum'.padStart(10),
+      'Avg'.padStart(10),
+    );
+    console.log('-'.repeat(50));
+    for (const [key, sum] of sums) {
+      console.log(
+        key.padEnd(25),
+        String(sum).padStart(10),
+        (sum / count).toFixed(1).padStart(10),
+      );
+    }
+  }
+
+  console.log('');
+}
