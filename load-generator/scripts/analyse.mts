@@ -76,35 +76,50 @@ function percentile(sorted: number[], p: number): number {
   return sorted[lower] + (sorted[upper] - sorted[lower]) * (idx - lower);
 }
 
-console.log('');
-console.log(
-  'Step'.padEnd(20),
-  'Count'.padStart(10),
-  'Avg'.padStart(10),
-  'P95'.padStart(10),
-  'Min'.padStart(10),
-  'Max'.padStart(10),
-);
-console.log('-'.repeat(75));
+type Align = 'left' | 'right';
 
-for (const [title, durations] of stepDurations) {
-  const sorted = durations.slice().sort((a, b) => a - b);
-  const avg = durations.reduce((s, d) => s + d, 0) / durations.length;
-  const p95 = percentile(sorted, 95);
-  const min = sorted[0];
-  const max = sorted[sorted.length - 1];
-
-  console.log(
-    title.padEnd(20),
-    String(durations.length).padStart(10),
-    `${avg.toFixed(0)}ms`.padStart(10),
-    `${p95.toFixed(0)}ms`.padStart(10),
-    `${min}ms`.padStart(10),
-    `${max}ms`.padStart(10),
+function printTable(headers: string[], aligns: Align[], rows: string[][]) {
+  const widths = headers.map((h, i) =>
+    Math.max(h.length, ...rows.map(r => r[i].length)),
   );
+  const pad = (s: string, w: number, a: Align) =>
+    a === 'right' ? s.padStart(w) : s.padEnd(w);
+  const formatRow = (cells: string[]) =>
+    '| ' + cells.map((c, i) => pad(c, widths[i], aligns[i])).join(' | ') + ' |';
+  const separator =
+    '| ' + widths.map((w, i) => {
+      const dashes = '-'.repeat(w);
+      return aligns[i] === 'right' ? dashes.slice(0, -1) + ':' : dashes;
+    }).join(' | ') + ' |';
+
+  console.log(formatRow(headers));
+  console.log(separator);
+  for (const row of rows) {
+    console.log(formatRow(row));
+  }
 }
 
-console.log('');
+{
+  const rows: string[][] = [];
+  for (const [title, durations] of stepDurations) {
+    const sorted = durations.slice().sort((a, b) => a - b);
+    const avg = durations.reduce((s, d) => s + d, 0) / durations.length;
+    const p95 = percentile(sorted, 95);
+    const min = sorted[0];
+    const max = sorted[sorted.length - 1];
+    rows.push([title, String(durations.length), `${avg.toFixed(0)}ms`, `${p95.toFixed(0)}ms`, `${min}ms`, `${max}ms`]);
+  }
+
+  console.log('');
+  console.log('## Step Durations');
+  console.log('');
+  printTable(
+    ['Step', 'Count', 'Avg', 'P95', 'Min', 'Max'],
+    ['left', 'right', 'right', 'right', 'right', 'right'],
+    rows,
+  );
+  console.log('');
+}
 
 if (networkStats.length > 0) {
   const topLevel = new Map<string, number>();
@@ -126,38 +141,19 @@ if (networkStats.length > 0) {
 
   const count = networkStats.length;
 
-  console.log('Network Stats (based on %d runs)', count);
-  console.log(
-    'Metric'.padEnd(25),
-    'Sum'.padStart(10),
-    'Avg'.padStart(10),
-  );
-  console.log('-'.repeat(50));
-
-  for (const [key, sum] of topLevel) {
-    console.log(
-      key.padEnd(25),
-      String(sum).padStart(10),
-      (sum / count).toFixed(1).padStart(10),
-    );
+  console.log(`## Network Stats (based on ${count} runs)`);
+  console.log('');
+  {
+    const rows = [...topLevel].map(([key, sum]) => [key, String(sum), (sum / count).toFixed(1)]);
+    printTable(['Metric', 'Sum', 'Avg'], ['left', 'right', 'right'], rows);
   }
 
   for (const [category, sums] of nested) {
     console.log('');
-    console.log(category);
-    console.log(
-      'Key'.padEnd(25),
-      'Sum'.padStart(10),
-      'Avg'.padStart(10),
-    );
-    console.log('-'.repeat(50));
-    for (const [key, sum] of sums) {
-      console.log(
-        key.padEnd(25),
-        String(sum).padStart(10),
-        (sum / count).toFixed(1).padStart(10),
-      );
-    }
+    console.log(`## ${category}`);
+    console.log('');
+    const rows = [...sums].map(([key, sum]) => [key, String(sum), (sum / count).toFixed(1)]);
+    printTable(['Key', 'Sum', 'Avg'], ['left', 'right', 'right'], rows);
   }
 
   console.log('');
