@@ -104,17 +104,17 @@ function printTable(headers: string[], aligns: Align[], rows: string[][]) {
   for (const [title, durations] of stepDurations) {
     const sorted = durations.slice().sort((a, b) => a - b);
     const avg = durations.reduce((s, d) => s + d, 0) / durations.length;
-    const p95 = percentile(sorted, 95);
+    const p90 = percentile(sorted, 90);
     const min = sorted[0];
     const max = sorted[sorted.length - 1];
-    rows.push([title, String(durations.length), `${avg.toFixed(0)}ms`, `${p95.toFixed(0)}ms`, `${min}ms`, `${max}ms`]);
+    rows.push([title, String(durations.length), `${avg.toFixed(0)}ms`, `${p90.toFixed(0)}ms`, `${min}ms`, `${max}ms`]);
   }
 
   console.log('');
-  console.log('## Step Durations');
+  console.log('#### Step Durations');
   console.log('');
   printTable(
-    ['Step', 'Count', 'Avg', 'P95', 'Min', 'Max'],
+    ['Step', 'Count', 'Avg', 'P90', 'Min', 'Max'],
     ['left', 'right', 'right', 'right', 'right', 'right'],
     rows,
   );
@@ -141,7 +141,7 @@ if (networkStats.length > 0) {
 
   const count = networkStats.length;
 
-  console.log(`## Network Stats (based on ${count} runs)`);
+  console.log(`#### Network Stats (based on ${count} runs)`);
   console.log('');
   {
     const rows = [...topLevel].map(([key, sum]) => [key, String(sum), (sum / count).toFixed(1)]);
@@ -150,7 +150,7 @@ if (networkStats.length > 0) {
 
   for (const [category, sums] of nested) {
     console.log('');
-    console.log(`## ${category}`);
+    console.log(`#### ${category}`);
     console.log('');
     const rows = [...sums].map(([key, sum]) => [key, String(sum), (sum / count).toFixed(1)]);
     printTable(['Key', 'Sum', 'Avg'], ['left', 'right', 'right'], rows);
