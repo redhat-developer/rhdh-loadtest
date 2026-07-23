@@ -9,3 +9,10 @@ updates:
     directory: /load-generator
     schedule:
       interval: weekly
+
+  - package-ecosystem: npm
+    directory: /plugins
+    schedule:
+      interval: weekly
+    # Disable all pull requests for plugins folder
+    open-pull-requests-limit: 0
