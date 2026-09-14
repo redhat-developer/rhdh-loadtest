@@ -15,14 +15,3 @@ updates:
           - "playwright*"
           - "@playwright/*"
 
-  - package-ecosystem: npm
-    directory: /plugins
-    schedule:
-      interval: weekly
-    # Disable all pull requests for plugins folder
-    open-pull-requests-limit: 0
-    groups:
-      playwright:
-        patterns:
-          - "playwright*"
-          - "@playwright/*"
