@@ -9,6 +9,11 @@ updates:
     directory: /load-generator
     schedule:
       interval: weekly
+    groups:
+      playwright:
+        patterns:
+          - "playwright*"
+          - "@playwright/*"
 
   - package-ecosystem: npm
     directory: /plugins
@@ -16,3 +21,8 @@ updates:
       interval: weekly
     # Disable all pull requests for plugins folder
     open-pull-requests-limit: 0
+    groups:
+      playwright:
+        patterns:
+          - "playwright*"
+          - "@playwright/*"
