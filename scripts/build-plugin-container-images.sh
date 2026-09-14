@@ -105,7 +105,7 @@ build_container_images() {
   esac
 }
 
-for workspace in plugins/backstage-1.42 plugins/backstage-1.45 plugins/backstage-1.49 plugins/backstage-1.52; do
+for workspace in plugins/backstage-1.42 plugins/backstage-1.45 plugins/backstage-1.49 plugins/backstage-1.52 plugins/backstage-1.54; do
   if [ ! -d "$workspace" ]; then
     continue
   fi
