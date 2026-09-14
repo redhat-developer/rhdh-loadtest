@@ -15,3 +15,12 @@ updates:
           - "playwright*"
           - "@playwright/*"
 
+  - package-ecosystem: npm
+    directory: /plugins
+    schedule:
+      interval: weekly
+    # Disable version and security update PRs for plugins
+    open-pull-requests-limit: 0
+    ignore:
+      - dependency-name: "*"
+
