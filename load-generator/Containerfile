@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/playwright:v1.61.1-resolute
+FROM mcr.microsoft.com/playwright:v1.63.0-resolute
 RUN corepack disable
 RUN npm install -g yarn
 
