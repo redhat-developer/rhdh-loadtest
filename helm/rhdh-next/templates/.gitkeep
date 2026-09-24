@@ -1,0 +1,1 @@
+# Keep templates/ so Helm treats this as a chart directory.

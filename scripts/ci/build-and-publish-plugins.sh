@@ -56,6 +56,9 @@ build_container_image() {
     1.52)
       npx --yes @red-hat-developer-hub/cli@1.11.1 plugin package --tag "rhdh-loadtest-plugins:$tag"
       ;;
+    1.54)
+      npx --yes @red-hat-developer-hub/cli@2.1.1 plugin package --tag "rhdh-loadtest-plugins:$tag"
+      ;;
     *)
       echo "Unknown workspace version: $version"
       exit 1

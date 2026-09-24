@@ -85,16 +85,16 @@ build_container_images() {
       ;;
     *1.54*)
       echo
-      echo "Build plugins with suffix $suffix for Backstage 1.54 plugins with @red-hat-developer-hub/cli@2"
+      echo "Build plugins with suffix $suffix for Backstage 1.54 plugins with @red-hat-developer-hub/cli@2.1.1"
       echo
       cd "$workspace"
       cd plugins/page-n
       rm -rf dist dist-dynamic dist-scalprum
-      npx --yes @red-hat-developer-hub/cli@2 plugin package --tag "rhdh-loadtest-plugins:bs_1.54_page-$suffix"
+      npx --yes @red-hat-developer-hub/cli@2.1.1 plugin package --tag "rhdh-loadtest-plugins:bs_1.54_page-$suffix"
       cd ../..
       cd plugins/catalog-tab-n
       rm -rf dist dist-dynamic dist-scalprum
-      npx --yes @red-hat-developer-hub/cli@2 plugin package --tag "rhdh-loadtest-plugins:bs_1.54_catalog-tab-$suffix"
+      npx --yes @red-hat-developer-hub/cli@2.1.1 plugin package --tag "rhdh-loadtest-plugins:bs_1.54_catalog-tab-$suffix"
       cd ../..
       cd ../..
 
