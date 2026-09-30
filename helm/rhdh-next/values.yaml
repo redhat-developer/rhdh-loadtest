@@ -11,18 +11,20 @@ redhat-developer-hub:
       repository: rhdh/plugin-catalog-index
       tag: "2.1"
 
-  # Disable Lightspeed / Intelligent Assistant for load tests
+  # Disable Lightspeed / Intelligent Assistant for loadtest
   intelligentAssistant:
     enabled: false
 
   dynamicPlugins:
     plugins:
-      - package: ./dynamic-plugins/dist/backstage-community-plugin-rbac
-        disabled: false
-      - package: ./dynamic-plugins/dist/red-hat-developer-hub-backstage-plugin-bulk-import
-        disabled: true
-      - package: ./dynamic-plugins/dist/red-hat-developer-hub-backstage-plugin-bulk-import-backend-dynamic
-        disabled: true
+      # Required to login
+      - package: oci://ghcr.io/redhat-developer/rhdh-plugin-export-overlays/backstage-plugin-auth-backend-module-guest-provider:next__0.2.20
+      - package: oci://ghcr.io/redhat-developer/rhdh-plugin-export-overlays/backstage-plugin-auth-backend-module-github-provider:next__0.5.4
+
+      # Disable segment for loadtest
+      - package: oci://quay.io/rhdh/backstage-community-plugin-analytics-provider-segment@sha256:2b7c6b4b1be9ce5b1e4cc42359d38a156324504da2ed67aee72df03b700b4827
+        enabled: false
+
       - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.54_page-1!internal-backstage-plugin-page-1
       - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.54_page-2!internal-backstage-plugin-page-2
       - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.54_page-3!internal-backstage-plugin-page-3
