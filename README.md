@@ -4,26 +4,26 @@ This repository contains ArgoCD resources, Helm charts and other resources
 to setup different RHDH versions on Kubernetes with up to 200 dynamic (frontend) plugins
 and 50k catalog entities.
 
-Available versions: `rhdh-17`, `rhdh-18`, `rhdh-19`, `rhdh-110`, `rhdh-110-nfs`, and `rhdh-next`
+Available versions: `rhdh-18`, `rhdh-19`, `rhdh-110`, `rhdh-110-nfs`, and `rhdh-next`
 
 ## Create test instances with Helm
 
-To create 1.9 and above:
+To create 1.10, 1.10 NFS and Next:
 
 ```
 make install-all
 ```
 
-or for 1.7 up to 1.8:
+To create 1.8 and 1.9:
 
 ```
 make install-legacy
 ```
 
-or for just one version use:
+Or for just one version use:
 
 ```
-cd helm/rhdh-110 && make install 
+cd helm/rhdh-next && make install 
 ```
 
 ## Create test instances with Argo CD
@@ -32,8 +32,8 @@ Start an OpenShift cluster with OpenShift GitOps operator. To create all test ap
 
 ```bash
 oc apply -f argocd/app-project.yaml
-oc apply -f argocd/app-of-default-apps.yaml   # for 1.9 and newer
-oc apply -f argocd/app-of-legacy-apps.yaml    # for 1.7 and 1.8
+oc apply -f argocd/app-of-default-apps.yaml   # for 1.10 and newer
+oc apply -f argocd/app-of-legacy-apps.yaml    # for 1.8 and 1.9
 ```
 
 or, without cloning:
