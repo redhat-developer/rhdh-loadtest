@@ -1,5 +1,5 @@
-CHART_NAME = rhdh-loadtests-next
-NAMESPACE = rhdh-loadtests-next
+CHART_NAME = rhdh-loadtest-next
+NAMESPACE = rhdh-loadtest-next
 
 # Optional: CLUSTER_ROUTER_BASE=$(oc get ingresses.config.openshift.io cluster -o jsonpath='{.spec.domain}')
 install:

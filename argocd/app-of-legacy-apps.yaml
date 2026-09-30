@@ -2,9 +2,9 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   namespace: openshift-gitops
-  name: rhdh-loadtests-app-of-legacy-apps
+  name: rhdh-loadtest-app-of-legacy-apps
 spec:
-  project: rhdh-loadtests
+  project: rhdh-loadtest
   source:
     repoURL: 'https://github.com/redhat-developer/rhdh-loadtest.git'
     targetRevision: HEAD

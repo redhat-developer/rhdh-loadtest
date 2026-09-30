@@ -1,5 +1,5 @@
-CHART_NAME = rhdh-loadtests-110-nfs
-NAMESPACE = rhdh-loadtests-110-nfs
+CHART_NAME = rhdh-loadtest-110-nfs
+NAMESPACE = rhdh-loadtest-110-nfs
 
 install:
 	helm upgrade --install $(CHART_NAME) . --create-namespace --namespace $(NAMESPACE) --values values.yaml
