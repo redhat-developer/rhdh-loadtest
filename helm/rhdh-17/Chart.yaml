@@ -1,7 +1,0 @@
-apiVersion: v2
-name: rhdh-loadtests-17
-version: 0.0.0
-dependencies:
-  - name: redhat-developer-hub
-    version: "1.7"
-    repository: "https://charts.openshift.io"
