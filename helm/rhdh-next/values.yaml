@@ -127,9 +127,9 @@ redhat-developer-hub:
     permission:
       enabled: false
 
-  # NFS (New Frontend System / Module Federation)
   extraEnv:
     - name: BACKSTAGE_LOG_LEVEL
       value: debug
-    # - name: ENABLESTANDARD_MODULE_FEDERATION # TODO: still needed?
-    #   value: "true"
+  extraEnvFrom:
+    - configMapRef:
+        name: rhdh-baseurl-configmap
