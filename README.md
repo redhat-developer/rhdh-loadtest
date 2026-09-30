@@ -96,7 +96,7 @@ upstream:
 
 TODO
 
-## Dynamic Plugins (Example container images for different RHDH versions)
+## Test Plugins
 
 The `plugins` folder contains multiple Backstage workspaces for different Backstage versions (1.42, 1.45, 1.49 and 1.52).
 Each workspace contains currently two plugins.
@@ -108,6 +108,21 @@ They are published as one container image under [quay.io/rhdh-community/rhdh-loa
 
 * `quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.42_page-n`
 * `quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.42_catalog-tab-n`
+
+### Dynamic Plugin Configuration for the New Frontend System
+
+```yaml
+redhat-developer-hub:
+  dynamicPlugins:
+    plugins:
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.54_page-1!internal-backstage-plugin-page-1
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.54_page-2!internal-backstage-plugin-page-...
+
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.54_catalog-tab-1!internal-backstage-plugin-catalog-tab-1
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.54_catalog-tab-2!internal-backstage-plugin-catalog-tab-...
+```
+
+### Dyanmic Plugin Confogiration with mount point configuration
 
 The Backstage version can be replaced with `bs_1.42`, `bs_1.45`, `bs_1.49` or `bs_1.52` and the `-n` can be replaced with a 1 to 100 so that up to 200 dynamic (frontend) plugins can be loaded for each RHDH release.
 
