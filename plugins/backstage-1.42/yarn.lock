@@ -7658,13 +7658,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@octokit/openapi-types@npm:^22.2.0":
-  version: 22.2.0
-  resolution: "@octokit/openapi-types@npm:22.2.0"
-  checksum: 10c0/a45bfc735611e836df0729f5922bbd5811d401052b972d1e3bc1278a2d2403e00f4552ce9d1f2793f77f167d212da559c5cb9f1b02c935114ad6d898779546ee
-  languageName: node
-  linkType: hard
-
 "@octokit/openapi-types@npm:^24.2.0":
   version: 24.2.0
   resolution: "@octokit/openapi-types@npm:24.2.0"
@@ -7856,16 +7849,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@octokit/types@npm:^13.0.0, @octokit/types@npm:^13.1.0":
-  version: 13.6.2
-  resolution: "@octokit/types@npm:13.6.2"
-  dependencies:
-    "@octokit/openapi-types": "npm:^22.2.0"
-  checksum: 10c0/ea51afb21b667b25dad9e5daae1701da1b362a4d6ed9609f6d3f9f219e5389bf50f7e53ae029ca190750e278be3ab963cac648a95ad248f245a5fda16a4f1ed1
-  languageName: node
-  linkType: hard
-
-"@octokit/types@npm:^13.7.0, @octokit/types@npm:^13.8.0":
+"@octokit/types@npm:^13.0.0, @octokit/types@npm:^13.1.0, @octokit/types@npm:^13.7.0, @octokit/types@npm:^13.8.0":
   version: 13.10.0
   resolution: "@octokit/types@npm:13.10.0"
   dependencies:
@@ -20275,14 +20259,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"graphql@npm:^16.0.0":
-  version: 16.11.0
-  resolution: "graphql@npm:16.11.0"
-  checksum: 10c0/124da7860a2292e9acf2fed0c71fc0f6a9b9ca865d390d112bdd563c1f474357141501c12891f4164fe984315764736ad67f705219c62f7580681d431a85db88
-  languageName: node
-  linkType: hard
-
-"graphql@npm:^16.8.1":
+"graphql@npm:^16.0.0, graphql@npm:^16.8.1":
   version: 16.12.0
   resolution: "graphql@npm:16.12.0"
   checksum: 10c0/b6fffa4e8a4e4a9933ebe85e7470b346dbf49050c1a482fac5e03e4a1a7bed2ecd3a4c97e29f04457af929464bc5e4f2aac991090c2f320111eef26e902a5c75

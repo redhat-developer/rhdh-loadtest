@@ -11136,16 +11136,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/debug@npm:^4.0.0":
-  version: 4.1.12
-  resolution: "@types/debug@npm:4.1.12"
-  dependencies:
-    "@types/ms": "npm:*"
-  checksum: 10c0/5dcd465edbb5a7f226e9a5efd1f399c6172407ef5840686b73e3608ce135eeca54ae8037dcd9f16bdb2768ac74925b820a8b9ecc588a58ca09eca6acabe33e2f
-  languageName: node
-  linkType: hard
-
-"@types/debug@npm:^4.1.7":
+"@types/debug@npm:^4.0.0, @types/debug@npm:^4.1.7":
   version: 4.1.13
   resolution: "@types/debug@npm:4.1.13"
   dependencies:
@@ -18531,14 +18522,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"graphql@npm:^16.0.0":
-  version: 16.12.0
-  resolution: "graphql@npm:16.12.0"
-  checksum: 10c0/b6fffa4e8a4e4a9933ebe85e7470b346dbf49050c1a482fac5e03e4a1a7bed2ecd3a4c97e29f04457af929464bc5e4f2aac991090c2f320111eef26e902a5c75
-  languageName: node
-  linkType: hard
-
-"graphql@npm:^16.8.1":
+"graphql@npm:^16.0.0, graphql@npm:^16.8.1":
   version: 16.14.2
   resolution: "graphql@npm:16.14.2"
   checksum: 10c0/a95a96961eaff55cc9fe9d31fae6f33499ac988b972d07ea5085024cb1333f515b902f376e7393a5489aa82200a8aff3eb96580e4d1b69d702ed19b6eb1ce97a
@@ -30224,16 +30208,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"use-sync-external-store@npm:^1.4.0":
-  version: 1.6.0
-  resolution: "use-sync-external-store@npm:1.6.0"
-  peerDependencies:
-    react: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
-  checksum: 10c0/35e1179f872a53227bdf8a827f7911da4c37c0f4091c29b76b1e32473d1670ebe7bcd880b808b7549ba9a5605c233350f800ffab963ee4a4ee346ee983b6019b
-  languageName: node
-  linkType: hard
-
-"use-sync-external-store@npm:^1.6.0":
+"use-sync-external-store@npm:^1.4.0, use-sync-external-store@npm:^1.6.0":
   version: 1.7.0
   resolution: "use-sync-external-store@npm:1.7.0"
   peerDependencies:
