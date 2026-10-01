@@ -1,1 +1,1 @@
-export { pagePlugin, Page } from './plugin';
+export { pageNPlugin as default } from './plugin';

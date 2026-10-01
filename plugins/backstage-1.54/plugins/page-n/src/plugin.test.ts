@@ -1,7 +1,7 @@
-import { pagePlugin } from './plugin';
+import { pageNPlugin } from './plugin';
 
 describe('page-n', () => {
   it('should export plugin', () => {
-    expect(pagePlugin).toBeDefined();
+    expect(pageNPlugin).toBeDefined();
   });
 });

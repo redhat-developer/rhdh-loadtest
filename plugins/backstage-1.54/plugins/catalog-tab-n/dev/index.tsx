@@ -1,11 +1,8 @@
-import { createDevApp } from '@backstage/dev-utils';
-import { catalogTabPlugin, EntityCatalogCard } from '../src/plugin';
+import { createDevApp } from '@backstage/frontend-dev-utils';
+import catalogPlugin from '@backstage/plugin-catalog/alpha';
 
-createDevApp()
-  .registerPlugin(catalogTabPlugin)
-  .addPage({
-    element: <EntityCatalogCard />,
-    title: 'Root Page',
-    path: '/catalog-tab-n',
-  })
-  .render();
+import plugin from '../src';
+
+createDevApp({
+  features: [catalogPlugin, plugin],
+});

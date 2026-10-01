@@ -1,1 +1,1 @@
-export { catalogTabPlugin, EntityCatalogCard } from './plugin';
+export { catalogTabPlugin as default } from './plugin';
