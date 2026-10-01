@@ -67,22 +67,6 @@ build_container_images() {
       cd ../..
 
       ;;
-    *1.52*)
-      echo
-      echo "Build plugins with suffix $suffix for Backstage 1.52 plugins with @red-hat-developer-hub/cli@1.11.1"
-      echo
-      cd "$workspace"
-      cd plugins/page-n
-      rm -rf dist dist-dynamic dist-scalprum
-      npx --yes @red-hat-developer-hub/cli@1.11.1 plugin package --tag "rhdh-loadtest-plugins:bs_1.52_page-$suffix"
-      cd ../..
-      cd plugins/catalog-tab-n
-      rm -rf dist dist-dynamic dist-scalprum
-      npx --yes @red-hat-developer-hub/cli@1.11.1 plugin package --tag "rhdh-loadtest-plugins:bs_1.52_catalog-tab-$suffix"
-      cd ../..
-      cd ../..
-
-      ;;
     *1.54*)
       echo
       echo "Build plugins with suffix $suffix for Backstage 1.54 plugins with @red-hat-developer-hub/cli@2.1.1"
@@ -105,7 +89,7 @@ build_container_images() {
   esac
 }
 
-for workspace in plugins/backstage-1.42 plugins/backstage-1.45 plugins/backstage-1.49 plugins/backstage-1.52 plugins/backstage-1.54; do
+for workspace in plugins/backstage-1.42 plugins/backstage-1.45 plugins/backstage-1.49 plugins/backstage-1.54; do
   if [ ! -d "$workspace" ]; then
     continue
   fi

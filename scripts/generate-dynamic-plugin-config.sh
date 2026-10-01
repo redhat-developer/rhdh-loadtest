@@ -2,7 +2,7 @@
 
 set -e
 
-backstage_prefix="bs_1.52_"
+backstage_prefix="bs_1.42_"
 pages=20
 catalog_tabs=20
 
