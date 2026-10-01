@@ -20,7 +20,6 @@ jobs:
           - backstage-1.42
           - backstage-1.45
           - backstage-1.49
-          - backstage-1.52
           - backstage-1.54
 
     steps:

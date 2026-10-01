@@ -98,7 +98,7 @@ TODO
 
 ## Test Plugins
 
-The `plugins` folder contains multiple Backstage workspaces for different Backstage versions (1.42, 1.45, 1.49 and 1.52).
+The `plugins` folder contains multiple Backstage workspaces for different Backstage versions (1.42, 1.45, 1.49 and 1.54).
 Each workspace contains currently two plugins.
 One that adds a new page to the main navigation and one that adds a new tab to the catalog details page.
 
@@ -124,7 +124,7 @@ redhat-developer-hub:
 
 ### Dyanmic Plugin Confogiration with mount point configuration
 
-The Backstage version can be replaced with `bs_1.42`, `bs_1.45`, `bs_1.49` or `bs_1.52` and the `-n` can be replaced with a 1 to 100 so that up to 200 dynamic (frontend) plugins can be loaded for each RHDH release.
+The Backstage version can be replaced with `bs_1.42`, `bs_1.45`, `bs_1.49` or `bs_1.54` and the `-n` can be replaced with a 1 to 100 so that up to 200 dynamic (frontend) plugins can be loaded for each RHDH release.
 
 To integrate these into your local setup apply these RHDH dynamic plugin configurations:
 
