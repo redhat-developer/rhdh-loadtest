@@ -101,6 +101,8 @@ build_container_image() {
   local plugin="$1"
   local tag="$2"
 
+  echo "Build container image for $workspace/plugins/$plugin as $tag..."
+
   cd "$workspace/plugins/$plugin"
   rm -rf dist dist-dynamic dist-scalprum
 
@@ -109,13 +111,13 @@ build_container_image() {
       run_with_cli_failure_logs npx --yes @janus-idp/cli@3.6.1 package package-dynamic-plugins --tag "rhdh-loadtest-plugins:$tag"
       ;;
     1.45)
-      run_with_cli_failure_logs npx --yes @red-hat-developer-hub/cli@1.9.1 plugin package --tag "rhdh-loadtest-plugins:$tag"
+      run_with_cli_failure_logs npx --yes @red-hat-developer-hub/cli@1.9.2 plugin package --tag "rhdh-loadtest-plugins:$tag"
       ;;
     1.49)
-      run_with_cli_failure_logs npx --yes @red-hat-developer-hub/cli@1.10.7 plugin package --tag "rhdh-loadtest-plugins:$tag"
+      run_with_cli_failure_logs npx --yes @red-hat-developer-hub/cli@1.10.8 plugin package --tag "rhdh-loadtest-plugins:$tag"
       ;;
     1.54)
-      run_with_cli_failure_logs npx --yes @red-hat-developer-hub/cli@2.1.1 plugin package --tag "rhdh-loadtest-plugins:$tag"
+      run_with_cli_failure_logs npx --yes @red-hat-developer-hub/cli@2.1.2 plugin package --tag "rhdh-loadtest-plugins:$tag"
       ;;
     *)
       echo "Unknown workspace version: $version"
