@@ -1,6 +1,6 @@
-# page-n
+# mui5-page-n
 
-Welcome to the page-n plugin!
+Welcome to the mui5-page-n plugin!
 
 _This plugin was created through the Backstage CLI_
 
@@ -8,7 +8,7 @@ _This plugin was created through the Backstage CLI_
 
 Your plugin has been added to the app in this repository, meaning you'll be able
 to access it by running `yarn start` in the root directory, and then navigating
-to [/page-n](http://localhost:3000/page-n).
+to [/mui5-page-n](http://localhost:3000/mui5-page-n).
 
 This plugin is built with Backstage's [frontend
 system](https://backstage.io/docs/frontend-system/architecture/index), and you
