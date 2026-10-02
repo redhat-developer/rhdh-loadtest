@@ -45,6 +45,7 @@ async function fetchAllTags(): Promise<QuayTag[]> {
     const url = new URL(QUAY_TAG_API);
     url.searchParams.set('page', String(page));
     url.searchParams.set('limit', '100');
+    url.searchParams.set('onlyActiveTags', 'true');
 
     const response = await fetch(url);
     if (!response.ok) {
