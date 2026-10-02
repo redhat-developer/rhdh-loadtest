@@ -60,20 +60,30 @@ dump_cli_failure_logs() {
     fi
   done
 
-  # npm pack / tar staging logs under the CLI temp dirs (best-effort).
+  # npm pack / tar staging logs and npm's own debug logs (best-effort).
   while IFS= read -r f; do
     found=1
     echo
     echo "----- $f -----"
     cat "$f"
-  done < <(find "${TMPDIR:-/tmp}" -maxdepth 2 \( \
-      -name 'rhdh-cli.yarn-install.log' -o \
-      -name 'npm-pack-output-*.log' -o \
-      -name 'yarn-install.log' \
-    \) -type f 2>/dev/null | sort -u)
+  done < <(
+    {
+      find "${TMPDIR:-/tmp}" -maxdepth 2 \( \
+        -name 'rhdh-cli.yarn-install.log' -o \
+        -name 'npm-pack-output-*.log' -o \
+        -name 'yarn-install.log' \
+      \) -type f 2>/dev/null
+      # Prefer the newest npm debug logs; older runs can leave many files behind.
+      find "${HOME}/.npm/_logs" -maxdepth 1 -name '*.log' -type f \
+        -printf '%T@ %p\n' 2>/dev/null \
+        | sort -nr \
+        | head -n 5 \
+        | cut -d' ' -f2-
+    } | awk '!seen[$0]++'
+  )
 
   if [ "$found" -eq 0 ]; then
-    echo "(no CLI log files found under ${TMPDIR:-/tmp} or the plugin directory)"
+    echo "(no CLI log files found under ${TMPDIR:-/tmp}, ${HOME}/.npm/_logs, or the plugin directory)"
   fi
 
   echo "===== End packaging CLI failure logs ====="
