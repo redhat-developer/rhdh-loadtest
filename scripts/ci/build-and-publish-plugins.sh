@@ -74,11 +74,9 @@ dump_cli_failure_logs() {
         -name 'yarn-install.log' \
       \) -type f 2>/dev/null
       # Prefer the newest npm debug logs; older runs can leave many files behind.
-      find "${HOME}/.npm/_logs" -maxdepth 1 -name '*.log' -type f \
-        -printf '%T@ %p\n' 2>/dev/null \
-        | sort -nr \
-        | head -n 5 \
-        | cut -d' ' -f2-
+      find "${HOME}/.npm/_logs" -maxdepth 1 -name '*.log' -type f 2>/dev/null \
+        | sort -r \
+        | head -n 1
     } | awk '!seen[$0]++'
   )
 
