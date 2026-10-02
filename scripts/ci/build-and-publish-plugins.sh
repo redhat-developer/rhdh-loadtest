@@ -36,6 +36,59 @@ if [ ! -d "$workspace" ]; then
   exit 1
 fi
 
+# The packaging CLIs redirect child-process output (notably `yarn install`) into
+# log files instead of the console. @janus-idp/cli never dumps that file on
+# failure; @red-hat-developer-hub/cli does for yarn-install but other steps can
+# still leave diagnostics on disk. Dump known log files when a command fails so
+# GitHub Actions captures the real error, then re-raise the original exit code.
+dump_cli_failure_logs() {
+  local found=0
+  local f
+
+  echo
+  echo "===== Packaging CLI failure logs ====="
+
+  for f in \
+    "${TMPDIR:-/tmp}/rhdh-cli.yarn-install.log" \
+    "yarn-install.log" \
+    "dist-dynamic/yarn-install.log"; do
+    if [ -f "$f" ]; then
+      found=1
+      echo
+      echo "----- $f -----"
+      cat "$f"
+    fi
+  done
+
+  # npm pack / tar staging logs under the CLI temp dirs (best-effort).
+  while IFS= read -r f; do
+    found=1
+    echo
+    echo "----- $f -----"
+    cat "$f"
+  done < <(find "${TMPDIR:-/tmp}" -maxdepth 2 \( \
+      -name 'rhdh-cli.yarn-install.log' -o \
+      -name 'npm-pack-output-*.log' -o \
+      -name 'yarn-install.log' \
+    \) -type f 2>/dev/null | sort -u)
+
+  if [ "$found" -eq 0 ]; then
+    echo "(no CLI log files found under ${TMPDIR:-/tmp} or the plugin directory)"
+  fi
+
+  echo "===== End packaging CLI failure logs ====="
+  echo
+}
+
+run_with_cli_failure_logs() {
+  local exit_code=0
+  "$@" || exit_code=$?
+  if [ "$exit_code" -ne 0 ]; then
+    dump_cli_failure_logs || true
+  fi
+  return "$exit_code"
+}
+
 build_container_image() {
   local plugin="$1"
   local tag="$2"
@@ -45,16 +98,16 @@ build_container_image() {
 
   case "$version" in
     1.42)
-      npx --yes @janus-idp/cli@3.6.1 package package-dynamic-plugins --tag "rhdh-loadtest-plugins:$tag"
+      run_with_cli_failure_logs npx --yes @janus-idp/cli@3.6.1 package package-dynamic-plugins --tag "rhdh-loadtest-plugins:$tag"
       ;;
     1.45)
-      npx --yes @red-hat-developer-hub/cli@1.9.1 plugin package --tag "rhdh-loadtest-plugins:$tag"
+      run_with_cli_failure_logs npx --yes @red-hat-developer-hub/cli@1.9.1 plugin package --tag "rhdh-loadtest-plugins:$tag"
       ;;
     1.49)
-      npx --yes @red-hat-developer-hub/cli@1.10.7 plugin package --tag "rhdh-loadtest-plugins:$tag"
+      run_with_cli_failure_logs npx --yes @red-hat-developer-hub/cli@1.10.7 plugin package --tag "rhdh-loadtest-plugins:$tag"
       ;;
     1.54)
-      npx --yes @red-hat-developer-hub/cli@2.1.1 plugin package --tag "rhdh-loadtest-plugins:$tag"
+      run_with_cli_failure_logs npx --yes @red-hat-developer-hub/cli@2.1.1 plugin package --tag "rhdh-loadtest-plugins:$tag"
       ;;
     *)
       echo "Unknown workspace version: $version"
