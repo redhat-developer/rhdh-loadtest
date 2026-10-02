@@ -77,6 +77,10 @@ build_and_publish_instance() {
 
     (build_container_image "$plugin-n" "$tag")
 
+    # Quay tag expiration: h/d/w only; 730d ≈ 2 years from push
+    printf 'FROM %s\nLABEL quay.expires-after=730d\n' "$localImage:$tag" \
+      | podman build -t "$localImage:$tag" -
+
     echo "Pushing $localImage:$tag to $imageRepository:$tag"
     podman push "$localImage:$tag" "$imageRepository:$tag"
 

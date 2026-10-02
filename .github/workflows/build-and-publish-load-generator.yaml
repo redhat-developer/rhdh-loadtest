@@ -25,7 +25,8 @@ jobs:
         uses: actions/checkout@v7
 
       - name: Build container image
-        run: podman build -t quay.io/rhdh-community/rhdh-loadtest-generator:latest .
+        # quay.expires-after uses h/d/w units; 730d ≈ 2 years
+        run: podman build --label quay.expires-after=730d -t quay.io/rhdh-community/rhdh-loadtest-generator:latest .
         working-directory: load-generator
 
       - name: Login to Quay
