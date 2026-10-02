@@ -77,7 +77,7 @@ dump_cli_failure_logs() {
       find "${HOME}/.npm/_logs" -maxdepth 1 -name '*.log' -type f 2>/dev/null \
         | sort -r \
         | head -n 1
-    } | awk '!seen[$0]++'
+    }
   )
 
   if [ "$found" -eq 0 ]; then
