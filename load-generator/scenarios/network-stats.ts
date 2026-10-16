@@ -1,24 +1,28 @@
 import type { Page, ConsoleMessage, Request, Response } from '@playwright/test';
 
 interface LogResult {
-  logStatsAndErrors: () => void;
+  logStatsAndErrors: () => Promise<void>;
 }
 
 export const addNetworkListeners = async (page: Page): Promise<LogResult> => {
   const consoleMessages = [] as ConsoleMessage[];
   const requests = [] as Request[];
   const requestsFailed = [] as Request[];
-  const requestsFinished = [] as Request[];
+  const requestsFinished = new Set<Request>();
   const responses = [] as Response[];
   
   page.on('console', (msg) => {
-    console.log(`Browser console.${msg.type()}: ${msg.text()}`);
+    const type = msg.type();
+    if (type === 'debug' || type === 'info') {
+      return;
+    }
+    console.log(`Browser console.${type}: ${msg.text()}`);
     consoleMessages.push(msg);
   });
   
   page.on('request', (req) => requests.push(req));
   page.on('requestfailed', (req) => requestsFailed.push(req));
-  page.on('requestfinished', (req) => requestsFinished.push(req));
+  page.on('requestfinished', (req) => requestsFinished.add(req));
   page.on('response', (resp) => responses.push(resp));
 
   const logStatsAndErrors = async () => {
@@ -26,7 +30,7 @@ export const addNetworkListeners = async (page: Page): Promise<LogResult> => {
       consoleMessages: consoleMessages.length,
       requests: requests.length,
       requestsFailed: requestsFailed.length,
-      requestsFinished: requestsFinished.length,
+      requestsFinished: requestsFinished.size,
       responses: responses.length,
       responseSizeSumKb: 0,
       responseSizeMaxKb: 0,
@@ -51,20 +55,34 @@ export const addNetworkListeners = async (page: Page): Promise<LogResult> => {
       const statusCode = resp.status();
       stats.perStatusCode[statusCode] = (stats.perStatusCode[statusCode] || 0) + 1;
 
-      const sizes = await req.sizes();
-      stats.responseSizeSumKb += sizes.responseBodySize / 1024; // Convert to KB
-      stats.responseSizeMaxKb = Math.max(stats.responseSizeMaxKb, sizes.responseBodySize / 1024);
+      if (!requestsFinished.has(req) || req.failure()) {
+        continue;
+      }
 
-      const timing = await req.timing();
-      if (timing.responseEnd !== -1) {
-        stats.responseTimeSumSec += timing.responseEnd / 1000; // Convert to seconds
-        responseTimes.push(timing.responseEnd / 1000);
+      try {
+        const sizes = await req.sizes();
+        stats.responseSizeSumKb += sizes.responseBodySize / 1024;
+        stats.responseSizeMaxKb = Math.max(
+          stats.responseSizeMaxKb,
+          sizes.responseBodySize / 1024,
+        );
+
+        const timing = req.timing();
+        if (timing.responseEnd !== -1) {
+          stats.responseTimeSumSec += timing.responseEnd / 1000;
+          responseTimes.push(timing.responseEnd / 1000);
+        }
+      } catch {
+        // Unfinished streams (SSE/long-poll) must not hang stats collection.
       }
     }
     stats.responseSizeSumKb = parseFloat(stats.responseSizeSumKb.toFixed(2));
     stats.responseSizeMaxKb = parseFloat(stats.responseSizeMaxKb.toFixed(2));
     stats.responseTimeSumSec = parseFloat(stats.responseTimeSumSec.toFixed(2));
-    stats.responseTimeAvgSec = responseTimes.length > 0 ? parseFloat((stats.responseTimeSumSec / responseTimes.length).toFixed(2)) : -1; // Calculate average
+    stats.responseTimeAvgSec =
+      responseTimes.length > 0
+        ? parseFloat((stats.responseTimeSumSec / responseTimes.length).toFixed(2))
+        : -1;
 
     console.log('Stats:', stats);
 

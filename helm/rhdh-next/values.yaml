@@ -5,12 +5,6 @@ redhat-developer-hub:
     route:
       enabled: false
 
-  catalogIndex:
-    image:
-      registry: quay.io
-      repository: rhdh/plugin-catalog-index
-      tag: "2.1"
-
   # Disable Lightspeed / Intelligent Assistant for loadtest
   intelligentAssistant:
     enabled: false
@@ -78,13 +72,16 @@ redhat-developer-hub:
       - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.54_catalog-tab-25!internal-backstage-plugin-catalog-tab-25
 
   appConfig:
+    # Required for NFS SignInPage (app-auth) to show guest
+    signInPage: guest
+
     app:
       title: RHDH 2.1 loadtest
       packages: all
       extensions:
-        - page:home:
-            config:
-              path: / # TODO: needed?
+        # Resolve nav attachment conflict (nav-content:app/sidebar vs nav-content:app)
+        - nav-content:app/sidebar: false
+        - page:home: false
         - page:catalog:
             config:
               path: /catalog # TODO: needed?
@@ -95,6 +92,8 @@ redhat-developer-hub:
               customizable: true
 
     auth:
+      # Required by NFS app-auth SignInPage (otherwise: "Sign-in is not available")
+      environment: development
       providers:
         guest:
           dangerouslyAllowOutsideDevelopment: true

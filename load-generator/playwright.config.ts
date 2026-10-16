@@ -9,19 +9,25 @@ import { defineConfig, devices } from '@playwright/test';
 // dotenv.config({ path: path.resolve(__dirname, '.env') });
 
 const nfs = (process.env.RHDH_FRONTEND ?? 'ofs').toLowerCase() === 'nfs';
+const loops = Number(process.env.LOOPS || 1);
+const cacheMode = (process.env.CACHE_MODE ?? 'both').toLowerCase();
+const warmJourneys =
+  cacheMode === 'warm' || cacheMode === 'both' ? loops + 1 : 1;
 
 const testMatch =
   nfs ? 'guest-login-home-catalog-nfs.spec.ts' : 'guest-login-home-catalog.spec.ts';
 
-// NFS (module federation) needs longer waits for remotes to load
+// NFS (module federation) needs longer waits for remotes/catalog to load.
+// Warm mode runs prime + LOOPS journeys in one test, so scale the default.
+const perJourneyTimeout = nfs ? 300_000 : 30_000;
 const testTimeout = Number(
-  process.env.PLAYWRIGHT_TEST_TIMEOUT ?? (nfs ? 120_000 : 30_000),
+  process.env.PLAYWRIGHT_TEST_TIMEOUT ?? perJourneyTimeout * warmJourneys,
 );
 const expectTimeout = Number(
-  process.env.PLAYWRIGHT_EXPECT_TIMEOUT ?? (nfs ? 120_000 : 20_000),
+  process.env.PLAYWRIGHT_EXPECT_TIMEOUT ?? (nfs ? 90_000 : 20_000),
 );
 const navigationTimeout = Number(
-  process.env.PLAYWRIGHT_NAVIGATION_TIMEOUT ?? (nfs ? 120_000 : 30_000),
+  process.env.PLAYWRIGHT_NAVIGATION_TIMEOUT ?? (nfs ? 90_000 : 30_000),
 );
 
 /**

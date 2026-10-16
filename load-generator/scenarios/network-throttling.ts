@@ -1,4 +1,4 @@
-import type { BrowserContext } from 'playwright-core';
+import type { BrowserContext, Page } from 'playwright-core';
 
 // Will read the NETWORK_THROTTLING environment variable and set up network throttling accordingly.
 // Fallback to 'none' if the environment variable is not set or invalid.
@@ -72,14 +72,10 @@ const conditions: Record<string, EmulateNetworkConditionsParameters> = {
   },
 };
 
-let alreadyConfigured = false;
-
-export const setupNetworkThrottling = async (context: BrowserContext) => {
-  if (alreadyConfigured) {
-    return;
-  }
-  alreadyConfigured = true;
-
+export const setupNetworkThrottling = async (
+  context: BrowserContext,
+  page?: Page,
+) => {
   let condition = conditions[option];
 
   if (!condition) {
@@ -91,6 +87,10 @@ export const setupNetworkThrottling = async (context: BrowserContext) => {
     console.log('Network throttling is enabled with option:', option, '=>', condition);
   }
 
-  const cdpSession = await context.newCDPSession(await context.pages()[0]);
+  const target = page ?? context.pages()[0];
+  if (!target) {
+    throw new Error('setupNetworkThrottling requires an open page');
+  }
+  const cdpSession = await context.newCDPSession(target);
   await cdpSession.send('Network.emulateNetworkConditions', condition);
 };

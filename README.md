@@ -189,39 +189,63 @@ The `load-generator` directory contains a Playwright-based load generator that s
 
 It is not a replacement for dedicated performance testing — the goal is to produce reproducible, lightweight load tests that can run on smaller test environments.
 
-The test scenario (`guest-login-home-catalog.spec.ts`) runs a configurable number of loops (default: 100), each performing these steps:
+Full command reference: [load-generator/README.md](load-generator/README.md).  
+### Scenarios
 
-1. **Login** — Opens the RHDH instance and waits for the guest "Enter" button
-2. **Home** — Clicks "Enter" and verifies the home page loads (Welcome, Get started, Explore cards)
-3. **Catalog** — Navigates to the Catalog page and verifies all 1000 components are listed
-4. **Component** — Opens "Component 1" and verifies its details (About, Group 1, System 1, Catalog Tab 1)
-5. **Catalog Tab** — Clicks the "Catalog Tab 1" tab and verifies the plugin content loads
-6. **Page Plugin** — Navigates to "Page 1" via the sidebar and verifies the plugin page loads
+| Frontend | Spec | Script |
+|---|---|---|
+| **OFS** (classic) | `guest-login-home-catalog.spec.ts` | `yarn test` |
+| **NFS** (new FE) | `guest-login-home-catalog-nfs.spec.ts` | `yarn test:nfs` |
 
-After the test completes, an analysis script (`scripts/analyse.mts`) parses the Playwright JSON report and prints per-step statistics (count, avg, p95, min, max).
+Point `RHDH_URL` at whichever RHDH instance you want to measure (any chart / version that exposes the guest journey).
 
-Example output:
+### Journey
 
-```
-Step                      Count        Avg        P95        Min        Max
----------------------------------------------------------------------------
-login                       100     6661ms     7387ms     6194ms     8564ms
-home                        100     1419ms     1905ms     1087ms     1997ms
-catalog                     100     1361ms     1454ms     1011ms     1861ms
-component                   100      689ms      776ms      543ms     1214ms
-catalog-tab-n               100      982ms     1071ms      425ms     2054ms
-page-n                      100      982ms     1424ms      881ms     1916ms
-all                         100    12126ms    13590ms    10686ms    14515ms
-```
+Each measured loop is one user session. Step names in reports are `cold/<step>` or `warm/<step>`:
+
+| # | Step | Start | Success criteria |
+|---|---|---|---|
+| 1 | **login** | `GET /` | Guest **Enter** visible (cold), or already-authenticated home (warm repeat) |
+| 2 | **home** | Click **Enter** (if shown), then sidebar **Home** | Home ready (widgets / welcome / empty-home, depending on build) |
+| 3 | **catalog** | Sidebar **Catalog** | **Catalog**, **All Components (1000)**, **Component 1** |
+| 4 | **component** | Click **Component 1** | **About**, **Group 1**, **System 1**, **Catalog Tab 1** |
+| 5 | **catalog-tab-n** | Click **Catalog Tab 1** | **Example User List** |
+| 6 | **page-n** | Sidebar **Page 1** | **Welcome to Page 1!**, **Information card**, **Example User List** |
+
+### Cold vs warm
+
+- **Cold:** new browser context per loop; HTTP cache disabled and cleared.
+- **Warm:** one browser context; one unmeasured **prime** journey, then measured loops with cache enabled.
+- **Journey time** = sum of the six steps. Do **not** compare warm Playwright `all` (prime + N loops) to cold `all`.
 
 ### Run locally
 
 ```shell
 cd load-generator
-npm install
-npm run install-browser
-export RHDH_URL=https://your-rhdh-instance.example.com
-npm test
+yarn install
+yarn install-browser
+unset HTTP_PROXY HTTPS_PROXY http_proxy https_proxy ALL_PROXY all_proxy
+
+export RHDH_URL=https://<route-host>
+export RHDH_FRONTEND=ofs   # or nfs
+export NETWORK_THROTTLING=none
+export PLAYWRIGHT_TEST_TIMEOUT=3600000
+export PLAYWRIGHT_EXPECT_TIMEOUT=60000
+export PLAYWRIGHT_NAVIGATION_TIMEOUT=60000
+
+CACHE_MODE=cold LOOPS=5 yarn test          # use yarn test:nfs when RHDH_FRONTEND=nfs
+cp -f test-results.json test-results-cold.json
+PLAYWRIGHT_JSON_OUTPUT_FILE=test-results-cold.json yarn analyse
+
+CACHE_MODE=warm LOOPS=20 yarn test
+cp -f test-results.json test-results-warm.json
+PLAYWRIGHT_JSON_OUTPUT_FILE=test-results-warm.json yarn analyse
+```
+
+Resolve a route host:
+
+```shell
+oc get route -n <namespace> -o jsonpath='{.items[0].spec.host}{"\n"}'
 ```
 
 ### Run as a container
@@ -229,7 +253,8 @@ npm test
 ```shell
 cd load-generator
 podman build . --tag load-generator
-podman run -e RHDH_URL=https://your-rhdh-instance.example.com load-generator
+podman run -e RHDH_URL=https://your-rhdh-instance.example.com \
+  -e RHDH_FRONTEND=ofs -e CACHE_MODE=cold -e LOOPS=5 load-generator
 ```
 
 ### Configuration
@@ -237,3 +262,11 @@ podman run -e RHDH_URL=https://your-rhdh-instance.example.com load-generator
 | Environment variable | Description |
 |---|---|
 | `RHDH_URL` (or `PLAYWRIGHT_BASEURL`) | Base URL of the RHDH instance to test |
+| `RHDH_FRONTEND` | `ofs` (default) or `nfs` — selects which Playwright spec runs |
+| `CACHE_MODE` | `cold`, `warm`, or `both` (default `both`) |
+| `LOOPS` | Measured iterations (default `1`). Warm also runs 1 extra prime pass |
+| `NETWORK_THROTTLING` | `none` (default), `fast`, `medium`, `slow` |
+| `PLAYWRIGHT_TEST_TIMEOUT` | Overall test timeout (ms); high value for warm LOOPS=20 |
+| `PLAYWRIGHT_EXPECT_TIMEOUT` | Expect timeout (ms); `60000` recommended on slow clusters |
+| `PLAYWRIGHT_NAVIGATION_TIMEOUT` | Navigation timeout (ms) |
+| `PLAYWRIGHT_JSON_OUTPUT_FILE` | JSON path for `yarn analyse` |
