@@ -14,6 +14,7 @@ JOB_NAME=$(
     RHDH_URL="${RHDH_URL:-}" \
     RHDH_FRONTEND="${RHDH_FRONTEND:-}" \
     NETWORK_THROTTLING="${NETWORK_THROTTLING:-}" \
+    CACHE_MODE="${CACHE_MODE:-}" \
     LOOPS="${LOOPS:-}" |
   kubectl create -n "$NAMESPACE" -f - -o jsonpath='{.metadata.name}'
 )

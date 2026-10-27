@@ -1,6 +1,6 @@
 dependencies:
 - name: chart
   repository: oci://quay.io/rhdh
-  version: 2.1-106-CI
-digest: sha256:d6a9619feadd93c674dfa5cb869f8474c89b413ff6152559f7f733001beed1c1
-generated: "2026-09-30T11:22:16.478090745+02:00"
+  version: 2.1-146-CI
+digest: sha256:b02b7daaa310075a80f384a4396e09b3f3828989613e2aad51f6251e9d6c64e8
+generated: "2026-10-16T00:22:24.608865+05:30"
