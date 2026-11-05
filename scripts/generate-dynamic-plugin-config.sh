@@ -2,9 +2,9 @@
 
 set -e
 
-backstage_prefix="bs_1.42_"
-pages=20
-catalog_tabs=20
+backstage_prefix="bs_1.54_"
+pages=100
+catalog_tabs=100
 
 path_prefix="internal-backstage-plugin-"
 yaml_prefix="internal.backstage-plugin-"
@@ -20,8 +20,18 @@ echo "  dynamic:"
 echo "    plugins:"
 echo "      # other plugins..."
 
-for i in $(seq 1 $pages); do
-  cat <<EOF
+if [ "$backstage_prefix" = "bs_1.54_" ]; then
+  for i in $(seq 1 $pages); do
+    echo "      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:${backstage_prefix}page-$i!${path_prefix}page-$i"
+  done
+  echo
+  for i in $(seq 1 $catalog_tabs); do
+    echo "      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:${backstage_prefix}catalog-tab-$i!${path_prefix}catalog-tab-$i"
+  done
+  echo
+else
+  for i in $(seq 1 $pages); do
+    cat <<EOF
       - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:${backstage_prefix}page-$i!${path_prefix}page-$i
         disabled: false
         pluginConfig:
@@ -35,10 +45,11 @@ for i in $(seq 1 $pages); do
                       icon: dashboard
                       text: Page $i
 EOF
-done
+  done
+  echo
 
-for i in $(seq 1 $catalog_tabs); do
-  cat <<EOF
+  for i in $(seq 1 $catalog_tabs); do
+    cat <<EOF
       - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:${backstage_prefix}catalog-tab-$i!${path_prefix}catalog-tab-$i
         disabled: false
         pluginConfig:
@@ -53,5 +64,6 @@ for i in $(seq 1 $catalog_tabs); do
                   - mountPoint: entity.page.catalog-tab-$i/cards
                     importName: EntityCatalogCard
 EOF
-done
-
+  echo
+  done
+fi
