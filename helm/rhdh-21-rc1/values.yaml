@@ -128,9 +128,6 @@ redhat-developer-hub:
     permission:
       enabled: false
 
-  extraEnv:
-    - name: BACKSTAGE_LOG_LEVEL
-      value: debug
   extraEnvFrom:
     - configMapRef:
         name: rhdh-baseurl-configmap

@@ -95,7 +95,6 @@ spec:
                 APP_CONFIG_app_baseUrl: https://$HOST
                 APP_CONFIG_backend_baseUrl: https://$HOST
                 BASEURL: https://$HOST
-                BACKSTAGE_LOG_LEVEL: debug
                 APP_CONFIG_app_packageName: app-next
                 ENABLE_STANDARD_MODULE_FEDERATION: 'true'
               EOF

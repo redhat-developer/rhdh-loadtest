@@ -206,11 +206,6 @@ redhat-developer-hub:
               name: rhdh-baseurl-configmap
               key: BASEURL
         # added to enable NFS
-        - name: BACKSTAGE_LOG_LEVEL
-          valueFrom:
-            configMapKeyRef:
-              name: rhdh-baseurl-configmap
-              key: BACKSTAGE_LOG_LEVEL
         - name: APP_CONFIG_app_packageName
           valueFrom:
             configMapKeyRef:
