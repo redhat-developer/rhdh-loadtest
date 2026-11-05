@@ -76,7 +76,7 @@ redhat-developer-hub:
     signInPage: guest
 
     app:
-      title: RHDH 2.1 loadtest
+      title: RHDH next loadtest
       packages: all
       extensions:
         # Resolve nav attachment conflict (nav-content:app/sidebar vs nav-content:app)

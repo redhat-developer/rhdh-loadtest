@@ -1,0 +1,136 @@
+# RHDH 2.x chart values (oci://quay.io/rhdh/chart)
+# Subchart is aliased as redhat-developer-hub in Chart.yaml
+redhat-developer-hub:
+  openshift:
+    route:
+      enabled: false
+
+  # Disable Lightspeed / Intelligent Assistant for loadtest
+  intelligentAssistant:
+    enabled: false
+
+  dynamicPlugins:
+    plugins:
+      # Required to login
+      - package: oci://ghcr.io/redhat-developer/rhdh-plugin-export-overlays/backstage-plugin-auth-backend-module-guest-provider:next__0.2.20
+      - package: oci://ghcr.io/redhat-developer/rhdh-plugin-export-overlays/backstage-plugin-auth-backend-module-github-provider:next__0.5.4
+
+      # Disable segment for loadtest
+      - package: oci://quay.io/rhdh/backstage-community-plugin-analytics-provider-segment@sha256:2b7c6b4b1be9ce5b1e4cc42359d38a156324504da2ed67aee72df03b700b4827
+        enabled: false
+
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.54_page-1!internal-backstage-plugin-page-1
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.54_page-2!internal-backstage-plugin-page-2
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.54_page-3!internal-backstage-plugin-page-3
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.54_page-4!internal-backstage-plugin-page-4
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.54_page-5!internal-backstage-plugin-page-5
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.54_page-6!internal-backstage-plugin-page-6
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.54_page-7!internal-backstage-plugin-page-7
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.54_page-8!internal-backstage-plugin-page-8
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.54_page-9!internal-backstage-plugin-page-9
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.54_page-10!internal-backstage-plugin-page-10
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.54_page-11!internal-backstage-plugin-page-11
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.54_page-12!internal-backstage-plugin-page-12
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.54_page-13!internal-backstage-plugin-page-13
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.54_page-14!internal-backstage-plugin-page-14
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.54_page-15!internal-backstage-plugin-page-15
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.54_page-16!internal-backstage-plugin-page-16
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.54_page-17!internal-backstage-plugin-page-17
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.54_page-18!internal-backstage-plugin-page-18
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.54_page-19!internal-backstage-plugin-page-19
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.54_page-20!internal-backstage-plugin-page-20
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.54_page-21!internal-backstage-plugin-page-21
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.54_page-22!internal-backstage-plugin-page-22
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.54_page-23!internal-backstage-plugin-page-23
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.54_page-24!internal-backstage-plugin-page-24
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.54_page-25!internal-backstage-plugin-page-25
+
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.54_catalog-tab-1!internal-backstage-plugin-catalog-tab-1
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.54_catalog-tab-2!internal-backstage-plugin-catalog-tab-2
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.54_catalog-tab-3!internal-backstage-plugin-catalog-tab-3
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.54_catalog-tab-4!internal-backstage-plugin-catalog-tab-4
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.54_catalog-tab-5!internal-backstage-plugin-catalog-tab-5
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.54_catalog-tab-6!internal-backstage-plugin-catalog-tab-6
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.54_catalog-tab-7!internal-backstage-plugin-catalog-tab-7
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.54_catalog-tab-8!internal-backstage-plugin-catalog-tab-8
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.54_catalog-tab-9!internal-backstage-plugin-catalog-tab-9
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.54_catalog-tab-10!internal-backstage-plugin-catalog-tab-10
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.54_catalog-tab-11!internal-backstage-plugin-catalog-tab-11
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.54_catalog-tab-12!internal-backstage-plugin-catalog-tab-12
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.54_catalog-tab-13!internal-backstage-plugin-catalog-tab-13
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.54_catalog-tab-14!internal-backstage-plugin-catalog-tab-14
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.54_catalog-tab-15!internal-backstage-plugin-catalog-tab-15
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.54_catalog-tab-16!internal-backstage-plugin-catalog-tab-16
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.54_catalog-tab-17!internal-backstage-plugin-catalog-tab-17
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.54_catalog-tab-18!internal-backstage-plugin-catalog-tab-18
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.54_catalog-tab-19!internal-backstage-plugin-catalog-tab-19
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.54_catalog-tab-20!internal-backstage-plugin-catalog-tab-20
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.54_catalog-tab-21!internal-backstage-plugin-catalog-tab-21
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.54_catalog-tab-22!internal-backstage-plugin-catalog-tab-22
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.54_catalog-tab-23!internal-backstage-plugin-catalog-tab-23
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.54_catalog-tab-24!internal-backstage-plugin-catalog-tab-24
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.54_catalog-tab-25!internal-backstage-plugin-catalog-tab-25
+
+  appConfig:
+    # Required for NFS SignInPage (app-auth) to show guest
+    signInPage: guest
+
+    app:
+      title: RHDH 2.1-rc1 loadtest
+      packages: all
+      extensions:
+        # Resolve nav attachment conflict (nav-content:app/sidebar vs nav-content:app)
+        - nav-content:app/sidebar: false
+        - page:home: false
+        - page:catalog:
+            config:
+              path: /catalog # TODO: needed?
+        - api:home/visits: true
+        - app-root-element:home/visit-listener: true
+        - home-page-layout:home/dynamic-homepage-layout:
+            config:
+              customizable: true
+
+    auth:
+      # Required by NFS app-auth SignInPage (otherwise: "Sign-in is not available")
+      environment: development
+      providers:
+        guest:
+          dangerouslyAllowOutsideDevelopment: true
+
+    catalog:
+      locations:
+        - type: url
+          target: https://github.com/redhat-developer/rhdh-loadtest/blob/main/catalog/guest-login.yaml
+          rules:
+            - allow: [User, Group]
+        - type: url
+          target: https://github.com/redhat-developer/rhdh-loadtest/blob/main/catalog/components-1000.yaml
+          rules:
+            - allow: [Component]
+        - type: url
+          target: https://github.com/redhat-developer/rhdh-loadtest/blob/main/catalog/groups-100.yaml
+          rules:
+            - allow: [Group]
+        - type: url
+          target: https://github.com/redhat-developer/rhdh-loadtest/blob/main/catalog/systems-100.yaml
+          rules:
+            - allow: [System]
+        - type: url
+          target: https://github.com/redhat-developer/rhdh-loadtest/blob/main/catalog/apis-100.yaml
+          rules:
+            - allow: [API]
+        - type: url
+          target: https://github.com/redhat-developer/rhdh-loadtest/blob/main/catalog/templates-100.yaml
+          rules:
+            - allow: [Template]
+
+    permission:
+      enabled: false
+
+  extraEnv:
+    - name: BACKSTAGE_LOG_LEVEL
+      value: debug
+  extraEnvFrom:
+    - configMapRef:
+        name: rhdh-baseurl-configmap

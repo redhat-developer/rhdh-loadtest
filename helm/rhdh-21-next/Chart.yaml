@@ -1,0 +1,8 @@
+apiVersion: v2
+name: rhdh-loadtest-21-next
+version: 0.0.0
+dependencies:
+  - name: chart
+    alias: redhat-developer-hub
+    version: 2.1-194-CI
+    repository: "oci://quay.io/rhdh"
