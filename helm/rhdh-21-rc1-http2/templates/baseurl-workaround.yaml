@@ -1,0 +1,280 @@
+---
+# Caddy reverse proxy in front of the default RHDH Service.
+# Routes, Caddyfile, and baseurl ConfigMaps are created by the Job once
+# OpenShift assigns the app Route host. Passthrough + ACME HTTP-01 Route
+# so Let's Encrypt and browser HTTP/2 reach Caddy.
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: rhdh-http2-caddy
+  labels:
+    app.kubernetes.io/component: caddy
+spec:
+  replicas: 1
+  # RWO PVC for ACME data cannot Multi-Attach during RollingUpdate.
+  strategy:
+    type: Recreate
+    rollingUpdate: null
+  selector:
+    matchLabels:
+      app.kubernetes.io/component: caddy
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/component: caddy
+    spec:
+      containers:
+        - name: caddy
+          image: registry.access.redhat.com/hi/caddy:2
+          ports:
+            - name: https
+              containerPort: 8443
+              protocol: TCP
+            - name: http
+              containerPort: 8080
+              protocol: TCP
+          readinessProbe:
+            tcpSocket:
+              port: https
+            initialDelaySeconds: 2
+            periodSeconds: 5
+          livenessProbe:
+            tcpSocket:
+              port: https
+            initialDelaySeconds: 10
+            periodSeconds: 20
+          securityContext:
+            allowPrivilegeEscalation: false
+            capabilities:
+              drop:
+                - ALL
+            readOnlyRootFilesystem: true
+            runAsNonRoot: true
+
+          volumeMounts:
+            - name: caddyfile
+              mountPath: /etc/caddy
+              readOnly: true
+            - name: caddy-data
+              mountPath: /data
+      volumes:
+        - name: caddyfile
+          configMap:
+            name: rhdh-http2-caddyfile
+            # Created by the post-install Job once the Route host is known.
+            optional: true
+        - name: caddy-data
+          persistentVolumeClaim:
+            claimName: rhdh-http2-caddy-data
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: rhdh-http2-caddy-data
+  labels:
+    app.kubernetes.io/component: caddy
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 1Gi
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: rhdh-http2-caddy
+  labels:
+    app.kubernetes.io/component: caddy
+spec:
+  type: ClusterIP
+  ports:
+    - name: https
+      port: 8443
+      targetPort: https
+      protocol: TCP
+    - name: http
+      port: 8080
+      targetPort: http
+      protocol: TCP
+  selector:
+    app.kubernetes.io/component: caddy
+---
+# ServiceAccount for the job
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: rhdh-baseurl-configmap-creator
+---
+# Role to create routes/configmaps and restart caddy after Caddyfile updates
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  name: rhdh-baseurl-configmap-creator
+rules:
+  - apiGroups:
+      - route.openshift.io
+    resources:
+      - routes
+    verbs:
+      - get
+      - list
+      - create
+      - update
+      - patch
+  # Required to set spec.host on the ACME Route to match the app Route host.
+  - apiGroups:
+      - route.openshift.io
+    resources:
+      - routes/custom-host
+    verbs:
+      - create
+  - apiGroups:
+      - ""
+    resources:
+      - configmaps
+    verbs:
+      - get
+      - create
+      - update
+      - patch
+  - apiGroups:
+      - apps
+    resources:
+      - deployments
+    verbs:
+      - get
+      - patch
+---
+# RoleBinding to bind the role to the service account
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: rhdh-baseurl-configmap-creator
+subjects:
+  - kind: ServiceAccount
+    name: rhdh-baseurl-configmap-creator
+roleRef:
+  kind: Role
+  name: rhdh-baseurl-configmap-creator
+  apiGroup: rbac.authorization.k8s.io
+---
+# Job: create Routes + baseurl/Caddyfile ConfigMaps, then restart Caddy.
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: rhdh-baseurl-configmap-creator
+  annotations:
+    helm.sh/hook: post-install,post-upgrade
+    helm.sh/hook-weight: "10"
+    helm.sh/hook-delete-policy: before-hook-creation,hook-succeeded
+spec:
+  template:
+    spec:
+      serviceAccountName: rhdh-baseurl-configmap-creator
+      containers:
+        - name: configmap-creator
+          image: bitnami/kubectl:latest
+          command:
+            - /bin/sh
+            - -c
+            - |
+              set -e
+              ROUTE={{ printf "%s-developer-hub" .Release.Name | quote }}
+              ACME_ROUTE={{ printf "%s-caddy-acme" .Release.Name | quote }}
+              UPSTREAM={{ printf "http://%s-developer-hub:7007" .Release.Name | quote }}
+              RELEASE={{ .Release.Name | quote }}
+
+              # App Route without host — OpenShift assigns the hostname.
+              cat <<EOF | kubectl apply -f -
+              apiVersion: route.openshift.io/v1
+              kind: Route
+              metadata:
+                name: ${ROUTE}
+                labels:
+                  app.kubernetes.io/component: backstage
+                  app.kubernetes.io/instance: ${RELEASE}
+                  app.kubernetes.io/name: developer-hub
+              spec:
+                to:
+                  kind: Service
+                  name: rhdh-http2-caddy
+                  weight: 100
+                port:
+                  targetPort: https
+                tls:
+                  termination: passthrough
+                wildcardPolicy: None
+              EOF
+
+              echo "Waiting for route ${ROUTE} host..."
+              HOST=""
+              for i in $(seq 1 60); do
+                HOST=$(kubectl get route "${ROUTE}" -o jsonpath='{.spec.host}' 2>/dev/null || true)
+                if [ -n "$HOST" ]; then
+                  break
+                fi
+                sleep 2
+              done
+
+              if [ -z "$HOST" ]; then
+                echo "Error: Could not retrieve route host"
+                exit 1
+              fi
+
+              echo "Route host: $HOST"
+
+              # HTTP-01 ACME Route: same host, challenge path only → Caddy :8080.
+              cat <<EOF | kubectl apply -f -
+              apiVersion: route.openshift.io/v1
+              kind: Route
+              metadata:
+                name: ${ACME_ROUTE}
+                labels:
+                  app.kubernetes.io/component: caddy
+              spec:
+                host: ${HOST}
+                path: /.well-known/acme-challenge
+                to:
+                  kind: Service
+                  name: rhdh-http2-caddy
+                  weight: 100
+                port:
+                  targetPort: http
+                wildcardPolicy: None
+              EOF
+
+              kubectl create configmap rhdh-baseurl-configmap \
+                --from-literal=APP_CONFIG_app_baseUrl="https://${HOST}" \
+                --from-literal=APP_CONFIG_backend_baseUrl="https://${HOST}" \
+                --from-literal=APP_CONFIG_backend_cors_origin="https://${HOST}" \
+                --from-literal=BASEURL="https://${HOST}" \
+                --dry-run=client -o yaml | kubectl apply -f -
+
+              # Hostname site block enables Let's Encrypt (HTTP-01).
+              cat > /tmp/Caddyfile <<EOF
+              {
+                admin off
+                http_port 8080
+                https_port 8443
+                # HTTP-01 via the acme Route on :80 -> Service :8080; no :80 in the pod.
+                auto_https disable_redirects
+                servers {
+                  protocols h1 h2
+                }
+              }
+
+              ${HOST} {
+                log
+                reverse_proxy ${UPSTREAM}
+              }
+              EOF
+              kubectl create configmap rhdh-http2-caddyfile \
+                --from-file=Caddyfile=/tmp/Caddyfile \
+                --dry-run=client -o yaml | kubectl apply -f -
+
+              echo "Routes and ConfigMaps created/updated successfully"
+              kubectl rollout restart deployment/rhdh-http2-caddy
+              echo "Restarted rhdh-http2-caddy to load Caddyfile"
+      restartPolicy: Never
+  backoffLimit: 3

@@ -1,0 +1,2635 @@
+global:
+  catalogIndex:
+    image:
+      registry: quay.io
+      repository: rhdh/plugin-catalog-index
+      tag: "1.10"
+  dynamic:
+    plugins:
+      - package: ./dynamic-plugins/dist/backstage-community-plugin-rbac
+        disabled: false
+      - package: ./dynamic-plugins/dist/red-hat-developer-hub-backstage-plugin-bulk-import
+        disabled: false
+      - package: ./dynamic-plugins/dist/red-hat-developer-hub-backstage-plugin-bulk-import-backend-dynamic
+        disabled: false
+
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_page-1!internal-backstage-plugin-page-1
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-page-1:
+                dynamicRoutes:
+                  - path: /page-1
+                    importName: Page
+                    menuItem:
+                      icon: dashboard
+                      text: Page 1
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_page-2!internal-backstage-plugin-page-2
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-page-2:
+                dynamicRoutes:
+                  - path: /page-2
+                    importName: Page
+                    menuItem:
+                      icon: dashboard
+                      text: Page 2
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_page-3!internal-backstage-plugin-page-3
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-page-3:
+                dynamicRoutes:
+                  - path: /page-3
+                    importName: Page
+                    menuItem:
+                      icon: dashboard
+                      text: Page 3
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_page-4!internal-backstage-plugin-page-4
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-page-4:
+                dynamicRoutes:
+                  - path: /page-4
+                    importName: Page
+                    menuItem:
+                      icon: dashboard
+                      text: Page 4
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_page-5!internal-backstage-plugin-page-5
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-page-5:
+                dynamicRoutes:
+                  - path: /page-5
+                    importName: Page
+                    menuItem:
+                      icon: dashboard
+                      text: Page 5
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_page-6!internal-backstage-plugin-page-6
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-page-6:
+                dynamicRoutes:
+                  - path: /page-6
+                    importName: Page
+                    menuItem:
+                      icon: dashboard
+                      text: Page 6
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_page-7!internal-backstage-plugin-page-7
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-page-7:
+                dynamicRoutes:
+                  - path: /page-7
+                    importName: Page
+                    menuItem:
+                      icon: dashboard
+                      text: Page 7
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_page-8!internal-backstage-plugin-page-8
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-page-8:
+                dynamicRoutes:
+                  - path: /page-8
+                    importName: Page
+                    menuItem:
+                      icon: dashboard
+                      text: Page 8
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_page-9!internal-backstage-plugin-page-9
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-page-9:
+                dynamicRoutes:
+                  - path: /page-9
+                    importName: Page
+                    menuItem:
+                      icon: dashboard
+                      text: Page 9
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_page-10!internal-backstage-plugin-page-10
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-page-10:
+                dynamicRoutes:
+                  - path: /page-10
+                    importName: Page
+                    menuItem:
+                      icon: dashboard
+                      text: Page 10
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_page-11!internal-backstage-plugin-page-11
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-page-11:
+                dynamicRoutes:
+                  - path: /page-11
+                    importName: Page
+                    menuItem:
+                      icon: dashboard
+                      text: Page 11
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_page-12!internal-backstage-plugin-page-12
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-page-12:
+                dynamicRoutes:
+                  - path: /page-12
+                    importName: Page
+                    menuItem:
+                      icon: dashboard
+                      text: Page 12
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_page-13!internal-backstage-plugin-page-13
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-page-13:
+                dynamicRoutes:
+                  - path: /page-13
+                    importName: Page
+                    menuItem:
+                      icon: dashboard
+                      text: Page 13
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_page-14!internal-backstage-plugin-page-14
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-page-14:
+                dynamicRoutes:
+                  - path: /page-14
+                    importName: Page
+                    menuItem:
+                      icon: dashboard
+                      text: Page 14
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_page-15!internal-backstage-plugin-page-15
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-page-15:
+                dynamicRoutes:
+                  - path: /page-15
+                    importName: Page
+                    menuItem:
+                      icon: dashboard
+                      text: Page 15
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_page-16!internal-backstage-plugin-page-16
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-page-16:
+                dynamicRoutes:
+                  - path: /page-16
+                    importName: Page
+                    menuItem:
+                      icon: dashboard
+                      text: Page 16
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_page-17!internal-backstage-plugin-page-17
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-page-17:
+                dynamicRoutes:
+                  - path: /page-17
+                    importName: Page
+                    menuItem:
+                      icon: dashboard
+                      text: Page 17
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_page-18!internal-backstage-plugin-page-18
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-page-18:
+                dynamicRoutes:
+                  - path: /page-18
+                    importName: Page
+                    menuItem:
+                      icon: dashboard
+                      text: Page 18
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_page-19!internal-backstage-plugin-page-19
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-page-19:
+                dynamicRoutes:
+                  - path: /page-19
+                    importName: Page
+                    menuItem:
+                      icon: dashboard
+                      text: Page 19
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_page-20!internal-backstage-plugin-page-20
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-page-20:
+                dynamicRoutes:
+                  - path: /page-20
+                    importName: Page
+                    menuItem:
+                      icon: dashboard
+                      text: Page 20
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_page-21!internal-backstage-plugin-page-21
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-page-21:
+                dynamicRoutes:
+                  - path: /page-21
+                    importName: Page
+                    menuItem:
+                      icon: dashboard
+                      text: Page 21
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_page-22!internal-backstage-plugin-page-22
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-page-22:
+                dynamicRoutes:
+                  - path: /page-22
+                    importName: Page
+                    menuItem:
+                      icon: dashboard
+                      text: Page 22
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_page-23!internal-backstage-plugin-page-23
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-page-23:
+                dynamicRoutes:
+                  - path: /page-23
+                    importName: Page
+                    menuItem:
+                      icon: dashboard
+                      text: Page 23
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_page-24!internal-backstage-plugin-page-24
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-page-24:
+                dynamicRoutes:
+                  - path: /page-24
+                    importName: Page
+                    menuItem:
+                      icon: dashboard
+                      text: Page 24
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_page-25!internal-backstage-plugin-page-25
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-page-25:
+                dynamicRoutes:
+                  - path: /page-25
+                    importName: Page
+                    menuItem:
+                      icon: dashboard
+                      text: Page 25
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_page-26!internal-backstage-plugin-page-26
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-page-26:
+                dynamicRoutes:
+                  - path: /page-26
+                    importName: Page
+                    menuItem:
+                      icon: dashboard
+                      text: Page 26
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_page-27!internal-backstage-plugin-page-27
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-page-27:
+                dynamicRoutes:
+                  - path: /page-27
+                    importName: Page
+                    menuItem:
+                      icon: dashboard
+                      text: Page 27
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_page-28!internal-backstage-plugin-page-28
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-page-28:
+                dynamicRoutes:
+                  - path: /page-28
+                    importName: Page
+                    menuItem:
+                      icon: dashboard
+                      text: Page 28
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_page-29!internal-backstage-plugin-page-29
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-page-29:
+                dynamicRoutes:
+                  - path: /page-29
+                    importName: Page
+                    menuItem:
+                      icon: dashboard
+                      text: Page 29
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_page-30!internal-backstage-plugin-page-30
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-page-30:
+                dynamicRoutes:
+                  - path: /page-30
+                    importName: Page
+                    menuItem:
+                      icon: dashboard
+                      text: Page 30
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_page-31!internal-backstage-plugin-page-31
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-page-31:
+                dynamicRoutes:
+                  - path: /page-31
+                    importName: Page
+                    menuItem:
+                      icon: dashboard
+                      text: Page 31
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_page-32!internal-backstage-plugin-page-32
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-page-32:
+                dynamicRoutes:
+                  - path: /page-32
+                    importName: Page
+                    menuItem:
+                      icon: dashboard
+                      text: Page 32
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_page-33!internal-backstage-plugin-page-33
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-page-33:
+                dynamicRoutes:
+                  - path: /page-33
+                    importName: Page
+                    menuItem:
+                      icon: dashboard
+                      text: Page 33
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_page-34!internal-backstage-plugin-page-34
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-page-34:
+                dynamicRoutes:
+                  - path: /page-34
+                    importName: Page
+                    menuItem:
+                      icon: dashboard
+                      text: Page 34
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_page-35!internal-backstage-plugin-page-35
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-page-35:
+                dynamicRoutes:
+                  - path: /page-35
+                    importName: Page
+                    menuItem:
+                      icon: dashboard
+                      text: Page 35
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_page-36!internal-backstage-plugin-page-36
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-page-36:
+                dynamicRoutes:
+                  - path: /page-36
+                    importName: Page
+                    menuItem:
+                      icon: dashboard
+                      text: Page 36
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_page-37!internal-backstage-plugin-page-37
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-page-37:
+                dynamicRoutes:
+                  - path: /page-37
+                    importName: Page
+                    menuItem:
+                      icon: dashboard
+                      text: Page 37
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_page-38!internal-backstage-plugin-page-38
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-page-38:
+                dynamicRoutes:
+                  - path: /page-38
+                    importName: Page
+                    menuItem:
+                      icon: dashboard
+                      text: Page 38
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_page-39!internal-backstage-plugin-page-39
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-page-39:
+                dynamicRoutes:
+                  - path: /page-39
+                    importName: Page
+                    menuItem:
+                      icon: dashboard
+                      text: Page 39
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_page-40!internal-backstage-plugin-page-40
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-page-40:
+                dynamicRoutes:
+                  - path: /page-40
+                    importName: Page
+                    menuItem:
+                      icon: dashboard
+                      text: Page 40
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_page-41!internal-backstage-plugin-page-41
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-page-41:
+                dynamicRoutes:
+                  - path: /page-41
+                    importName: Page
+                    menuItem:
+                      icon: dashboard
+                      text: Page 41
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_page-42!internal-backstage-plugin-page-42
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-page-42:
+                dynamicRoutes:
+                  - path: /page-42
+                    importName: Page
+                    menuItem:
+                      icon: dashboard
+                      text: Page 42
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_page-43!internal-backstage-plugin-page-43
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-page-43:
+                dynamicRoutes:
+                  - path: /page-43
+                    importName: Page
+                    menuItem:
+                      icon: dashboard
+                      text: Page 43
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_page-44!internal-backstage-plugin-page-44
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-page-44:
+                dynamicRoutes:
+                  - path: /page-44
+                    importName: Page
+                    menuItem:
+                      icon: dashboard
+                      text: Page 44
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_page-45!internal-backstage-plugin-page-45
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-page-45:
+                dynamicRoutes:
+                  - path: /page-45
+                    importName: Page
+                    menuItem:
+                      icon: dashboard
+                      text: Page 45
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_page-46!internal-backstage-plugin-page-46
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-page-46:
+                dynamicRoutes:
+                  - path: /page-46
+                    importName: Page
+                    menuItem:
+                      icon: dashboard
+                      text: Page 46
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_page-47!internal-backstage-plugin-page-47
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-page-47:
+                dynamicRoutes:
+                  - path: /page-47
+                    importName: Page
+                    menuItem:
+                      icon: dashboard
+                      text: Page 47
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_page-48!internal-backstage-plugin-page-48
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-page-48:
+                dynamicRoutes:
+                  - path: /page-48
+                    importName: Page
+                    menuItem:
+                      icon: dashboard
+                      text: Page 48
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_page-49!internal-backstage-plugin-page-49
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-page-49:
+                dynamicRoutes:
+                  - path: /page-49
+                    importName: Page
+                    menuItem:
+                      icon: dashboard
+                      text: Page 49
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_page-50!internal-backstage-plugin-page-50
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-page-50:
+                dynamicRoutes:
+                  - path: /page-50
+                    importName: Page
+                    menuItem:
+                      icon: dashboard
+                      text: Page 50
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_page-51!internal-backstage-plugin-page-51
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-page-51:
+                dynamicRoutes:
+                  - path: /page-51
+                    importName: Page
+                    menuItem:
+                      icon: dashboard
+                      text: Page 51
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_page-52!internal-backstage-plugin-page-52
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-page-52:
+                dynamicRoutes:
+                  - path: /page-52
+                    importName: Page
+                    menuItem:
+                      icon: dashboard
+                      text: Page 52
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_page-53!internal-backstage-plugin-page-53
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-page-53:
+                dynamicRoutes:
+                  - path: /page-53
+                    importName: Page
+                    menuItem:
+                      icon: dashboard
+                      text: Page 53
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_page-54!internal-backstage-plugin-page-54
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-page-54:
+                dynamicRoutes:
+                  - path: /page-54
+                    importName: Page
+                    menuItem:
+                      icon: dashboard
+                      text: Page 54
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_page-55!internal-backstage-plugin-page-55
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-page-55:
+                dynamicRoutes:
+                  - path: /page-55
+                    importName: Page
+                    menuItem:
+                      icon: dashboard
+                      text: Page 55
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_page-56!internal-backstage-plugin-page-56
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-page-56:
+                dynamicRoutes:
+                  - path: /page-56
+                    importName: Page
+                    menuItem:
+                      icon: dashboard
+                      text: Page 56
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_page-57!internal-backstage-plugin-page-57
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-page-57:
+                dynamicRoutes:
+                  - path: /page-57
+                    importName: Page
+                    menuItem:
+                      icon: dashboard
+                      text: Page 57
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_page-58!internal-backstage-plugin-page-58
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-page-58:
+                dynamicRoutes:
+                  - path: /page-58
+                    importName: Page
+                    menuItem:
+                      icon: dashboard
+                      text: Page 58
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_page-59!internal-backstage-plugin-page-59
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-page-59:
+                dynamicRoutes:
+                  - path: /page-59
+                    importName: Page
+                    menuItem:
+                      icon: dashboard
+                      text: Page 59
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_page-60!internal-backstage-plugin-page-60
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-page-60:
+                dynamicRoutes:
+                  - path: /page-60
+                    importName: Page
+                    menuItem:
+                      icon: dashboard
+                      text: Page 60
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_page-61!internal-backstage-plugin-page-61
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-page-61:
+                dynamicRoutes:
+                  - path: /page-61
+                    importName: Page
+                    menuItem:
+                      icon: dashboard
+                      text: Page 61
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_page-62!internal-backstage-plugin-page-62
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-page-62:
+                dynamicRoutes:
+                  - path: /page-62
+                    importName: Page
+                    menuItem:
+                      icon: dashboard
+                      text: Page 62
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_page-63!internal-backstage-plugin-page-63
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-page-63:
+                dynamicRoutes:
+                  - path: /page-63
+                    importName: Page
+                    menuItem:
+                      icon: dashboard
+                      text: Page 63
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_page-64!internal-backstage-plugin-page-64
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-page-64:
+                dynamicRoutes:
+                  - path: /page-64
+                    importName: Page
+                    menuItem:
+                      icon: dashboard
+                      text: Page 64
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_page-65!internal-backstage-plugin-page-65
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-page-65:
+                dynamicRoutes:
+                  - path: /page-65
+                    importName: Page
+                    menuItem:
+                      icon: dashboard
+                      text: Page 65
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_page-66!internal-backstage-plugin-page-66
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-page-66:
+                dynamicRoutes:
+                  - path: /page-66
+                    importName: Page
+                    menuItem:
+                      icon: dashboard
+                      text: Page 66
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_page-67!internal-backstage-plugin-page-67
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-page-67:
+                dynamicRoutes:
+                  - path: /page-67
+                    importName: Page
+                    menuItem:
+                      icon: dashboard
+                      text: Page 67
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_page-68!internal-backstage-plugin-page-68
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-page-68:
+                dynamicRoutes:
+                  - path: /page-68
+                    importName: Page
+                    menuItem:
+                      icon: dashboard
+                      text: Page 68
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_page-69!internal-backstage-plugin-page-69
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-page-69:
+                dynamicRoutes:
+                  - path: /page-69
+                    importName: Page
+                    menuItem:
+                      icon: dashboard
+                      text: Page 69
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_page-70!internal-backstage-plugin-page-70
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-page-70:
+                dynamicRoutes:
+                  - path: /page-70
+                    importName: Page
+                    menuItem:
+                      icon: dashboard
+                      text: Page 70
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_page-71!internal-backstage-plugin-page-71
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-page-71:
+                dynamicRoutes:
+                  - path: /page-71
+                    importName: Page
+                    menuItem:
+                      icon: dashboard
+                      text: Page 71
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_page-72!internal-backstage-plugin-page-72
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-page-72:
+                dynamicRoutes:
+                  - path: /page-72
+                    importName: Page
+                    menuItem:
+                      icon: dashboard
+                      text: Page 72
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_page-73!internal-backstage-plugin-page-73
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-page-73:
+                dynamicRoutes:
+                  - path: /page-73
+                    importName: Page
+                    menuItem:
+                      icon: dashboard
+                      text: Page 73
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_page-74!internal-backstage-plugin-page-74
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-page-74:
+                dynamicRoutes:
+                  - path: /page-74
+                    importName: Page
+                    menuItem:
+                      icon: dashboard
+                      text: Page 74
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_page-75!internal-backstage-plugin-page-75
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-page-75:
+                dynamicRoutes:
+                  - path: /page-75
+                    importName: Page
+                    menuItem:
+                      icon: dashboard
+                      text: Page 75
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_page-76!internal-backstage-plugin-page-76
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-page-76:
+                dynamicRoutes:
+                  - path: /page-76
+                    importName: Page
+                    menuItem:
+                      icon: dashboard
+                      text: Page 76
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_page-77!internal-backstage-plugin-page-77
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-page-77:
+                dynamicRoutes:
+                  - path: /page-77
+                    importName: Page
+                    menuItem:
+                      icon: dashboard
+                      text: Page 77
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_page-78!internal-backstage-plugin-page-78
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-page-78:
+                dynamicRoutes:
+                  - path: /page-78
+                    importName: Page
+                    menuItem:
+                      icon: dashboard
+                      text: Page 78
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_page-79!internal-backstage-plugin-page-79
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-page-79:
+                dynamicRoutes:
+                  - path: /page-79
+                    importName: Page
+                    menuItem:
+                      icon: dashboard
+                      text: Page 79
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_page-80!internal-backstage-plugin-page-80
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-page-80:
+                dynamicRoutes:
+                  - path: /page-80
+                    importName: Page
+                    menuItem:
+                      icon: dashboard
+                      text: Page 80
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_page-81!internal-backstage-plugin-page-81
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-page-81:
+                dynamicRoutes:
+                  - path: /page-81
+                    importName: Page
+                    menuItem:
+                      icon: dashboard
+                      text: Page 81
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_page-82!internal-backstage-plugin-page-82
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-page-82:
+                dynamicRoutes:
+                  - path: /page-82
+                    importName: Page
+                    menuItem:
+                      icon: dashboard
+                      text: Page 82
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_page-83!internal-backstage-plugin-page-83
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-page-83:
+                dynamicRoutes:
+                  - path: /page-83
+                    importName: Page
+                    menuItem:
+                      icon: dashboard
+                      text: Page 83
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_page-84!internal-backstage-plugin-page-84
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-page-84:
+                dynamicRoutes:
+                  - path: /page-84
+                    importName: Page
+                    menuItem:
+                      icon: dashboard
+                      text: Page 84
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_page-85!internal-backstage-plugin-page-85
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-page-85:
+                dynamicRoutes:
+                  - path: /page-85
+                    importName: Page
+                    menuItem:
+                      icon: dashboard
+                      text: Page 85
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_page-86!internal-backstage-plugin-page-86
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-page-86:
+                dynamicRoutes:
+                  - path: /page-86
+                    importName: Page
+                    menuItem:
+                      icon: dashboard
+                      text: Page 86
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_page-87!internal-backstage-plugin-page-87
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-page-87:
+                dynamicRoutes:
+                  - path: /page-87
+                    importName: Page
+                    menuItem:
+                      icon: dashboard
+                      text: Page 87
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_page-88!internal-backstage-plugin-page-88
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-page-88:
+                dynamicRoutes:
+                  - path: /page-88
+                    importName: Page
+                    menuItem:
+                      icon: dashboard
+                      text: Page 88
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_page-89!internal-backstage-plugin-page-89
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-page-89:
+                dynamicRoutes:
+                  - path: /page-89
+                    importName: Page
+                    menuItem:
+                      icon: dashboard
+                      text: Page 89
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_page-90!internal-backstage-plugin-page-90
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-page-90:
+                dynamicRoutes:
+                  - path: /page-90
+                    importName: Page
+                    menuItem:
+                      icon: dashboard
+                      text: Page 90
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_page-91!internal-backstage-plugin-page-91
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-page-91:
+                dynamicRoutes:
+                  - path: /page-91
+                    importName: Page
+                    menuItem:
+                      icon: dashboard
+                      text: Page 91
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_page-92!internal-backstage-plugin-page-92
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-page-92:
+                dynamicRoutes:
+                  - path: /page-92
+                    importName: Page
+                    menuItem:
+                      icon: dashboard
+                      text: Page 92
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_page-93!internal-backstage-plugin-page-93
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-page-93:
+                dynamicRoutes:
+                  - path: /page-93
+                    importName: Page
+                    menuItem:
+                      icon: dashboard
+                      text: Page 93
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_page-94!internal-backstage-plugin-page-94
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-page-94:
+                dynamicRoutes:
+                  - path: /page-94
+                    importName: Page
+                    menuItem:
+                      icon: dashboard
+                      text: Page 94
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_page-95!internal-backstage-plugin-page-95
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-page-95:
+                dynamicRoutes:
+                  - path: /page-95
+                    importName: Page
+                    menuItem:
+                      icon: dashboard
+                      text: Page 95
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_page-96!internal-backstage-plugin-page-96
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-page-96:
+                dynamicRoutes:
+                  - path: /page-96
+                    importName: Page
+                    menuItem:
+                      icon: dashboard
+                      text: Page 96
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_page-97!internal-backstage-plugin-page-97
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-page-97:
+                dynamicRoutes:
+                  - path: /page-97
+                    importName: Page
+                    menuItem:
+                      icon: dashboard
+                      text: Page 97
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_page-98!internal-backstage-plugin-page-98
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-page-98:
+                dynamicRoutes:
+                  - path: /page-98
+                    importName: Page
+                    menuItem:
+                      icon: dashboard
+                      text: Page 98
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_page-99!internal-backstage-plugin-page-99
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-page-99:
+                dynamicRoutes:
+                  - path: /page-99
+                    importName: Page
+                    menuItem:
+                      icon: dashboard
+                      text: Page 99
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_page-100!internal-backstage-plugin-page-100
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-page-100:
+                dynamicRoutes:
+                  - path: /page-100
+                    importName: Page
+                    menuItem:
+                      icon: dashboard
+                      text: Page 100
+
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_catalog-tab-1!internal-backstage-plugin-catalog-tab-1
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-catalog-tab-1:
+                entityTabs:
+                  - path: /catalog-tab-1
+                    title: Catalog Tab 1
+                    mountPoint: entity.page.catalog-tab-1
+                mountPoints:
+                  - mountPoint: entity.page.catalog-tab-1/cards
+                    importName: EntityCatalogCard
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_catalog-tab-2!internal-backstage-plugin-catalog-tab-2
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-catalog-tab-2:
+                entityTabs:
+                  - path: /catalog-tab-2
+                    title: Catalog Tab 2
+                    mountPoint: entity.page.catalog-tab-2
+                mountPoints:
+                  - mountPoint: entity.page.catalog-tab-2/cards
+                    importName: EntityCatalogCard
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_catalog-tab-3!internal-backstage-plugin-catalog-tab-3
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-catalog-tab-3:
+                entityTabs:
+                  - path: /catalog-tab-3
+                    title: Catalog Tab 3
+                    mountPoint: entity.page.catalog-tab-3
+                mountPoints:
+                  - mountPoint: entity.page.catalog-tab-3/cards
+                    importName: EntityCatalogCard
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_catalog-tab-4!internal-backstage-plugin-catalog-tab-4
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-catalog-tab-4:
+                entityTabs:
+                  - path: /catalog-tab-4
+                    title: Catalog Tab 4
+                    mountPoint: entity.page.catalog-tab-4
+                mountPoints:
+                  - mountPoint: entity.page.catalog-tab-4/cards
+                    importName: EntityCatalogCard
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_catalog-tab-5!internal-backstage-plugin-catalog-tab-5
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-catalog-tab-5:
+                entityTabs:
+                  - path: /catalog-tab-5
+                    title: Catalog Tab 5
+                    mountPoint: entity.page.catalog-tab-5
+                mountPoints:
+                  - mountPoint: entity.page.catalog-tab-5/cards
+                    importName: EntityCatalogCard
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_catalog-tab-6!internal-backstage-plugin-catalog-tab-6
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-catalog-tab-6:
+                entityTabs:
+                  - path: /catalog-tab-6
+                    title: Catalog Tab 6
+                    mountPoint: entity.page.catalog-tab-6
+                mountPoints:
+                  - mountPoint: entity.page.catalog-tab-6/cards
+                    importName: EntityCatalogCard
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_catalog-tab-7!internal-backstage-plugin-catalog-tab-7
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-catalog-tab-7:
+                entityTabs:
+                  - path: /catalog-tab-7
+                    title: Catalog Tab 7
+                    mountPoint: entity.page.catalog-tab-7
+                mountPoints:
+                  - mountPoint: entity.page.catalog-tab-7/cards
+                    importName: EntityCatalogCard
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_catalog-tab-8!internal-backstage-plugin-catalog-tab-8
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-catalog-tab-8:
+                entityTabs:
+                  - path: /catalog-tab-8
+                    title: Catalog Tab 8
+                    mountPoint: entity.page.catalog-tab-8
+                mountPoints:
+                  - mountPoint: entity.page.catalog-tab-8/cards
+                    importName: EntityCatalogCard
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_catalog-tab-9!internal-backstage-plugin-catalog-tab-9
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-catalog-tab-9:
+                entityTabs:
+                  - path: /catalog-tab-9
+                    title: Catalog Tab 9
+                    mountPoint: entity.page.catalog-tab-9
+                mountPoints:
+                  - mountPoint: entity.page.catalog-tab-9/cards
+                    importName: EntityCatalogCard
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_catalog-tab-10!internal-backstage-plugin-catalog-tab-10
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-catalog-tab-10:
+                entityTabs:
+                  - path: /catalog-tab-10
+                    title: Catalog Tab 10
+                    mountPoint: entity.page.catalog-tab-10
+                mountPoints:
+                  - mountPoint: entity.page.catalog-tab-10/cards
+                    importName: EntityCatalogCard
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_catalog-tab-11!internal-backstage-plugin-catalog-tab-11
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-catalog-tab-11:
+                entityTabs:
+                  - path: /catalog-tab-11
+                    title: Catalog Tab 11
+                    mountPoint: entity.page.catalog-tab-11
+                mountPoints:
+                  - mountPoint: entity.page.catalog-tab-11/cards
+                    importName: EntityCatalogCard
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_catalog-tab-12!internal-backstage-plugin-catalog-tab-12
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-catalog-tab-12:
+                entityTabs:
+                  - path: /catalog-tab-12
+                    title: Catalog Tab 12
+                    mountPoint: entity.page.catalog-tab-12
+                mountPoints:
+                  - mountPoint: entity.page.catalog-tab-12/cards
+                    importName: EntityCatalogCard
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_catalog-tab-13!internal-backstage-plugin-catalog-tab-13
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-catalog-tab-13:
+                entityTabs:
+                  - path: /catalog-tab-13
+                    title: Catalog Tab 13
+                    mountPoint: entity.page.catalog-tab-13
+                mountPoints:
+                  - mountPoint: entity.page.catalog-tab-13/cards
+                    importName: EntityCatalogCard
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_catalog-tab-14!internal-backstage-plugin-catalog-tab-14
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-catalog-tab-14:
+                entityTabs:
+                  - path: /catalog-tab-14
+                    title: Catalog Tab 14
+                    mountPoint: entity.page.catalog-tab-14
+                mountPoints:
+                  - mountPoint: entity.page.catalog-tab-14/cards
+                    importName: EntityCatalogCard
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_catalog-tab-15!internal-backstage-plugin-catalog-tab-15
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-catalog-tab-15:
+                entityTabs:
+                  - path: /catalog-tab-15
+                    title: Catalog Tab 15
+                    mountPoint: entity.page.catalog-tab-15
+                mountPoints:
+                  - mountPoint: entity.page.catalog-tab-15/cards
+                    importName: EntityCatalogCard
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_catalog-tab-16!internal-backstage-plugin-catalog-tab-16
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-catalog-tab-16:
+                entityTabs:
+                  - path: /catalog-tab-16
+                    title: Catalog Tab 16
+                    mountPoint: entity.page.catalog-tab-16
+                mountPoints:
+                  - mountPoint: entity.page.catalog-tab-16/cards
+                    importName: EntityCatalogCard
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_catalog-tab-17!internal-backstage-plugin-catalog-tab-17
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-catalog-tab-17:
+                entityTabs:
+                  - path: /catalog-tab-17
+                    title: Catalog Tab 17
+                    mountPoint: entity.page.catalog-tab-17
+                mountPoints:
+                  - mountPoint: entity.page.catalog-tab-17/cards
+                    importName: EntityCatalogCard
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_catalog-tab-18!internal-backstage-plugin-catalog-tab-18
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-catalog-tab-18:
+                entityTabs:
+                  - path: /catalog-tab-18
+                    title: Catalog Tab 18
+                    mountPoint: entity.page.catalog-tab-18
+                mountPoints:
+                  - mountPoint: entity.page.catalog-tab-18/cards
+                    importName: EntityCatalogCard
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_catalog-tab-19!internal-backstage-plugin-catalog-tab-19
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-catalog-tab-19:
+                entityTabs:
+                  - path: /catalog-tab-19
+                    title: Catalog Tab 19
+                    mountPoint: entity.page.catalog-tab-19
+                mountPoints:
+                  - mountPoint: entity.page.catalog-tab-19/cards
+                    importName: EntityCatalogCard
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_catalog-tab-20!internal-backstage-plugin-catalog-tab-20
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-catalog-tab-20:
+                entityTabs:
+                  - path: /catalog-tab-20
+                    title: Catalog Tab 20
+                    mountPoint: entity.page.catalog-tab-20
+                mountPoints:
+                  - mountPoint: entity.page.catalog-tab-20/cards
+                    importName: EntityCatalogCard
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_catalog-tab-21!internal-backstage-plugin-catalog-tab-21
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-catalog-tab-21:
+                entityTabs:
+                  - path: /catalog-tab-21
+                    title: Catalog Tab 21
+                    mountPoint: entity.page.catalog-tab-21
+                mountPoints:
+                  - mountPoint: entity.page.catalog-tab-21/cards
+                    importName: EntityCatalogCard
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_catalog-tab-22!internal-backstage-plugin-catalog-tab-22
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-catalog-tab-22:
+                entityTabs:
+                  - path: /catalog-tab-22
+                    title: Catalog Tab 22
+                    mountPoint: entity.page.catalog-tab-22
+                mountPoints:
+                  - mountPoint: entity.page.catalog-tab-22/cards
+                    importName: EntityCatalogCard
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_catalog-tab-23!internal-backstage-plugin-catalog-tab-23
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-catalog-tab-23:
+                entityTabs:
+                  - path: /catalog-tab-23
+                    title: Catalog Tab 23
+                    mountPoint: entity.page.catalog-tab-23
+                mountPoints:
+                  - mountPoint: entity.page.catalog-tab-23/cards
+                    importName: EntityCatalogCard
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_catalog-tab-24!internal-backstage-plugin-catalog-tab-24
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-catalog-tab-24:
+                entityTabs:
+                  - path: /catalog-tab-24
+                    title: Catalog Tab 24
+                    mountPoint: entity.page.catalog-tab-24
+                mountPoints:
+                  - mountPoint: entity.page.catalog-tab-24/cards
+                    importName: EntityCatalogCard
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_catalog-tab-25!internal-backstage-plugin-catalog-tab-25
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-catalog-tab-25:
+                entityTabs:
+                  - path: /catalog-tab-25
+                    title: Catalog Tab 25
+                    mountPoint: entity.page.catalog-tab-25
+                mountPoints:
+                  - mountPoint: entity.page.catalog-tab-25/cards
+                    importName: EntityCatalogCard
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_catalog-tab-26!internal-backstage-plugin-catalog-tab-26
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-catalog-tab-26:
+                entityTabs:
+                  - path: /catalog-tab-26
+                    title: Catalog Tab 26
+                    mountPoint: entity.page.catalog-tab-26
+                mountPoints:
+                  - mountPoint: entity.page.catalog-tab-26/cards
+                    importName: EntityCatalogCard
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_catalog-tab-27!internal-backstage-plugin-catalog-tab-27
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-catalog-tab-27:
+                entityTabs:
+                  - path: /catalog-tab-27
+                    title: Catalog Tab 27
+                    mountPoint: entity.page.catalog-tab-27
+                mountPoints:
+                  - mountPoint: entity.page.catalog-tab-27/cards
+                    importName: EntityCatalogCard
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_catalog-tab-28!internal-backstage-plugin-catalog-tab-28
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-catalog-tab-28:
+                entityTabs:
+                  - path: /catalog-tab-28
+                    title: Catalog Tab 28
+                    mountPoint: entity.page.catalog-tab-28
+                mountPoints:
+                  - mountPoint: entity.page.catalog-tab-28/cards
+                    importName: EntityCatalogCard
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_catalog-tab-29!internal-backstage-plugin-catalog-tab-29
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-catalog-tab-29:
+                entityTabs:
+                  - path: /catalog-tab-29
+                    title: Catalog Tab 29
+                    mountPoint: entity.page.catalog-tab-29
+                mountPoints:
+                  - mountPoint: entity.page.catalog-tab-29/cards
+                    importName: EntityCatalogCard
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_catalog-tab-30!internal-backstage-plugin-catalog-tab-30
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-catalog-tab-30:
+                entityTabs:
+                  - path: /catalog-tab-30
+                    title: Catalog Tab 30
+                    mountPoint: entity.page.catalog-tab-30
+                mountPoints:
+                  - mountPoint: entity.page.catalog-tab-30/cards
+                    importName: EntityCatalogCard
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_catalog-tab-31!internal-backstage-plugin-catalog-tab-31
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-catalog-tab-31:
+                entityTabs:
+                  - path: /catalog-tab-31
+                    title: Catalog Tab 31
+                    mountPoint: entity.page.catalog-tab-31
+                mountPoints:
+                  - mountPoint: entity.page.catalog-tab-31/cards
+                    importName: EntityCatalogCard
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_catalog-tab-32!internal-backstage-plugin-catalog-tab-32
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-catalog-tab-32:
+                entityTabs:
+                  - path: /catalog-tab-32
+                    title: Catalog Tab 32
+                    mountPoint: entity.page.catalog-tab-32
+                mountPoints:
+                  - mountPoint: entity.page.catalog-tab-32/cards
+                    importName: EntityCatalogCard
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_catalog-tab-33!internal-backstage-plugin-catalog-tab-33
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-catalog-tab-33:
+                entityTabs:
+                  - path: /catalog-tab-33
+                    title: Catalog Tab 33
+                    mountPoint: entity.page.catalog-tab-33
+                mountPoints:
+                  - mountPoint: entity.page.catalog-tab-33/cards
+                    importName: EntityCatalogCard
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_catalog-tab-34!internal-backstage-plugin-catalog-tab-34
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-catalog-tab-34:
+                entityTabs:
+                  - path: /catalog-tab-34
+                    title: Catalog Tab 34
+                    mountPoint: entity.page.catalog-tab-34
+                mountPoints:
+                  - mountPoint: entity.page.catalog-tab-34/cards
+                    importName: EntityCatalogCard
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_catalog-tab-35!internal-backstage-plugin-catalog-tab-35
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-catalog-tab-35:
+                entityTabs:
+                  - path: /catalog-tab-35
+                    title: Catalog Tab 35
+                    mountPoint: entity.page.catalog-tab-35
+                mountPoints:
+                  - mountPoint: entity.page.catalog-tab-35/cards
+                    importName: EntityCatalogCard
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_catalog-tab-36!internal-backstage-plugin-catalog-tab-36
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-catalog-tab-36:
+                entityTabs:
+                  - path: /catalog-tab-36
+                    title: Catalog Tab 36
+                    mountPoint: entity.page.catalog-tab-36
+                mountPoints:
+                  - mountPoint: entity.page.catalog-tab-36/cards
+                    importName: EntityCatalogCard
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_catalog-tab-37!internal-backstage-plugin-catalog-tab-37
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-catalog-tab-37:
+                entityTabs:
+                  - path: /catalog-tab-37
+                    title: Catalog Tab 37
+                    mountPoint: entity.page.catalog-tab-37
+                mountPoints:
+                  - mountPoint: entity.page.catalog-tab-37/cards
+                    importName: EntityCatalogCard
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_catalog-tab-38!internal-backstage-plugin-catalog-tab-38
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-catalog-tab-38:
+                entityTabs:
+                  - path: /catalog-tab-38
+                    title: Catalog Tab 38
+                    mountPoint: entity.page.catalog-tab-38
+                mountPoints:
+                  - mountPoint: entity.page.catalog-tab-38/cards
+                    importName: EntityCatalogCard
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_catalog-tab-39!internal-backstage-plugin-catalog-tab-39
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-catalog-tab-39:
+                entityTabs:
+                  - path: /catalog-tab-39
+                    title: Catalog Tab 39
+                    mountPoint: entity.page.catalog-tab-39
+                mountPoints:
+                  - mountPoint: entity.page.catalog-tab-39/cards
+                    importName: EntityCatalogCard
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_catalog-tab-40!internal-backstage-plugin-catalog-tab-40
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-catalog-tab-40:
+                entityTabs:
+                  - path: /catalog-tab-40
+                    title: Catalog Tab 40
+                    mountPoint: entity.page.catalog-tab-40
+                mountPoints:
+                  - mountPoint: entity.page.catalog-tab-40/cards
+                    importName: EntityCatalogCard
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_catalog-tab-41!internal-backstage-plugin-catalog-tab-41
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-catalog-tab-41:
+                entityTabs:
+                  - path: /catalog-tab-41
+                    title: Catalog Tab 41
+                    mountPoint: entity.page.catalog-tab-41
+                mountPoints:
+                  - mountPoint: entity.page.catalog-tab-41/cards
+                    importName: EntityCatalogCard
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_catalog-tab-42!internal-backstage-plugin-catalog-tab-42
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-catalog-tab-42:
+                entityTabs:
+                  - path: /catalog-tab-42
+                    title: Catalog Tab 42
+                    mountPoint: entity.page.catalog-tab-42
+                mountPoints:
+                  - mountPoint: entity.page.catalog-tab-42/cards
+                    importName: EntityCatalogCard
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_catalog-tab-43!internal-backstage-plugin-catalog-tab-43
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-catalog-tab-43:
+                entityTabs:
+                  - path: /catalog-tab-43
+                    title: Catalog Tab 43
+                    mountPoint: entity.page.catalog-tab-43
+                mountPoints:
+                  - mountPoint: entity.page.catalog-tab-43/cards
+                    importName: EntityCatalogCard
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_catalog-tab-44!internal-backstage-plugin-catalog-tab-44
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-catalog-tab-44:
+                entityTabs:
+                  - path: /catalog-tab-44
+                    title: Catalog Tab 44
+                    mountPoint: entity.page.catalog-tab-44
+                mountPoints:
+                  - mountPoint: entity.page.catalog-tab-44/cards
+                    importName: EntityCatalogCard
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_catalog-tab-45!internal-backstage-plugin-catalog-tab-45
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-catalog-tab-45:
+                entityTabs:
+                  - path: /catalog-tab-45
+                    title: Catalog Tab 45
+                    mountPoint: entity.page.catalog-tab-45
+                mountPoints:
+                  - mountPoint: entity.page.catalog-tab-45/cards
+                    importName: EntityCatalogCard
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_catalog-tab-46!internal-backstage-plugin-catalog-tab-46
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-catalog-tab-46:
+                entityTabs:
+                  - path: /catalog-tab-46
+                    title: Catalog Tab 46
+                    mountPoint: entity.page.catalog-tab-46
+                mountPoints:
+                  - mountPoint: entity.page.catalog-tab-46/cards
+                    importName: EntityCatalogCard
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_catalog-tab-47!internal-backstage-plugin-catalog-tab-47
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-catalog-tab-47:
+                entityTabs:
+                  - path: /catalog-tab-47
+                    title: Catalog Tab 47
+                    mountPoint: entity.page.catalog-tab-47
+                mountPoints:
+                  - mountPoint: entity.page.catalog-tab-47/cards
+                    importName: EntityCatalogCard
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_catalog-tab-48!internal-backstage-plugin-catalog-tab-48
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-catalog-tab-48:
+                entityTabs:
+                  - path: /catalog-tab-48
+                    title: Catalog Tab 48
+                    mountPoint: entity.page.catalog-tab-48
+                mountPoints:
+                  - mountPoint: entity.page.catalog-tab-48/cards
+                    importName: EntityCatalogCard
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_catalog-tab-49!internal-backstage-plugin-catalog-tab-49
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-catalog-tab-49:
+                entityTabs:
+                  - path: /catalog-tab-49
+                    title: Catalog Tab 49
+                    mountPoint: entity.page.catalog-tab-49
+                mountPoints:
+                  - mountPoint: entity.page.catalog-tab-49/cards
+                    importName: EntityCatalogCard
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_catalog-tab-50!internal-backstage-plugin-catalog-tab-50
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-catalog-tab-50:
+                entityTabs:
+                  - path: /catalog-tab-50
+                    title: Catalog Tab 50
+                    mountPoint: entity.page.catalog-tab-50
+                mountPoints:
+                  - mountPoint: entity.page.catalog-tab-50/cards
+                    importName: EntityCatalogCard
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_catalog-tab-51!internal-backstage-plugin-catalog-tab-51
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-catalog-tab-51:
+                entityTabs:
+                  - path: /catalog-tab-51
+                    title: Catalog Tab 51
+                    mountPoint: entity.page.catalog-tab-51
+                mountPoints:
+                  - mountPoint: entity.page.catalog-tab-51/cards
+                    importName: EntityCatalogCard
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_catalog-tab-52!internal-backstage-plugin-catalog-tab-52
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-catalog-tab-52:
+                entityTabs:
+                  - path: /catalog-tab-52
+                    title: Catalog Tab 52
+                    mountPoint: entity.page.catalog-tab-52
+                mountPoints:
+                  - mountPoint: entity.page.catalog-tab-52/cards
+                    importName: EntityCatalogCard
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_catalog-tab-53!internal-backstage-plugin-catalog-tab-53
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-catalog-tab-53:
+                entityTabs:
+                  - path: /catalog-tab-53
+                    title: Catalog Tab 53
+                    mountPoint: entity.page.catalog-tab-53
+                mountPoints:
+                  - mountPoint: entity.page.catalog-tab-53/cards
+                    importName: EntityCatalogCard
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_catalog-tab-54!internal-backstage-plugin-catalog-tab-54
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-catalog-tab-54:
+                entityTabs:
+                  - path: /catalog-tab-54
+                    title: Catalog Tab 54
+                    mountPoint: entity.page.catalog-tab-54
+                mountPoints:
+                  - mountPoint: entity.page.catalog-tab-54/cards
+                    importName: EntityCatalogCard
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_catalog-tab-55!internal-backstage-plugin-catalog-tab-55
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-catalog-tab-55:
+                entityTabs:
+                  - path: /catalog-tab-55
+                    title: Catalog Tab 55
+                    mountPoint: entity.page.catalog-tab-55
+                mountPoints:
+                  - mountPoint: entity.page.catalog-tab-55/cards
+                    importName: EntityCatalogCard
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_catalog-tab-56!internal-backstage-plugin-catalog-tab-56
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-catalog-tab-56:
+                entityTabs:
+                  - path: /catalog-tab-56
+                    title: Catalog Tab 56
+                    mountPoint: entity.page.catalog-tab-56
+                mountPoints:
+                  - mountPoint: entity.page.catalog-tab-56/cards
+                    importName: EntityCatalogCard
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_catalog-tab-57!internal-backstage-plugin-catalog-tab-57
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-catalog-tab-57:
+                entityTabs:
+                  - path: /catalog-tab-57
+                    title: Catalog Tab 57
+                    mountPoint: entity.page.catalog-tab-57
+                mountPoints:
+                  - mountPoint: entity.page.catalog-tab-57/cards
+                    importName: EntityCatalogCard
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_catalog-tab-58!internal-backstage-plugin-catalog-tab-58
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-catalog-tab-58:
+                entityTabs:
+                  - path: /catalog-tab-58
+                    title: Catalog Tab 58
+                    mountPoint: entity.page.catalog-tab-58
+                mountPoints:
+                  - mountPoint: entity.page.catalog-tab-58/cards
+                    importName: EntityCatalogCard
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_catalog-tab-59!internal-backstage-plugin-catalog-tab-59
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-catalog-tab-59:
+                entityTabs:
+                  - path: /catalog-tab-59
+                    title: Catalog Tab 59
+                    mountPoint: entity.page.catalog-tab-59
+                mountPoints:
+                  - mountPoint: entity.page.catalog-tab-59/cards
+                    importName: EntityCatalogCard
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_catalog-tab-60!internal-backstage-plugin-catalog-tab-60
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-catalog-tab-60:
+                entityTabs:
+                  - path: /catalog-tab-60
+                    title: Catalog Tab 60
+                    mountPoint: entity.page.catalog-tab-60
+                mountPoints:
+                  - mountPoint: entity.page.catalog-tab-60/cards
+                    importName: EntityCatalogCard
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_catalog-tab-61!internal-backstage-plugin-catalog-tab-61
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-catalog-tab-61:
+                entityTabs:
+                  - path: /catalog-tab-61
+                    title: Catalog Tab 61
+                    mountPoint: entity.page.catalog-tab-61
+                mountPoints:
+                  - mountPoint: entity.page.catalog-tab-61/cards
+                    importName: EntityCatalogCard
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_catalog-tab-62!internal-backstage-plugin-catalog-tab-62
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-catalog-tab-62:
+                entityTabs:
+                  - path: /catalog-tab-62
+                    title: Catalog Tab 62
+                    mountPoint: entity.page.catalog-tab-62
+                mountPoints:
+                  - mountPoint: entity.page.catalog-tab-62/cards
+                    importName: EntityCatalogCard
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_catalog-tab-63!internal-backstage-plugin-catalog-tab-63
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-catalog-tab-63:
+                entityTabs:
+                  - path: /catalog-tab-63
+                    title: Catalog Tab 63
+                    mountPoint: entity.page.catalog-tab-63
+                mountPoints:
+                  - mountPoint: entity.page.catalog-tab-63/cards
+                    importName: EntityCatalogCard
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_catalog-tab-64!internal-backstage-plugin-catalog-tab-64
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-catalog-tab-64:
+                entityTabs:
+                  - path: /catalog-tab-64
+                    title: Catalog Tab 64
+                    mountPoint: entity.page.catalog-tab-64
+                mountPoints:
+                  - mountPoint: entity.page.catalog-tab-64/cards
+                    importName: EntityCatalogCard
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_catalog-tab-65!internal-backstage-plugin-catalog-tab-65
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-catalog-tab-65:
+                entityTabs:
+                  - path: /catalog-tab-65
+                    title: Catalog Tab 65
+                    mountPoint: entity.page.catalog-tab-65
+                mountPoints:
+                  - mountPoint: entity.page.catalog-tab-65/cards
+                    importName: EntityCatalogCard
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_catalog-tab-66!internal-backstage-plugin-catalog-tab-66
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-catalog-tab-66:
+                entityTabs:
+                  - path: /catalog-tab-66
+                    title: Catalog Tab 66
+                    mountPoint: entity.page.catalog-tab-66
+                mountPoints:
+                  - mountPoint: entity.page.catalog-tab-66/cards
+                    importName: EntityCatalogCard
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_catalog-tab-67!internal-backstage-plugin-catalog-tab-67
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-catalog-tab-67:
+                entityTabs:
+                  - path: /catalog-tab-67
+                    title: Catalog Tab 67
+                    mountPoint: entity.page.catalog-tab-67
+                mountPoints:
+                  - mountPoint: entity.page.catalog-tab-67/cards
+                    importName: EntityCatalogCard
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_catalog-tab-68!internal-backstage-plugin-catalog-tab-68
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-catalog-tab-68:
+                entityTabs:
+                  - path: /catalog-tab-68
+                    title: Catalog Tab 68
+                    mountPoint: entity.page.catalog-tab-68
+                mountPoints:
+                  - mountPoint: entity.page.catalog-tab-68/cards
+                    importName: EntityCatalogCard
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_catalog-tab-69!internal-backstage-plugin-catalog-tab-69
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-catalog-tab-69:
+                entityTabs:
+                  - path: /catalog-tab-69
+                    title: Catalog Tab 69
+                    mountPoint: entity.page.catalog-tab-69
+                mountPoints:
+                  - mountPoint: entity.page.catalog-tab-69/cards
+                    importName: EntityCatalogCard
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_catalog-tab-70!internal-backstage-plugin-catalog-tab-70
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-catalog-tab-70:
+                entityTabs:
+                  - path: /catalog-tab-70
+                    title: Catalog Tab 70
+                    mountPoint: entity.page.catalog-tab-70
+                mountPoints:
+                  - mountPoint: entity.page.catalog-tab-70/cards
+                    importName: EntityCatalogCard
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_catalog-tab-71!internal-backstage-plugin-catalog-tab-71
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-catalog-tab-71:
+                entityTabs:
+                  - path: /catalog-tab-71
+                    title: Catalog Tab 71
+                    mountPoint: entity.page.catalog-tab-71
+                mountPoints:
+                  - mountPoint: entity.page.catalog-tab-71/cards
+                    importName: EntityCatalogCard
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_catalog-tab-72!internal-backstage-plugin-catalog-tab-72
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-catalog-tab-72:
+                entityTabs:
+                  - path: /catalog-tab-72
+                    title: Catalog Tab 72
+                    mountPoint: entity.page.catalog-tab-72
+                mountPoints:
+                  - mountPoint: entity.page.catalog-tab-72/cards
+                    importName: EntityCatalogCard
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_catalog-tab-73!internal-backstage-plugin-catalog-tab-73
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-catalog-tab-73:
+                entityTabs:
+                  - path: /catalog-tab-73
+                    title: Catalog Tab 73
+                    mountPoint: entity.page.catalog-tab-73
+                mountPoints:
+                  - mountPoint: entity.page.catalog-tab-73/cards
+                    importName: EntityCatalogCard
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_catalog-tab-74!internal-backstage-plugin-catalog-tab-74
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-catalog-tab-74:
+                entityTabs:
+                  - path: /catalog-tab-74
+                    title: Catalog Tab 74
+                    mountPoint: entity.page.catalog-tab-74
+                mountPoints:
+                  - mountPoint: entity.page.catalog-tab-74/cards
+                    importName: EntityCatalogCard
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_catalog-tab-75!internal-backstage-plugin-catalog-tab-75
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-catalog-tab-75:
+                entityTabs:
+                  - path: /catalog-tab-75
+                    title: Catalog Tab 75
+                    mountPoint: entity.page.catalog-tab-75
+                mountPoints:
+                  - mountPoint: entity.page.catalog-tab-75/cards
+                    importName: EntityCatalogCard
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_catalog-tab-76!internal-backstage-plugin-catalog-tab-76
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-catalog-tab-76:
+                entityTabs:
+                  - path: /catalog-tab-76
+                    title: Catalog Tab 76
+                    mountPoint: entity.page.catalog-tab-76
+                mountPoints:
+                  - mountPoint: entity.page.catalog-tab-76/cards
+                    importName: EntityCatalogCard
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_catalog-tab-77!internal-backstage-plugin-catalog-tab-77
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-catalog-tab-77:
+                entityTabs:
+                  - path: /catalog-tab-77
+                    title: Catalog Tab 77
+                    mountPoint: entity.page.catalog-tab-77
+                mountPoints:
+                  - mountPoint: entity.page.catalog-tab-77/cards
+                    importName: EntityCatalogCard
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_catalog-tab-78!internal-backstage-plugin-catalog-tab-78
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-catalog-tab-78:
+                entityTabs:
+                  - path: /catalog-tab-78
+                    title: Catalog Tab 78
+                    mountPoint: entity.page.catalog-tab-78
+                mountPoints:
+                  - mountPoint: entity.page.catalog-tab-78/cards
+                    importName: EntityCatalogCard
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_catalog-tab-79!internal-backstage-plugin-catalog-tab-79
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-catalog-tab-79:
+                entityTabs:
+                  - path: /catalog-tab-79
+                    title: Catalog Tab 79
+                    mountPoint: entity.page.catalog-tab-79
+                mountPoints:
+                  - mountPoint: entity.page.catalog-tab-79/cards
+                    importName: EntityCatalogCard
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_catalog-tab-80!internal-backstage-plugin-catalog-tab-80
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-catalog-tab-80:
+                entityTabs:
+                  - path: /catalog-tab-80
+                    title: Catalog Tab 80
+                    mountPoint: entity.page.catalog-tab-80
+                mountPoints:
+                  - mountPoint: entity.page.catalog-tab-80/cards
+                    importName: EntityCatalogCard
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_catalog-tab-81!internal-backstage-plugin-catalog-tab-81
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-catalog-tab-81:
+                entityTabs:
+                  - path: /catalog-tab-81
+                    title: Catalog Tab 81
+                    mountPoint: entity.page.catalog-tab-81
+                mountPoints:
+                  - mountPoint: entity.page.catalog-tab-81/cards
+                    importName: EntityCatalogCard
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_catalog-tab-82!internal-backstage-plugin-catalog-tab-82
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-catalog-tab-82:
+                entityTabs:
+                  - path: /catalog-tab-82
+                    title: Catalog Tab 82
+                    mountPoint: entity.page.catalog-tab-82
+                mountPoints:
+                  - mountPoint: entity.page.catalog-tab-82/cards
+                    importName: EntityCatalogCard
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_catalog-tab-83!internal-backstage-plugin-catalog-tab-83
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-catalog-tab-83:
+                entityTabs:
+                  - path: /catalog-tab-83
+                    title: Catalog Tab 83
+                    mountPoint: entity.page.catalog-tab-83
+                mountPoints:
+                  - mountPoint: entity.page.catalog-tab-83/cards
+                    importName: EntityCatalogCard
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_catalog-tab-84!internal-backstage-plugin-catalog-tab-84
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-catalog-tab-84:
+                entityTabs:
+                  - path: /catalog-tab-84
+                    title: Catalog Tab 84
+                    mountPoint: entity.page.catalog-tab-84
+                mountPoints:
+                  - mountPoint: entity.page.catalog-tab-84/cards
+                    importName: EntityCatalogCard
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_catalog-tab-85!internal-backstage-plugin-catalog-tab-85
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-catalog-tab-85:
+                entityTabs:
+                  - path: /catalog-tab-85
+                    title: Catalog Tab 85
+                    mountPoint: entity.page.catalog-tab-85
+                mountPoints:
+                  - mountPoint: entity.page.catalog-tab-85/cards
+                    importName: EntityCatalogCard
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_catalog-tab-86!internal-backstage-plugin-catalog-tab-86
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-catalog-tab-86:
+                entityTabs:
+                  - path: /catalog-tab-86
+                    title: Catalog Tab 86
+                    mountPoint: entity.page.catalog-tab-86
+                mountPoints:
+                  - mountPoint: entity.page.catalog-tab-86/cards
+                    importName: EntityCatalogCard
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_catalog-tab-87!internal-backstage-plugin-catalog-tab-87
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-catalog-tab-87:
+                entityTabs:
+                  - path: /catalog-tab-87
+                    title: Catalog Tab 87
+                    mountPoint: entity.page.catalog-tab-87
+                mountPoints:
+                  - mountPoint: entity.page.catalog-tab-87/cards
+                    importName: EntityCatalogCard
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_catalog-tab-88!internal-backstage-plugin-catalog-tab-88
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-catalog-tab-88:
+                entityTabs:
+                  - path: /catalog-tab-88
+                    title: Catalog Tab 88
+                    mountPoint: entity.page.catalog-tab-88
+                mountPoints:
+                  - mountPoint: entity.page.catalog-tab-88/cards
+                    importName: EntityCatalogCard
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_catalog-tab-89!internal-backstage-plugin-catalog-tab-89
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-catalog-tab-89:
+                entityTabs:
+                  - path: /catalog-tab-89
+                    title: Catalog Tab 89
+                    mountPoint: entity.page.catalog-tab-89
+                mountPoints:
+                  - mountPoint: entity.page.catalog-tab-89/cards
+                    importName: EntityCatalogCard
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_catalog-tab-90!internal-backstage-plugin-catalog-tab-90
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-catalog-tab-90:
+                entityTabs:
+                  - path: /catalog-tab-90
+                    title: Catalog Tab 90
+                    mountPoint: entity.page.catalog-tab-90
+                mountPoints:
+                  - mountPoint: entity.page.catalog-tab-90/cards
+                    importName: EntityCatalogCard
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_catalog-tab-91!internal-backstage-plugin-catalog-tab-91
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-catalog-tab-91:
+                entityTabs:
+                  - path: /catalog-tab-91
+                    title: Catalog Tab 91
+                    mountPoint: entity.page.catalog-tab-91
+                mountPoints:
+                  - mountPoint: entity.page.catalog-tab-91/cards
+                    importName: EntityCatalogCard
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_catalog-tab-92!internal-backstage-plugin-catalog-tab-92
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-catalog-tab-92:
+                entityTabs:
+                  - path: /catalog-tab-92
+                    title: Catalog Tab 92
+                    mountPoint: entity.page.catalog-tab-92
+                mountPoints:
+                  - mountPoint: entity.page.catalog-tab-92/cards
+                    importName: EntityCatalogCard
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_catalog-tab-93!internal-backstage-plugin-catalog-tab-93
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-catalog-tab-93:
+                entityTabs:
+                  - path: /catalog-tab-93
+                    title: Catalog Tab 93
+                    mountPoint: entity.page.catalog-tab-93
+                mountPoints:
+                  - mountPoint: entity.page.catalog-tab-93/cards
+                    importName: EntityCatalogCard
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_catalog-tab-94!internal-backstage-plugin-catalog-tab-94
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-catalog-tab-94:
+                entityTabs:
+                  - path: /catalog-tab-94
+                    title: Catalog Tab 94
+                    mountPoint: entity.page.catalog-tab-94
+                mountPoints:
+                  - mountPoint: entity.page.catalog-tab-94/cards
+                    importName: EntityCatalogCard
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_catalog-tab-95!internal-backstage-plugin-catalog-tab-95
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-catalog-tab-95:
+                entityTabs:
+                  - path: /catalog-tab-95
+                    title: Catalog Tab 95
+                    mountPoint: entity.page.catalog-tab-95
+                mountPoints:
+                  - mountPoint: entity.page.catalog-tab-95/cards
+                    importName: EntityCatalogCard
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_catalog-tab-96!internal-backstage-plugin-catalog-tab-96
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-catalog-tab-96:
+                entityTabs:
+                  - path: /catalog-tab-96
+                    title: Catalog Tab 96
+                    mountPoint: entity.page.catalog-tab-96
+                mountPoints:
+                  - mountPoint: entity.page.catalog-tab-96/cards
+                    importName: EntityCatalogCard
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_catalog-tab-97!internal-backstage-plugin-catalog-tab-97
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-catalog-tab-97:
+                entityTabs:
+                  - path: /catalog-tab-97
+                    title: Catalog Tab 97
+                    mountPoint: entity.page.catalog-tab-97
+                mountPoints:
+                  - mountPoint: entity.page.catalog-tab-97/cards
+                    importName: EntityCatalogCard
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_catalog-tab-98!internal-backstage-plugin-catalog-tab-98
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-catalog-tab-98:
+                entityTabs:
+                  - path: /catalog-tab-98
+                    title: Catalog Tab 98
+                    mountPoint: entity.page.catalog-tab-98
+                mountPoints:
+                  - mountPoint: entity.page.catalog-tab-98/cards
+                    importName: EntityCatalogCard
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_catalog-tab-99!internal-backstage-plugin-catalog-tab-99
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-catalog-tab-99:
+                entityTabs:
+                  - path: /catalog-tab-99
+                    title: Catalog Tab 99
+                    mountPoint: entity.page.catalog-tab-99
+                mountPoints:
+                  - mountPoint: entity.page.catalog-tab-99/cards
+                    importName: EntityCatalogCard
+      - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.49_catalog-tab-100!internal-backstage-plugin-catalog-tab-100
+        disabled: false
+        pluginConfig:
+          dynamicPlugins:
+            frontend:
+              internal.backstage-plugin-catalog-tab-100:
+                entityTabs:
+                  - path: /catalog-tab-100
+                    title: Catalog Tab 100
+                    mountPoint: entity.page.catalog-tab-100
+                mountPoints:
+                  - mountPoint: entity.page.catalog-tab-100/cards
+                    importName: EntityCatalogCard
+
+redhat-developer-hub:
+  route:
+    enabled: false
+
+  upstream:
+    backstage:
+      appConfig:
+        app:
+          title: RHDH 1.10 loadtest
+
+        auth:
+          providers:
+            guest:
+              dangerouslyAllowOutsideDevelopment: true
+
+        catalog:
+          locations:
+            - type: url
+              target: https://github.com/redhat-developer/rhdh-loadtest/blob/main/catalog/guest-login.yaml
+              rules:
+                - allow: [User, Group]
+            - type: url
+              target: https://github.com/redhat-developer/rhdh-loadtest/blob/main/catalog/components-1000.yaml
+              rules:
+                - allow: [Component]
+            - type: url
+              target: https://github.com/redhat-developer/rhdh-loadtest/blob/main/catalog/groups-100.yaml
+              rules:
+                - allow: [Group]
+            - type: url
+              target: https://github.com/redhat-developer/rhdh-loadtest/blob/main/catalog/systems-100.yaml
+              rules:
+                - allow: [System]
+            - type: url
+              target: https://github.com/redhat-developer/rhdh-loadtest/blob/main/catalog/apis-100.yaml
+              rules:
+                - allow: [API]
+            - type: url
+              target: https://github.com/redhat-developer/rhdh-loadtest/blob/main/catalog/templates-100.yaml
+              rules:
+                - allow: [Template]
+
+        permission:
+          enabled: false
+          rbac:
+            pluginsWithPermission:
+              - catalog
+              - permission
+              - scaffolder
+            # policyFileReload: true
+            # policies-csv-file: ./rbac/rbac-policies.csv
+            # conditionalPoliciesFile: ./rbac-conditions/rbac-conditional-policies.yaml
+            admin:
+              users:
+                - name: user:default/rhdh-qe
+
+      extraVolumes:
+        # All volumns from the helm chart defaults,
+        # just that we use 10Gi for dynamic-plugins-root
+        - name: dynamic-plugins-root
+          ephemeral:
+            volumeClaimTemplate:
+              spec:
+                accessModes:
+                  - ReadWriteOnce
+                resources:
+                  requests:
+                    storage: 10Gi # default 5Gi
+        - name: dynamic-plugins
+          configMap:
+            defaultMode: 420
+            name: '{{ printf "%s-dynamic-plugins" .Release.Name }}'
+            optional: true
+        - name: dynamic-plugins-npmrc
+          secret:
+            defaultMode: 420
+            optional: true
+            secretName: '{{ printf "%s-dynamic-plugins-npmrc" .Release.Name }}'
+        - name: dynamic-plugins-registry-auth
+          secret:
+            defaultMode: 416
+            optional: true
+            secretName: '{{ printf "%s-dynamic-plugins-registry-auth" .Release.Name }}'
+        - name: npmcacache
+          emptyDir: {}
+        - name: extensions-catalog
+          emptyDir: {}
+        - name: temp
+          emptyDir: {}
+
+      extraEnvVars:
+        # defaults
+        - name: BACKEND_SECRET
+          valueFrom:
+            secretKeyRef:
+              key: backend-secret
+              name: '{{ include "janus-idp.backend-secret-name" $ }}'
+        - name: POSTGRESQL_ADMIN_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              key: postgres-password
+              name: '{{- include "janus-idp.postgresql.secretName" . }}'
+        # load route host (app and backend baseUrl)
+        - name: APP_CONFIG_app_baseUrl
+          valueFrom:
+            configMapKeyRef:
+              name: rhdh-baseurl-configmap
+              key: APP_CONFIG_app_baseUrl
+        - name: APP_CONFIG_backend_baseUrl
+          valueFrom:
+            configMapKeyRef:
+              name: rhdh-baseurl-configmap
+              key: APP_CONFIG_backend_baseUrl
+        - name: BASEURL
+          valueFrom:
+            configMapKeyRef:
+              name: rhdh-baseurl-configmap
+              key: BASEURL
