@@ -4,7 +4,7 @@
 
 set -e
 
-for workspace in plugins/backstage-*; do
+for workspace in workspaces/backstage-*; do
   if [ ! -d "$workspace" ]; then
     continue
   fi

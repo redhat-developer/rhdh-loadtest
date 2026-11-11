@@ -4,14 +4,14 @@
 set -e
 
 # Fail if there is changes to the package.json files, to prevent overwriting local changes
-if git diff --exit-code -- plugins/backstage-*/package.json; then
+if git diff --exit-code -- workspaces/backstage-*/package.json; then
   echo "No local changes to package.json files, proceeding with setting resolutions."
 else
   echo "Error: There are local changes to package.json files. Please commit or stash them before running this script."
   exit 1
 fi
 
-for workspace in plugins/backstage-*; do
+for workspace in workspaces/backstage-*; do
   echo "Setting resolutions for workspace $workspace"
 
   backstage_version=$(jq -r ".version" < "$workspace/backstage.json")

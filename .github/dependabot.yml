@@ -1,7 +1,7 @@
 version: 2
 updates:
   - package-ecosystem: github-actions
-    directory: /
+    directory: /.github/workflows
     schedule:
       interval: weekly
 
@@ -15,11 +15,12 @@ updates:
           - "playwright*"
           - "@playwright/*"
 
+  # Try to disable workspace security checks and update because these are
+  # for test purposes only, and we want keep the old versions mostly untouched.
   - package-ecosystem: npm
-    directory: /plugins
+    directory: /workspaces
     schedule:
-      interval: weekly
-    # Disable version and security update PRs for plugins
+      interval: yearly
     open-pull-requests-limit: 0
     ignore:
       - dependency-name: "*"

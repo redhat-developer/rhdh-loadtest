@@ -28,7 +28,7 @@ done
 imageRepository="${IMAGE_REPOSITORY:-quay.io/rhdh-community/rhdh-loadtest-plugins}"
 localImage="localhost/rhdh-loadtest-plugins"
 
-workspace="plugins/${WORKSPACE:-undefined}"
+workspace="workspaces/${WORKSPACE:-undefined}"
 version="${WORKSPACE#backstage-}"
 
 if [ ! -d "$workspace" ]; then

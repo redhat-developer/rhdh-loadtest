@@ -96,11 +96,14 @@ upstream:
 
 TODO
 
-## Test Plugins
+## Dynamic test-plugins (as container images)
 
-The `plugins` folder contains multiple Backstage workspaces for different Backstage versions (1.42, 1.45, 1.49 and 1.54).
-Each workspace contains currently two plugins.
-One that adds a new page to the main navigation and one that adds a new tab to the catalog details page.
+The `workspaces` folder contains multiple Backstage workspaces for different
+RHDH and so for different Backstage versions.
+
+Each workspace contains at least two plugins: One that adds a new page to the main navigation and one that adds a new tab to the catalog details page.
+
+The latest version includes also some more test plugins to compare Backstage UI (BUI) vs. Material UI (4) / MUI (5), etc.
 
 The scripts folder contains scripts to build these plugins 100 times with indepenend `pluginIds` to integrate these plugins multiple times into RHDH.
 
@@ -122,7 +125,7 @@ redhat-developer-hub:
       - package: oci://quay.io/rhdh-community/rhdh-loadtest-plugins:bs_1.54_catalog-tab-2!internal-backstage-plugin-catalog-tab-...
 ```
 
-### Dyanmic Plugin Confogiration with mount point configuration
+### Dyanmic Plugin Configuration with mount point configuration
 
 The Backstage version can be replaced with `bs_1.42`, `bs_1.45`, `bs_1.49` or `bs_1.54` and the `-n` can be replaced with a 1 to 100 so that up to 200 dynamic (frontend) plugins can be loaded for each RHDH release.
 
@@ -185,7 +188,7 @@ You can pick up a complete example in [helm/rhdh-18/values.yaml](helm/rhdh-18/va
 
 ## Load Generator
 
-The `load-generator` directory contains a Playwright-based load generator that simulates user interactions with RHDH.
+The `load-generator` folder contains a Playwright-based load generator that simulates user interactions with RHDH.
 
 It is not a replacement for dedicated performance testing — the goal is to produce reproducible, lightweight load tests that can run on smaller test environments.
 
