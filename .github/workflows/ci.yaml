@@ -24,7 +24,7 @@ jobs:
 
       - name: Validate YAML files
         run: |
-          find .github argocd catalog helm techdocs -name '*.yaml' -o -name '*.yml' | while read -r file; do
+          find .github argocd catalog helm -name '*.yaml' -o -name '*.yml' | while read -r file; do
             echo "  $file"
             yq '.' "$file" > /dev/null
           done
