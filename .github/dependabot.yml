@@ -15,6 +15,11 @@ updates:
           - "playwright*"
           - "@playwright/*"
 
+  - package-ecosystem: docker
+    directory: /load-generator
+    schedule:
+      interval: weekly
+
   # Try to disable workspace security checks and update because these are
   # for test purposes only, and we want keep the old versions mostly untouched.
   - package-ecosystem: npm
