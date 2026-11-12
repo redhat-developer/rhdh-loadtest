@@ -1,13 +1,13 @@
 import { test, expect, type BrowserContext, type Page } from "@playwright/test";
 
-import { Backstage } from "./Backstage";
-import { addNetworkListeners } from "./network-stats";
-import { setupNetworkThrottling } from "./network-throttling";
+import { Backstage } from "../lib/playwright/Backstage";
+import { addNetworkListeners } from "../lib/playwright/network-stats";
+import { setupNetworkThrottling } from "../lib/playwright/network-throttling";
 import {
   requestedCacheModes,
   setupCacheMode,
   type CacheMode,
-} from "./cache-mode";
+} from "../lib/playwright/cache-mode";
 
 const loops = Number(process.env.LOOPS || 1);
 const cacheModes = requestedCacheModes();

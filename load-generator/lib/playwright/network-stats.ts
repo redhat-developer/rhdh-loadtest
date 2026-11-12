@@ -1,6 +1,6 @@
 import type { Page, ConsoleMessage, Request, Response } from '@playwright/test';
 
-interface LogResult {
+export interface LogResult {
   logStatsAndErrors: () => Promise<void>;
 }
 

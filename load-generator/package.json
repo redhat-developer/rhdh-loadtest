@@ -21,7 +21,7 @@
     "playwright": "playwright",
     "analyse": "node scripts/analyse.mts",
     "test": "playwright test && yarn analyse",
-    "test:ofs:ui": "playwright test --ui && yarn analyse",
+    "test:ui": "playwright test --ui && yarn analyse",
     "test:nfs": "RHDH_FRONTEND=nfs playwright test && yarn analyse",
     "test:nfs:ui": "RHDH_FRONTEND=nfs playwright test --ui && yarn analyse"
   }
