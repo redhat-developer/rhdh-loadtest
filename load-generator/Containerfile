@@ -1,5 +1,6 @@
 FROM mcr.microsoft.com/playwright:v1.65.0-resolute
-RUN corepack disable
+# Node 26+ images may omit corepack; only disable when present
+RUN if command -v corepack >/dev/null 2>&1; then corepack disable; fi
 RUN npm install -g yarn
 
 WORKDIR /app
