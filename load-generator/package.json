@@ -6,7 +6,7 @@
   "type": "commonjs",
   "packageManager": "yarn@4.4.1",
   "engines": {
-    "node": "24"
+    "node": "26"
   },
   "dependencies": {
     "playwright": "^1.65.0",
