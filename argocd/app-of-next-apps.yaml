@@ -2,13 +2,13 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   namespace: openshift-gitops
-  name: rhdh-loadtest-app-of-default-apps
+  name: rhdh-loadtest-app-of-next-apps
 spec:
   project: rhdh-loadtest
   source:
     repoURL: 'https://github.com/redhat-developer/rhdh-loadtest.git'
     targetRevision: HEAD
-    path: argocd/default-apps
+    path: argocd/next-apps
   destination:
     name: in-cluster
     namespace: openshift-gitops

@@ -32,15 +32,17 @@ Start an OpenShift cluster with OpenShift GitOps operator. To create all test ap
 
 ```bash
 oc apply -f argocd/app-project.yaml
-oc apply -f argocd/app-of-default-apps.yaml   # for 1.10 and newer
-oc apply -f argocd/app-of-legacy-apps.yaml    # for 1.8 and 1.9
+oc apply -f argocd/app-of-current-apps.yaml
+oc apply -f argocd/app-of-next-apps.yaml
+oc apply -f argocd/app-of-legacy-apps.yaml
 ```
 
 or, without cloning:
 
 ```bash
 oc apply -f https://raw.githubusercontent.com/redhat-developer/rhdh-loadtest/refs/heads/main/argocd/app-project.yaml
-oc apply -f https://raw.githubusercontent.com/redhat-developer/rhdh-loadtest/refs/heads/main/argocd/app-of-default-apps.yaml
+oc apply -f https://raw.githubusercontent.com/redhat-developer/rhdh-loadtest/refs/heads/main/argocd/app-of-current-apps.yaml
+oc apply -f https://raw.githubusercontent.com/redhat-developer/rhdh-loadtest/refs/heads/main/argocd/app-of-next-apps.yaml
 oc apply -f https://raw.githubusercontent.com/redhat-developer/rhdh-loadtest/refs/heads/main/argocd/app-of-legacy-apps.yaml
 ```
 
@@ -48,14 +50,16 @@ Or create just a single application:
 
 ```bash
 oc apply -f argocd/app-project.yaml
-oc apply -f argocd/default-apps/rhdh-110-nfs.yaml
+oc apply -f argocd/next-apps/rhdh-next.yaml
+oc apply -f argocd/next-apps/rhdh-next-http2.yaml
 ```
 
 or, without cloning:
 
 ```bash
 oc apply -f https://raw.githubusercontent.com/redhat-developer/rhdh-loadtest/refs/heads/main/argocd/app-project.yaml
-oc apply -f https://raw.githubusercontent.com/redhat-developer/rhdh-loadtest/refs/heads/main/argocd/default-apps/rhdh-110-nfs.yaml
+oc apply -f https://raw.githubusercontent.com/redhat-developer/rhdh-loadtest/refs/heads/main/argocd/next-apps/rhdh-next.yaml
+oc apply -f https://raw.githubusercontent.com/redhat-developer/rhdh-loadtest/refs/heads/main/argocd/next-apps/rhdh-next-http2.yaml
 ```
 
 ## Test catalog entities
