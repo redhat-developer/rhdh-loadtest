@@ -32,7 +32,10 @@ export class Backstage {
 
   tabItem(name: string) {
     const tabs = this.tabs;
-    return tabs.getByRole("tab", { name }).or(tabs.getByRole("link", { name }));
+    // exact: true — "Catalog Tab 1" must not match "Catalog Tab 10" / "100".
+    return tabs
+      .getByRole("tab", { name, exact: true })
+      .or(tabs.getByRole("link", { name, exact: true }));
   }
 
   get content() {
