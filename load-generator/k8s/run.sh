@@ -12,7 +12,6 @@ JOB_NAME=$(
   kubectl create --dry-run=client -o yaml -n "$NAMESPACE" -f "$SCRIPT_DIR/job.yaml" |
   kubectl set env -f - --local -o yaml \
     RHDH_URL="${RHDH_URL:-}" \
-    RHDH_FRONTEND="${RHDH_FRONTEND:-}" \
     NETWORK_THROTTLING="${NETWORK_THROTTLING:-}" \
     CACHE_MODE="${CACHE_MODE:-}" \
     LOOPS="${LOOPS:-}" |

@@ -1,101 +1,36 @@
-import { readFileSync } from 'node:fs';
-
 import type { JSONReport } from '@playwright/test/reporter';
 
-const filename = process.env.PLAYWRIGHT_JSON_OUTPUT_FILE ?? 'test-results.json';
+import {
+  extractStepDurations,
+  formatDuration,
+  loadReport,
+  parseStatsObject,
+  percentile,
+  printTable,
+} from './utils.mts';
+
+const filename =
+  process.argv[2] ?? process.env.PLAYWRIGHT_JSON_OUTPUT_FILE ?? 'test-results.json';
 
 console.log(`Analyse ${filename}`);
 
-const report: JSONReport = JSON.parse(readFileSync(filename, 'utf-8'));
-
-const stepDurations = new Map<string, number[]>();
-
-function stripAnsi(s: string): string {
-  return s.replace(/\x1b\[[0-9;]*m/g, '');
-}
-
-function parseStatsObject(text: string): Record<string, unknown> | null {
-  const clean = stripAnsi(text).trim();
-  if (!clean.startsWith('Stats:')) return null;
-  const objStr = clean.slice('Stats:'.length).trim();
-  let json = objStr.replace(/(?<=[\s,{])(\w+)(?=\s*:)/g, '"$1"');
-  json = json.replace(/'/g, '"');
-  try {
-    return JSON.parse(json);
-  } catch {
-    return null;
-  }
-}
+const report: JSONReport = loadReport(filename);
+const stepDurations = extractStepDurations(report);
 
 const networkStats: Record<string, unknown>[] = [];
-
 for (const suite of report.suites) {
   for (const spec of suite.specs) {
-    if (!spec.ok) {
-      console.warn(`Unexpected test spec "${spec.ok}" in "${spec.title}"`);
-      continue;
-    }
     for (const test of spec.tests) {
-      if (test.status !== 'expected') {
-        console.warn(`Unexpected test status "${test.status}" in "${spec.title}"`);
-        continue;
-      }
       for (const result of test.results) {
-        if (result.status !== 'passed') {
-          console.warn(`Unexpected test result status (${result.status}) in "${spec.title}"`);
-          continue;
-        }
-        if (result.steps) {
-          for (const step of result.steps) {
-            const durations = stepDurations.get(step.title) ?? [];
-            durations.push(step.duration);
-            stepDurations.set(step.title, durations);
-          }
-          const durations = stepDurations.get('all') ?? [];
-          durations.push(result.duration);
-          stepDurations.set('all', durations);
-        }
-        if (result.stdout) {
-          for (const entry of result.stdout) {
-            if (typeof entry === 'object' && 'text' in entry) {
-              const stats = parseStatsObject((entry as { text: string }).text);
-              if (stats) networkStats.push(stats);
-            }
+        if (result.status !== 'passed' || !result.stdout) continue;
+        for (const entry of result.stdout) {
+          if (typeof entry === 'object' && 'text' in entry) {
+            const stats = parseStatsObject((entry as { text: string }).text);
+            if (stats) networkStats.push(stats);
           }
         }
       }
     }
-  }
-}
-
-function percentile(sorted: number[], p: number): number {
-  const idx = (p / 100) * (sorted.length - 1);
-  const lower = Math.floor(idx);
-  const upper = Math.ceil(idx);
-  if (lower === upper) return sorted[lower];
-  return sorted[lower] + (sorted[upper] - sorted[lower]) * (idx - lower);
-}
-
-type Align = 'left' | 'right';
-
-function printTable(headers: string[], aligns: Align[], rows: string[][]) {
-  const widths = headers.map((h, i) =>
-    Math.max(h.length, ...rows.map(r => r[i].length)),
-  );
-  const pad = (s: string, w: number, a: Align) =>
-    a === 'right' ? s.padStart(w) : s.padEnd(w);
-  const formatRow = (cells: string[]) =>
-    '| ' + cells.map((c, i) => pad(c, widths[i], aligns[i])).join(' | ') + ' |';
-  const separator =
-    '| ' + widths.map((w, i) => {
-      const dashes = '-'.repeat(w);
-      return aligns[i] === 'right' ? dashes.slice(0, -1) + ':' : dashes;
-    }).join(' | ') + ' |';
-
-  console.log(formatRow(headers));
-  console.log(separator);
-  for (const row of rows) {
-    console.log(formatRow(row));
   }
 }
 
@@ -107,7 +42,14 @@ function printTable(headers: string[], aligns: Align[], rows: string[][]) {
     const p90 = percentile(sorted, 90);
     const min = sorted[0];
     const max = sorted[sorted.length - 1];
-    rows.push([title, String(durations.length), `${avg.toFixed(0)}ms`, `${p90.toFixed(0)}ms`, `${min}ms`, `${max}ms`]);
+    rows.push([
+      title,
+      String(durations.length),
+      formatDuration(avg),
+      formatDuration(p90),
+      formatDuration(min),
+      formatDuration(max),
+    ]);
   }
 
   console.log('');

@@ -8,27 +8,15 @@ import { defineConfig, devices } from '@playwright/test';
 // import path from 'path';
 // dotenv.config({ path: path.resolve(__dirname, '.env') });
 
-const nfs = (process.env.RHDH_FRONTEND ?? 'ofs').toLowerCase() === 'nfs';
-const loops = Number(process.env.LOOPS || 1);
-const cacheMode = (process.env.CACHE_MODE ?? 'both').toLowerCase();
-const warmJourneys =
-  cacheMode === 'warm' || cacheMode === 'both' ? loops + 1 : 1;
+const env = process.env as Record<string, string | undefined>;
 
-const testMatch =
-  nfs ? 'guest-login-home-catalog-nfs.spec.ts' : 'guest-login-home-catalog.spec.ts';
+const baseURL = env.RHDH_URL;
 
-// NFS (module federation) needs longer waits for remotes/catalog to load.
-// Warm mode runs prime + LOOPS journeys in one test, so scale the default.
-const perJourneyTimeout = nfs ? 300_000 : 30_000;
-const testTimeout = Number(
-  process.env.PLAYWRIGHT_TEST_TIMEOUT ?? perJourneyTimeout * warmJourneys,
-);
-const expectTimeout = Number(
-  process.env.PLAYWRIGHT_EXPECT_TIMEOUT ?? (nfs ? 90_000 : 20_000),
-);
-const navigationTimeout = Number(
-  process.env.PLAYWRIGHT_NAVIGATION_TIMEOUT ?? (nfs ? 90_000 : 30_000),
-);
+// One shared journey works on OFS and NFS. Use NFS-safe defaults so module
+// federation / slow clusters do not flake; override via env when needed.
+const testTimeout = Number(env.PLAYWRIGHT_TEST_TIMEOUT ?? 120_000);
+const expectTimeout = Number(env.PLAYWRIGHT_EXPECT_TIMEOUT ?? 30_000);
+const navigationTimeout = Number(env.PLAYWRIGHT_NAVIGATION_TIMEOUT ?? 60_000);
 
 /**
  * See https://playwright.dev/docs/test-configuration.
@@ -40,10 +28,9 @@ export default defineConfig({
   },
 
   testDir: './scenarios',
-  testMatch,
 
   /* Run tests in files in parallel */
-  fullyParallel: false,
+  fullyParallel: true,
   /* Fail the build on CI if you accidentally left test.only in the source code. */
   forbidOnly: true,
   /* Retry on CI only */
@@ -58,8 +45,8 @@ export default defineConfig({
   ],
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
-    /* Base URL to use in actions like `await page.goto('')`. */
-    baseURL: process.env.RHDH_URL || process.env.PLAYWRIGHT_BASEURL,
+    /* Base URL to  use in actions like `await page.goto('')`. */
+    baseURL,
 
     navigationTimeout: navigationTimeout,
 
