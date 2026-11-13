@@ -3,6 +3,10 @@ import type { Page } from '@playwright/test';
 export class Backstage {
   constructor(public readonly page: Page) {}
 
+  get globalHeader() {
+    return this.page.locator('nav#global-header');
+  }
+
   get sidebar() {
     // Prefer the main sidebar; plain `nav` also matches the global header and
     // resolves multiple "Home" links (icon + label), which breaks click().
@@ -26,8 +30,17 @@ export class Backstage {
     );
   }
 
+  tabItem(name: string) {
+    const tabs = this.tabs;
+    return tabs.getByRole("tab", { name }).or(tabs.getByRole("link", { name }));
+  }
+
   get content() {
-    return this.page.locator('article, .bui-Header + *, .bui-HeaderPage + *');
+    // OFS wraps page body in <article>. NFS places page body as siblings of
+    // .bui-PluginHeader (HeaderTop/Content/Bottom + main container).
+    return this.page.locator(
+      'article, .bui-PluginHeader ~ *, .bui-Header + *, .bui-HeaderPage + *',
+    );
   }
 
   sidebarItem(name: string) {

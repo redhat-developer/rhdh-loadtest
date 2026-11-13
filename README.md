@@ -197,33 +197,21 @@ The `load-generator` folder contains a Playwright-based load generator that simu
 It is not a replacement for dedicated performance testing — the goal is to produce reproducible, lightweight load tests that can run on smaller test environments.
 
 Full command reference: [load-generator/README.md](load-generator/README.md).  
-### Scenarios
 
-| Frontend | Spec | Script |
-|---|---|---|
-| **OFS** (classic) | `guest-login-home-catalog.spec.ts` | `yarn test` |
-| **NFS** (new FE) | `guest-login-home-catalog-nfs.spec.ts` | `yarn test:nfs` |
+### Scenarios
 
 Point `RHDH_URL` at whichever RHDH instance you want to measure (any chart / version that exposes the guest journey).
 
-### Journey
+The tests runs n times (`export LOOPS=5`, default is 10) of the same user journey, which means login, homepage, catalog, etc.
 
-Each measured loop is one user session. Step names in reports are `cold/<step>` or `warm/<step>`:
+Each run walks through the complete app two times, onces without any cached JS (the default Playwright behaviour for a test).
+Then it sign outs the user and navigates to the login (`goto("/")`) again and opens all pages a second time.
 
-| # | Step | Start | Success criteria |
-|---|---|---|---|
-| 1 | **login** | `GET /` | Guest **Enter** visible (cold), or already-authenticated home (warm repeat) |
-| 2 | **home** | Click **Enter** (if shown), then sidebar **Home** | Home ready (widgets / welcome / empty-home, depending on build) |
-| 3 | **catalog** | Sidebar **Catalog** | **Catalog**, **All Components (1000)**, **Component 1** |
-| 4 | **component** | Click **Component 1** | **About**, **Group 1**, **System 1**, **Catalog Tab 1** |
-| 5 | **catalog-tab-n** | Click **Catalog Tab 1** | **Example User List** |
-| 6 | **page-n** | Sidebar **Page 1** | **Welcome to Page 1!**, **Information card**, **Example User List** |
+The analyses script builds an average (plus p90, min, max) based on all runs to get a more 'stable' number.
+In the reporting we call this "cold" (no cached JS) and "warm" (cached JS from the first visit).
 
-### Cold vs warm
-
-- **Cold:** new browser context per loop; HTTP cache disabled and cleared.
-- **Warm:** one browser context; one unmeasured **prime** journey, then measured loops with cache enabled.
-- **Journey time** = sum of the six steps. Do **not** compare warm Playwright `all` (prime + N loops) to cold `all`.
+Because your local connection to the cluster is still a thing, there is also a script to run the tests on the cluster.
+Since the speed network within the cluster would be 'too fast' these should use the available threshold configuration.
 
 ### Run locally
 
@@ -234,19 +222,14 @@ yarn install-browser
 unset HTTP_PROXY HTTPS_PROXY http_proxy https_proxy ALL_PROXY all_proxy
 
 export RHDH_URL=https://<route-host>
-export RHDH_FRONTEND=ofs   # or nfs
 export NETWORK_THROTTLING=none
 export PLAYWRIGHT_TEST_TIMEOUT=3600000
 export PLAYWRIGHT_EXPECT_TIMEOUT=60000
 export PLAYWRIGHT_NAVIGATION_TIMEOUT=60000
+export LOOPS=3
 
-CACHE_MODE=cold LOOPS=5 yarn test          # use yarn test:nfs when RHDH_FRONTEND=nfs
-cp -f test-results.json test-results-cold.json
-PLAYWRIGHT_JSON_OUTPUT_FILE=test-results-cold.json yarn analyse
-
-CACHE_MODE=warm LOOPS=20 yarn test
-cp -f test-results.json test-results-warm.json
-PLAYWRIGHT_JSON_OUTPUT_FILE=test-results-warm.json yarn analyse
+yarn test
+yarn analyse
 ```
 
 Resolve a route host:
@@ -260,17 +243,14 @@ oc get route -n <namespace> -o jsonpath='{.items[0].spec.host}{"\n"}'
 ```shell
 cd load-generator
 podman build . --tag load-generator
-podman run -e RHDH_URL=https://your-rhdh-instance.example.com \
-  -e RHDH_FRONTEND=ofs -e CACHE_MODE=cold -e LOOPS=5 load-generator
+podman run -e RHDH_URL=https://your-rhdh-instance.example.com -e LOOPS=10 load-generator
 ```
 
 ### Configuration
 
 | Environment variable | Description |
 |---|---|
-| `RHDH_URL` (or `PLAYWRIGHT_BASEURL`) | Base URL of the RHDH instance to test |
-| `RHDH_FRONTEND` | `ofs` (default) or `nfs` — selects which Playwright spec runs |
-| `CACHE_MODE` | `cold`, `warm`, or `both` (default `both`) |
+| `RHDH_URL` | Base URL of the RHDH instance to test |
 | `LOOPS` | Measured iterations (default `1`). Warm also runs 1 extra prime pass |
 | `NETWORK_THROTTLING` | `none` (default), `fast`, `medium`, `slow` |
 | `PLAYWRIGHT_TEST_TIMEOUT` | Overall test timeout (ms); high value for warm LOOPS=20 |
