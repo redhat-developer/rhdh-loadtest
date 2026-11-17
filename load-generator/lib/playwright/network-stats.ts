@@ -91,10 +91,11 @@ export const addNetworkListeners = async (page: Page): Promise<LogResult> => {
       console.log(`Request failed: ${req.method()} ${req.url()} - ${req.failure()?.errorText}`);
     });
 
-    // Log all responses with status code != 200
+    // Log all responses with unexpected status codes
+    const expectedStatusCodes = [200, 304];
     responses.forEach((resp) => {
-      if (resp.status() !== 200) {
-        console.log(`Response with status code != 200: ${resp.status()} ${resp.url()}`);
+      if (!expectedStatusCodes.includes(resp.status())) {
+        console.log(`Response with unexpected status code: ${resp.status()} ${resp.url()}`);
       }
     });
   };
