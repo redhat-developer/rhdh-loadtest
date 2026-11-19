@@ -3,6 +3,9 @@
 # Yarn
 .yarn/install-state.gz
 
+# Job run logs from scripts/run-job.mts / run-batch.mts
+/logs/
+
 # Playwright
 /test-results.json
 /test-results/

@@ -13,7 +13,6 @@ JOB_NAME=$(
   kubectl set env -f - --local -o yaml \
     RHDH_URL="${RHDH_URL:-}" \
     NETWORK_THROTTLING="${NETWORK_THROTTLING:-}" \
-    CACHE_MODE="${CACHE_MODE:-}" \
     LOOPS="${LOOPS:-}" |
   kubectl create -n "$NAMESPACE" -f - -o jsonpath='{.metadata.name}'
 )

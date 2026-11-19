@@ -1,0 +1,12 @@
+{
+  "loops": 20,
+  "networkThrottling": "medium",
+  "prefix": "",
+  "suffix": "",
+  "urls": [
+    {
+      "name": "next-9b6a1ebd-http2",
+      "url": "https://rhdh-loadtest-next-http2-developer-hub-rhdh-loadtest-next-http2.apps.rosa.akmt3-da6ve-rav.36d8.p3.openshiftapps.com"
+    }
+  ]
+}

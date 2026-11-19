@@ -21,7 +21,9 @@
     "playwright": "playwright",
     "analyse": "node scripts/analyse.mts",
     "compare": "node scripts/compare.mts",
-    "test": "playwright test && yarn analyse",
+    "run-job": "node scripts/run-job.mts",
+    "run-batch": "node scripts/run-batch.mts",
+    "test": "playwright test; yarn analyse",
     "test:ui": "playwright test --ui && yarn analyse"
   }
 }
